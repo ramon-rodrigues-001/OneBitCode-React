@@ -1,0 +1,9 @@
+Vite
+
+Um pacote(biblioteca) do npm, necessário  para build assim como o WebPack porem +Rapido e +Simples
+
+Ve com 2 funcionalidades: 
+ 1º: Um empacotador (Rollup) pre-configurado e com assets otimizados
+ 2º: Um servidor ESM (HMR) bem Rapido
+
+npm create vite@latest 
