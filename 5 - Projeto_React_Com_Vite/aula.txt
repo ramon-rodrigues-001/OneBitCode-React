@@ -1,0 +1,13 @@
+Oque esta acontecendo:
+> Aqui baixamos o Vite e criamos um aplicativo_Vite
+    > npm create vite@latest
+        > cd NomeDoProjeto
+            > npm install
+
+> Apagamos oque era desnecessario:
+    > src/index.style & app.style Tudo que tem aver com estilo
+    > ./Assets
+
+> Apos isso o app esta pronto para ser iniciado, o Vite já esta configurado, e você pode criar arquivos JSX que o vite vai compilar.
+
+> app.jsx e onde esta o codigo é exportado para o main.jsx que esta lincado com html
