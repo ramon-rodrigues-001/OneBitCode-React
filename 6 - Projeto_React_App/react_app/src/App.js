@@ -1,5 +1,7 @@
-
-import { HelloWorld, Logo, Frase} from "./Components.js";
+import HelloWorld from "./components/Hello.js";
+import Logo from "./components/Logo.js";
+import { Frase } from "./components/Frase.js";
+import { LoremIpsom } from "./components/LoremIpsom.js";
 
 export function App() {
   return (
@@ -7,6 +9,7 @@ export function App() {
       <Logo />
       <HelloWorld />
       <Frase />
+      <LoremIpsom />
     </div>
   );
 }
