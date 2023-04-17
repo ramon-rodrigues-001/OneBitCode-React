@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {fragment} from 'react';
+
+import Buttons from "./btn/BtnCommun";
+import Buttons2 from "./btn/BtnQuimera";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <fragment>
+      <h1>Eventos no React</h1>
+      <hr />
+      <Buttons 
+        alert="Ola este é o primeiro button"
+        innerText="BTN_1"
+      />
+      <Buttons 
+        alert="Ola este é o Segundo button"
+        innerText="BTN_2"
+      />
+      <hr />
+      <Buttons2 />
+    </fragment>
   );
 }
 
