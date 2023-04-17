@@ -1,0 +1,12 @@
+REACT APP:
+npm create-react-app NomeDoProjeto
+    > Ingual ao Vite
+    > Este app ja vem com um servidor:
+        > cd NomeDoProjeto
+        > npx rum start
+    > Tambem tem um compilador
+    >Estrutura react pronta
+
+
+DIVIDINFDO E REUTILIZANDO COMPONENTS:
+    >
