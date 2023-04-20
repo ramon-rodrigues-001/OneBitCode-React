@@ -6,8 +6,9 @@ function App() {
   return (
     <Fragment>
       <Header />
-      <main>
+      <main id="main-home">
         <SobreMim />
+        
       </main>
     </Fragment>
   )

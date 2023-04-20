@@ -1,4 +1,10 @@
 @charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 #header-home {
   position: fixed;
   background-color: #292525;
@@ -180,6 +186,8 @@
   align-items: center;
   text-align: justify;
   flex-wrap: wrap;
+  opacity: 100%;
+  transform: scale(1);
 }
 #sobre-mim #div-animação-header #btn-mais-sobreMim {
   display: none;
@@ -243,6 +251,30 @@
   #sobre-mim #mais-sobreMim:checked ~ #sm-direita #texto-descartavel-1 {
     display: inline;
   }
+}
+.container-hmf {
+  scroll-behavior: smooth;
+}
+
+.container-hmf {
+  background-color: black;
+  font-size: 1.1em;
+}
+
+.h1 {
+  font-size: 2em;
+}
+
+h2 {
+  color: white;
+}
+
+.span-LetraVermelha {
+  color: #ff0000;
+}
+
+input[type=checkbox] {
+  visibility: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */
