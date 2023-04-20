@@ -1,6 +1,9 @@
 
-// IMPORTANDO AS VAREAVEIS DE CORES
+// IMPORTANDO AS [VAREAVEIS DE CORES]
 @import "./components/variaveis/variavel.scss";
 
-// IMPORTANDO O ESTILO DO HEADER
-@import "./components/header/header.scss"
+// IMPORTANDO O ESTILO DO [HEADER]
+@import "./components/header/header.scss";
+
+// IMPORTANDO O ESTILO DO [SOBRE MIM]
+@import "components/main/sobreMim/SobreMim.scss"
