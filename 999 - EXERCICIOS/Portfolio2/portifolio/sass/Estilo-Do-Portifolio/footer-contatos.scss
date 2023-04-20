@@ -1,0 +1,24 @@
+footer#contatos {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    background-color: $preto-claro;
+    color: $color;
+    min-height: 100vh;
+
+    #animação-texto-contatos {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        
+        
+        .footer-cards {
+            max-width: 200px;
+            margin: 10px;
+        }
+    }
+}

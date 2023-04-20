@@ -47,10 +47,27 @@ class Planets extends React.Component {
         }
     }
 
+
+    removePlanet = () => {
+        const planetas = [...this.state.planets]
+        planetas.pop()
+        this.setState(state => ({
+            planets: [...planetas]
+        }))
+    }
+
+    newRenderizar = () => {
+        const lastPlanet = this.state.planets[this.state.planets.length - 1]
+        this.setState(stata => ({
+            planets: [...this.state.planets, lastPlanet]
+        }))
+    }
+
     render() {
         return (
             <div className='div-planets'>
                 <h2>Planets</h2>
+                <button onClick={this.removePlanet}>Remove Planet</button><button onClick={this.newRenderizar}>Add New Planet</button>
                 <hr />
 
                 {
