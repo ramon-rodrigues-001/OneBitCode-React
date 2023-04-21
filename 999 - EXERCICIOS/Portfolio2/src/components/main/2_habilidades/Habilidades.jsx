@@ -1,6 +1,21 @@
 import React from "react";
 
-export default function Habilidades() {
+
+// PARA MUDAR O TEXTO DO BUTÃO MOSTRAR MAIS DA PARTE [HABILIDADES]
+function mudar_text_btn_habilidades() {
+    let a_habilidades = document.querySelector('a#btn-mais-habilidades')
+    let input_habilidades = document.querySelector('input#mais-habilidades')
+
+    if (input_habilidades.checked == false) {
+        a_habilidades.innerText = "MOSTRAR MENOS"
+    }
+    else if (input_habilidades.checked == true) {
+        a_habilidades.innerText = "MOSTRAR MAIS"
+    }
+}
+
+
+export default function Habilidades(props) {
     return (
         <section id="habilidades">
             <div data-aos="zoom-in" id="div_animation">  {/* DIV BIBLIOTECA ANIMAÇÃO */}
@@ -48,7 +63,7 @@ export default function Habilidades() {
                     
                     {/* Butão ligado ou input checkbox das habilidades */}
                     <label htmlFor="mais-habilidades">
-                        <a className="btn btn-outline-danger" id="btn-mais-habilidades">MOSTRAR MAIS</a>
+                        <a className="btn btn-outline-danger" id="btn-mais-habilidades" onClick={mudar_text_btn_habilidades}>MOSTRAR MAIS</a>
                     </label>
                 </div>
                 <div className="container" id="conteiner-resposta-abilidade">

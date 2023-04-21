@@ -1,23 +1,17 @@
 import React, { Fragment } from "react";
 
-// PARA MUDAR O TEXTO DO BUTÃO MOSTRAR MAIS DA PARTE [Sobre Mim]
-// let a_sobreMim = document.querySelector('a#btn-mais-sobreMim')
-// a_sobreMim.addEventListener('click', ()=> {
-//     let input_sobreMim = document.querySelector('#mais-sobreMim')
-
-//     if (input_sobreMim.checked == false) {
-//         a_sobreMim.innerText = "MOSTRAR MENOS"
-//     }
-//     else if (input_sobreMim.checked == true) {
-//         a_sobreMim.innerText = "MOSTRAR MAIS"
-//     }
-// })
  
-function mudar_text_btn_sobremim(elemento) {
-    const btn = elemento.currentTarget
+// PARA MUDAR O TEXTO DO BUTÃO MOSTRAR MAIS DA PARTE [Sobre Mim]
+function mudar_text_btn_sobremim() {
+    let a_sobreMim = document.querySelector('a#btn-mais-sobreMim')
+    let input_sobreMim = document.querySelector('#mais-sobreMim')
 
-    console.log(btn)
-    return
+    if (input_sobreMim.checked == false) {
+        a_sobreMim.innerText = "MOSTRAR MENOS"
+    }
+    else if (input_sobreMim.checked == true) {
+        a_sobreMim.innerText = "MOSTRAR MAIS"
+    }
 }
 
 

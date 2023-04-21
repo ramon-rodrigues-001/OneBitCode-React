@@ -497,4 +497,4 @@ return VanillaTilt;
 
 }());
 
-export default VanillaTilt
+export {VanillaTilt}
