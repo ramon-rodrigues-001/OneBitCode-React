@@ -81,7 +81,7 @@
         }
 
         #mais-habilidades:checked ~ #conteiner-cards .habilidade-descartavel {
-            display: block;
+            display: inline-block;
         }
 
         #conteiner-cards {

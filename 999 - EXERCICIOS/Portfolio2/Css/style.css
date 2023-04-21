@@ -319,7 +319,7 @@
     display: none;
   }
   #habilidades #mais-habilidades:checked ~ #conteiner-cards .habilidade-descartavel {
-    display: block;
+    display: inline-block;
   }
   #habilidades #conteiner-cards .cards.impar {
     position: relative;
