@@ -18,7 +18,7 @@ function mudar_text_btn_habilidades() {
 
 export default function Habilidades(props) {
     return (
-        <section id="habilidades">
+        <section id="habilidades" onMouseEnter={props.chamarAnimation}>
             <div data-aos="zoom-in" id="div_animation">  {/* DIV BIBLIOTECA ANIMAÇÃO */}
                 <h2 className="h1 text-center" id="inicio">
                     <span className="span-LetraVermelha">Habilid</span>ades

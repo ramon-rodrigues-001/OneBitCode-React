@@ -6,8 +6,9 @@ import { VanillaTilt } from './Vanilla/vanilla-tilt.js'
 
 
 function App() {
+
+  
   function chamarAnimationCards() {
-    alert('ssssssssss')
     VanillaTilt.init(document.querySelectorAll(".item-projetos"), {
       max: 25,
       speed: 400,
@@ -25,10 +26,11 @@ function App() {
     });
   }
 
+
   return (
     <Fragment>
       <Header />
-      <main id="main-home" onLoad={chamarAnimationCards}>
+      <main id="main-home">
         <SobreMim />
         <Habilidades 
           chamarAnimation={chamarAnimationCards}
