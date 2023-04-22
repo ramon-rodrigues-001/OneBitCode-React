@@ -18,7 +18,7 @@ function mudar_text_btn_habilidades() {
 
 export default function Habilidades(props) {
     return (
-        <section id="habilidades" onMouseEnter={props.chamarAnimation}>
+        <section id="habilidades">
             <div data-aos="zoom-in" id="div_animation">  {/* DIV BIBLIOTECA ANIMAÇÃO */}
                 <h2 className="h1 text-center" id="inicio">
                     <span className="span-LetraVermelha">Habilid</span>ades
@@ -80,7 +80,7 @@ export default function Habilidades(props) {
 
 
 // ======== MOSTAR TEXTO DE CADA HABILIDADES [Switch]  ========
-export const clicarEmCardsCards = function (ev) {
+export const clicarEmCards = function (ev) {
 
     const h1Inicial = document.querySelector('#titliInicial')
     document.querySelector('#conteiner-resposta-abilidade').removeChild(h1Inicial)
