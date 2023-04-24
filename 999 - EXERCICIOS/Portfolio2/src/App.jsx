@@ -1,13 +1,11 @@
 import React, {Fragment} from 'react'
 import Header from './components/header/Header.jsx'
 import SobreMim from './components/main/1_sobreMim/SobreMim.jsx'
-import Habilidades from './components/main/2_habilidades/Habilidades.jsx'
+import {Habilidades, mudar_text_btn_habilidades} from './components/main/2_habilidades/Habilidades.jsx'
 import { VanillaTilt } from './Vanilla/vanilla-tilt.js'
 
 
 function App() {
-
-  
   function chamarAnimation() {
     alert('ola')
     VanillaTilt.init(document.querySelectorAll(".item-projetos"), {
@@ -35,6 +33,7 @@ function App() {
         <SobreMim />
         <Habilidades 
           chamarAnimation={chamarAnimation}
+          mudar_text_btn_habilidades={mudar_text_btn_habilidades}
         />
       </main>
     </Fragment>
