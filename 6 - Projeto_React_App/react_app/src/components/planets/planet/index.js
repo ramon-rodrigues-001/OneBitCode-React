@@ -3,8 +3,8 @@ import GrayImg from '../../shared/gray_img'
 import DescritionWithLink from '../../shared/description_with_link'
 
 
-function getSatellits(id) {
-    const response = fetch('http://localhost:3000/API/' + id + '.json/')
+async function getSatellits(id) {
+    const response = await fetch('http://localhost:3000/API/mars.json/satellites/name')
     const satellits = response.json()
     return satellits
 }
@@ -16,6 +16,7 @@ function organizarSatelite(stateSatellits) {
         )
     })
 
+    console.log(satellits.value)
     return satellits
 }
 
