@@ -3,17 +3,6 @@ import Planet from './planet'
 import './style.css'
 
 
-function organizarSatelite(stateSatellits) {
-    const satellits = stateSatellits.map((nome) => {
-        return (
-            <li>satellit: {nome}</li>
-        )
-    })
-
-    return satellits
-}
-
-// 
 async function getPlanets() {
     let response = await fetch('http://localhost:3000/API/planets.json')
     let date = response.json()
@@ -25,13 +14,6 @@ class Planets extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            satellits: [
-               'a', 
-               'b', 
-               'c', 
-               'd'
-            ],
-
             planets: [
                 /*  {
                     title: "Mercurio",
@@ -83,7 +65,6 @@ class Planets extends React.Component {
                                 link={planet.link}
                                 img_url={planet.img_url}
 
-                                satellits={organizarSatelite(this.state.satellits)}
                             />
                         )
                     })
