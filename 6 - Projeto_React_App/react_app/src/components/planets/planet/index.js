@@ -1,23 +1,24 @@
-import React, { fragment } from 'react'
+import React, { Fragment } from 'react'
 import GrayImg from '../../shared/gray_img'
 import DescritionWithLink from '../../shared/description_with_link'
 
 
 async function getSatellits(id) {
-    const response = await fetch('http://localhost:3000/API/mars.json/satellites/name')
-    const satellits = response.json()
-    return satellits
+    const response = await fetch('http://localhost:3000/API/'+id+'json')
+    let date = response.json()
+    return date
 }
 
 function organizarSatelite(stateSatellits) {
-    const satellits = stateSatellits.map((nome) => {
+    // console.log(stateSatellits)
+    const li_satellits = stateSatellits.map((elemento) => {
         return (
-            <li>satellit: {nome}</li>
+            <li>satellit: {elemento.name}</li> 
         )
     })
 
-    console.log(satellits.value)
-    return satellits
+    // console.log(li_satellits.value)
+    return li_satellits
 }
 
 
@@ -26,22 +27,20 @@ class Planet extends React.Component {
         super(props)
         this.state = {
             satellits: [
-
             ]
         }
     }
 
-    componentDidMount() {
-        getSatellits(this.props.title).then(satellits => {
-            this.setState(state => ({
-                satellits: satellits["satellites"]
-            }))
-        })
+    
+    async componentDidMount() {
+        // console.log(this.props.title)
+        const satellits = await getSatellits(this.props.title)
+        this.setState({ satellits: satellits["planets"] })
     }
 
     render() {
         return (
-            <fragment>
+            <Fragment>
                 <h4>{this.props.title}</h4>
                 <DescritionWithLink description={this.props.description} link={this.props.link}/>
                 <GrayImg 
@@ -49,7 +48,7 @@ class Planet extends React.Component {
                     satellits={organizarSatelite(this.state.satellits)}
                     description={this.props.description}
                 />
-            </fragment>
+            </Fragment>
         )
     }
 }

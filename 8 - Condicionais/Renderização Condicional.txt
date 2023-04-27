@@ -1,0 +1,34 @@
+Aqui fizemos dois componentes um externo que passa os props para o mais interno.
+Caso o componentes externo passe a props.color={true} renderizamos uma img com class [Colorido], Caso não a class sera [Preto_Branco]
+
+=========================================================
+
+import Render_Img from '../Render_Img.jsx'
+
+function Renderizador() {
+    <Render_Img
+        url: {'http//URL_imagemDaImagem/2828282'}
+        color: {true}
+    />
+}
+
+
+=========================================================
+
+import React from 'react'
+class Render_Img() extend React.Component {
+    constructor(props) {
+        super(props)
+    }
+
+    Render() {
+        return (
+            if (props.color === true) {
+                <img src={props.url} class="Colorido" id="img_Colorido"></img>
+            }
+            else {
+                <img src={props.url} class="Preto_Branco" id="img_Preto_e_Branco"></img>
+            }
+        )
+    }
+}

@@ -5,7 +5,7 @@ import './style.css'
 
 async function getPlanets() {
     let response = await fetch('http://localhost:3000/API/planets.json')
-    let date = response.json()
+    let date = await response.json()
     return date
 }
 
