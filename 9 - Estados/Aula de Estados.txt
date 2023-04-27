@@ -1,0 +1,22 @@
+>É quarda as impormações em um state dentro do constructor de uma class,
+>Quando um state é atualizado o react renderiza o DOM/Pagina
+
+class Estado extend React.Component {
+	constructor(props) {
+		super(props)
+		this.state = {            > Esta é a forma de criar um state com imforções que vão ser utilizadas no Render
+			planets: [a, b, c],
+			satellits: [a, b, c, d]
+		}
+	}
+		
+	Render() {
+		this.state.planets.map((elemento) => {  > Para cada elemento dentro do state planets retorna um component
+ 			return(
+				<planets
+					planetas: elementos
+			 	/>
+			)
+		})
+	}
+}
