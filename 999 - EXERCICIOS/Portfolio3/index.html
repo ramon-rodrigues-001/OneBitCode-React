@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <!-- Icones BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    
+    <!-- BIBLIOTECA DE ANIMAÇÃO DE TEXTO CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <!-- <link rel="shortcut icon" href="imagens/miniComputador.webp" type="image/x-icon"> -->
+
+    <!-- FONT [Ubunto]-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    
+
+    <title>Portifolio 2222</title>
+</head>
+<body>
+    <div id="container-hmf">
+        <header id="header-home">
+            <h1 id="logo"><span class="span-LetraVermelha">PORT</span>FOLIO</h1>
+
+            <nav id="navbar">
+                <a href="#sobre-mim">SOBRE MIM</a>
+                <a href="#habilidades">HABILIDADES</a>
+                <a href="#projetos">PROJETOS</a>
+                <a href="#contatos">CONTATOS</a>
+            </nav>
+            
+            <input type="checkbox" name="check-menu" id="check-menu">
+            <menu id="hamburguer">
+                <label for="check-menu">
+                    <div id="menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                        <div class="tracos" id="traco-1"></div>
+                        <div class="tracos" id="traco-2"></div>
+                        <div class="tracos" id="traco-3"></div>
+                    </div>
+                </label>
+                
+                <div class="container-fluid">
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" data-bs-backdrop="false">
+                        <div class="offcanvas-header mx-5">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="btn btn-outline-light itens_menu" href="#sobre-mim">Sobre Mim</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="btn btn-outline-light itens_menu" href="#habilidades">Habilidades</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="btn btn-outline-light itens_menu" href="#projetos">Projetos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="btn btn-outline-light itens_menu" href="#contatos">contatos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="btn btn-outline-danger itens_menu" href="https://github.com/ramon-rodrigues-001" target="_blank">GITHUB</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="btn btn-outline-danger itens_menu" href="https://www.linkedin.com/in/ramon-rodrigues-515a9b244/" target="_blank">LINKEDIN</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </menu>
+            
+
+            <a class="btn btn-outline-info me-2" href="https://github.com/ramon-rodrigues-001/Portifolio" target="_blank" id="butao-github"><i class="bi bi-github"></i>  GITHUB</a>
+        </header>
+
+        <!-- BARRA DE PROGRESO -->
+        <div id="scroll" style="width: 100vw;">
+            <div id="barra-de-scroll">
+            </div>
+        </div>
+
+        <main id="main-home">
+
+            <!-- SOBRE MIM -->       
+            <section  id="sobre-mim">
+                <div data-aos="zoom-in" id="div-animação-header"> <!-- DIV BIBLIOTECA ANIMAÇÃO -->
+                    <div id="sm-esquerda" class="img-flutuante">
+                        <img id="img-flutuante" src="imagens/Preferida.jpg" alt="Arte criada por Canaticfr">
+                    </div>
+                    <input type="checkbox" name="mais-sobreMim" id="mais-sobreMim">
+                    <div  id="sm-direita">
+                        <h2 class="h1"> <span class="span-LetraVermelha">Sobre</span> Mim</h2>
+                        <img src="imagens/icone-aspas.png" alt="aspas" class="icone_aspas" id="aspa-1">
+                        <p id="texto">Oi eu sou o Ramon, um desenvolvedor web front-end de 18 anos que começou a estudar programação em 10/01/2022. 
+                        <span id="texto-descartavel-1">
+                            Sou apaixonado por tecnologia e adoro trabalhar no ambiente de front-end, pois acredito que o desenvolvimento web pode criar experiências incríveis para os usuários e ajudar as empresas a alcançarem seus objetivos. 
+                            <span id="texto-descartavel-2">
+                                Conheci a programação através do canal do curso em vídeo e depois comprei meu primeiro curso profissionalizante da OneBitCode, onde aprendi Sass, Bootstrap, Javascript, Typescript e muito mais. Estou animado para buscar novas oportunidades e expandir minhas habilidades para crescer profissionalmente.
+                            </span>
+                        </span></p>
+                        <img src="imagens/icone-aspas.png" alt="aspas" class="icone_aspas" id="aspa-2">
+                    </div>
+                    <label for="mais-sobreMim" id="label-mais-sobreMim">
+                        <a class="btn btn-outline-info" id="btn-mais-sobreMim" onclick="mostrar_maisSobreMim()">MOSTRAR MAIS</a>
+                    </label>
+                </div>
+            </section>
+
+
+            <!-- Habilidades -->    
+            <section id="habilidades">
+                <div data-aos="zoom-in">  <!-- DIV BIBLIOTECA ANIMAÇÃO -->
+                    <h2 class="h1 text-center" id="inicio">
+                        <span class="span-LetraVermelha">Habilid</span>ades
+                    </h2>
+                    <input type="checkbox" name="input-habilidades" id="mais-habilidades">
+                    <div id="conteiner-cards">
+                        <a href="#habilidades" class="cards" id="h1">
+                            <img src="imagens/icon-habilits/html5-plain.svg" class="iconHabilits" alt="icon_HTML_5">
+                            <h3 class="title-ability">HTML5</h3>
+                            <p class="h5 px-2">Avançado</p>
+                        </a>
+                        <a href="#habilidades" class="cards impar" id="h2">
+                            <img src="imagens/icon-habilits/css3-plain.svg" class="iconHabilits" alt="icon_CSS_3">
+                            <h3 class="title-ability">CSS</h3>
+                            <p class="h5 px-2">Avançado</p>
+                        </a>
+                        <a href="#habilidades" class="cards" id="h3">
+                            <img src="imagens/icon-habilits/javascript-plain.svg" class="iconHabilits" alt="icon_JS">
+                            <h3 class="title-ability">JAVASCRIPT</h3>
+                            <p class="h5 px-2">Avançado</p>
+                        </a>
+                        <a href="#habilidades" class="cards" id="h4">
+                            <img src="imagens/icon-habilits/sass-original.svg" class="iconHabilits" alt="icon_SASS">
+                            <h3 class="title-ability">SASS</h3>
+                            <p class="h5 px-2">Basico</p>
+                        </a>
+                        <a href="#habilidades" class="cards habilidade-descartavel impar" id="h5">
+                            <img src="imagens/icon-habilits/bootstrap-plain.svg" class="iconHabilits" alt="icon_BOOTSTRAP">
+                            <h3 class="title-ability">BOOTSTRAP</h3>
+                            <p class="h5 px-2">Basico</p>
+                        </a>
+                        <a href="#habilidades" class="cards habilidade-descartavel" id="h6">
+                            <img src="imagens/icon-habilits/react-original.svg" class="iconHabilits" alt="icon_REACT">
+                            <h3 class="title-ability">REACT</h3>
+                            <p class="h5 px-2">Iniciante</p>
+                        </a>
+                        <a href="#habilidades" class="cards habilidade-descartavel" id="h7">
+                            <img src="imagens/icon-habilits/git-plain.svg" class="iconHabilits" alt="icon_GIT">
+                            <h3 class="title-ability">GIT</h3>
+                            <p class="h5 px-2">Iniciante</p>
+                        </a>
+                        <a href="#habilidades" class="cards habilidade-descartavel impar" id="h8">
+                            <img src="imagens/icon-habilits/typescript-plain.svg" class="iconHabilits" alt="icon_TYPESCRIPT">
+                            <h3 class="title-ability">TYPESCRIPT</h3>
+                            <p class="h5 px-2">Pretendo Em Breve</p>
+                        </a>
+                        <a href="#habilidades" class="cards habilidade-descartavel" id="h9">
+                            <img src="imagens/icon-habilits/bulma-plain.svg" class="iconHabilits" alt="icon_BULMA">
+                            <h3 class="title-ability">BULMA</h3>
+                            <p class="h5 px-2">Pretendo Em Breve</p>
+                        </a>
+                        <!-- Butão ligado ou input checkbox das habilidades -->
+                        <label for="mais-habilidades">
+                            <a class="btn btn-outline-info" id="btn-mais-habilidades">MOSTRAR MAIS</a>
+                        </label>
+                    </div>
+                    <div class="container" id="conteiner-resposta-abilidade">
+                        <h2 id="titliInicial">Click em uma habilidade!</h2>
+                        <p id="paragrafInicial"></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROJETOS -->      
+            <section id="projetos">
+                <div data-aos="zoom-in">  <!-- DIV BIBLIOTECA ANIMAÇÃO -->
+                    <h2 class="h1 text-center">
+                        <span class="span-LetraVermelha">Proj</span>etos
+                    </span></h2>
+
+                    <div id="container-slider">
+                        <input type="radio" name="input-slider" id="input-slider-1" checked>
+                        <input type="radio" name="input-slider" id="input-slider-2">
+                        <input type="radio" name="input-slider" id="input-slider-3">
+    
+                        <div id="cards">
+                            <label for="input-slider-1" class="cardsCarrosel" id="label-1">
+                                <img src="imagens/god-of-war-tela.jpg" alt="projeto-GodOfWar">
+                                <a src="" class="btn deploy">
+                                    <span class="detalhes-btn quadrado_1"></span>
+                                    DEPLOY
+                                    <span class="detalhes-btn quadrado_2"></span>
+                                </a>
+                                <a class="btn github">
+                                    <span class="detalhes-btn quadrado_1"></span>
+                                    GITHUB
+                                    <span class="detalhes-btn quadrado_2"></span>
+                                </a>
+                            </label>
+                            <label for="input-slider-2" class="cardsCarrosel" id="label-2">
+                                <img src="imagens/imagen-do-projeto-calculadora_js.png" alt="projeto-GodOfWar">
+                                <a class="btn deploy">
+                                    <span class="detalhes-btn quadrado_1"></span>
+                                    DEPLOY
+                                    <span class="detalhes-btn quadrado_2"></span>
+                                </a>
+                                <a class="btn github">
+                                    <span class="detalhes-btn quadrado_1"></span>
+                                    GITHUB
+                                    <span class="detalhes-btn quadrado_2"></span>
+                                </a>
+                            </label>
+                            <label for="input-slider-3" class="cardsCarrosel" id="label-3">
+                                <img src="imagens/imagen-do-projeto-SpaceX-Mini.png" alt="projeto-spaceX">
+                                <a class="btn deploy">
+                                    <span class="detalhes-btn quadrado_1"></span>
+                                    DEPLOY
+                                    <span class="detalhes-btn quadrado_2"></span>
+                                </a>
+                                <a class="btn github">
+                                    <span class="detalhes-btn quadrado_1"></span>
+                                    GITHUB
+                                    <span class="detalhes-btn quadrado_2"></span>
+                                </a>
+                            </label>
+                        </div>
+                    </div>
+
+                    <input type="checkbox" name="mais-projetos" id="mais-projetos">
+                    <div class="contain-projetos">
+                        <a href="#" class="item-projetos projeto-descartavel">
+                            <p class="h1">VAZIO</p>
+                        </a>
+
+                        <a href="#" class="item-projetos projeto-descartavel">
+                            <p class="h1">VAZIO</p>
+                        </a>
+
+                        <a href="#" class="item-projetos projeto-descartavel">
+                            <p class="h1">VAZIO</p>
+                        </a>
+                    </div>
+                    
+                    <label for="mais-projetos" id="label-projetos">
+                        <a class="btn btn-outline-info" id="btn-mais-projetos"  onclick="mostrar_projetos()">MOSTRAR MAIS</a>
+                    </label>
+                </div>
+            </section>
+        </main>
+
+
+        <!-- FOOTER CONTATOS --> 
+        <footer id="contatos">
+            <div data-aos="zoom-in" id="animação-texto-contatos"> <!-- DIV BIBLIOTECA ANIMAÇÃO -->
+                <h2 class="h1 text-center"><span class="span-LetraVermelha">Cont</span>atos</span></h2>
+                <div>
+                    <a class="footer-cards btn btn-outline-info" href="https://www.linkedin.com/in/ramon-rodrigues-515a9b244/" target="_blank">
+                        <p class="h1"><i class="bi bi-linkedin"></i></p>
+                        Linkedin
+                    </a>
+                    <a class="footer-cards btn btn-outline-info" href="https://github.com/ramon-rodrigues-001" target="_blank">
+                        <p class="h1"><i class="bi bi-github"></i></p>
+                        Github
+                    </a>
+                    <a class="footer-cards btn btn-outline-info" href="https://www.facebook.com/profile.php?id=100084075099565" target="_blank">
+                        <p class="h1"><i class="bi bi-facebook"></i></p>
+                        Facebook
+                    </a>
+                </div>
+                <p><strong>Email: </strong>ramon.rodrigues.dev@gmail.com</p>
+                <p><strong>Cell: </strong>(33) 97879-2332</p>
+                <p><strong>Endereço: </strong>Capelinha-MG 39680‑000</p>
+                <p>Direitos da imagem utilizada: <a href="https://br.freepik.com/autor/canaticfr" target="_blank">Canaticfr</a></p>
+                <p data-aos="fade-right" data-aos-duration="3000">
+                    V:1.0_01/10/2022
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- BIBLIOTECA DE ANIMAÇÃO DE TEXTO JAVASCRIPT -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- JavaScript Animação com VANILLAS -->
+    <script src="javascript/Vanilla/vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".item-projetos"), {
+		    max: 25,
+		    speed: 400,
+            glare: true,
+            "max-glare": 1,
+	    });
+        VanillaTilt.init(document.querySelectorAll(".cards"), {
+		    max: 25,
+		    speed: 400,
+            glare: true
+	    });
+        VanillaTilt.init(document.querySelectorAll(".img-flutuante"), {
+		    max: 50,
+		    speed: 5000,
+	    });
+    </script>
+
+
+    <!-- JavaScript Puro -->
+    <script src="javascript/script.js" type="module"></script>
+
+    <!-- Bootstrap 5.3.0 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>
