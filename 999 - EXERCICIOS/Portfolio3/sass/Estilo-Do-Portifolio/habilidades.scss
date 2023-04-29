@@ -13,7 +13,7 @@
     }
     
     .title-ability {
-        color: $vermelho;
+        color: $info;
         text-align: center;
     }
 
@@ -51,8 +51,9 @@
             }
 
             &:hover {
-                border: 2px solid $vermelho;
-                box-shadow: 1px 1px 10px 5px rgba(255, 0, 0, 0.128);
+                border: 2px solid $info;
+                box-shadow: 0px 1px 2px 1px $info;
+                transition: .7s ease;
 
                 .iconHabilits {
                     transition: .5s;

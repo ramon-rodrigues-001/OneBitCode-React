@@ -16,6 +16,7 @@
 
 .h1 {
   font-size: 2em;
+  color: white;
 }
 
 h2 {
@@ -23,13 +24,74 @@ h2 {
   margin-bottom: 20px;
 }
 
-.span-LetraVermelha {
-  color: rgb(0, 255, 255);
-  text-shadow: 2px 2px 20px aqua;
+.span-azulMarinho {
+  color: #31D2F2;
+  text-shadow: 2px 2px 20px #31D2F2;
 }
 
 input[type=checkbox] {
   visibility: hidden;
+}
+
+.btnPersonalizado {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  font-weight: bold;
+  border: 3px solid aqua;
+  text-decoration: none;
+  padding: 10px 30px;
+  z-index: 999;
+  transition: 0.7s ease;
+}
+.btnPersonalizado::before {
+  background-color: rgb(255, 255, 255);
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 110%;
+  height: 0;
+  z-index: -1;
+  transition: 0.7s ease;
+}
+.btnPersonalizado .detalhes-btn {
+  background-color: rgb(0, 172, 172);
+  position: absolute;
+  width: 30px;
+  height: 6px;
+  border-radius: 0px 0px 50% 50%;
+  transition: 0.7s ease;
+}
+.btnPersonalizado .detalhes-btn.quadrado_1 {
+  top: -1px;
+  left: 10px;
+  border-radius: 0px 0px 50% 50%;
+}
+.btnPersonalizado .detalhes-btn.quadrado_2 {
+  bottom: -1px;
+  right: 10px;
+  border-radius: 50% 50% 0px 0px;
+}
+.btnPersonalizado:hover {
+  border-color: white;
+  color: black;
+}
+.btnPersonalizado:hover .detalhes-btn {
+  background-color: black;
+}
+.btnPersonalizado:hover .detalhes-btn.quadrado_1 {
+  left: 70%;
+}
+.btnPersonalizado:hover .detalhes-btn.quadrado_2 {
+  right: 70%;
+}
+.btnPersonalizado:hover::before {
+  background-color: aqua;
+  height: 450%;
 }
 
 #header-home {
@@ -59,7 +121,7 @@ input[type=checkbox] {
   transition: 0.4s;
 }
 #header-home #navbar a:hover {
-  color: rgb(180, 175, 175);
+  color: #31D2F2;
 }
 #header-home #hamburguer {
   display: none;
@@ -297,7 +359,7 @@ input[type=checkbox] {
   color: white;
 }
 #habilidades .title-ability {
-  color: #ff0000;
+  color: #31D2F2;
   text-align: center;
 }
 #habilidades #conteiner-cards {
@@ -331,8 +393,9 @@ input[type=checkbox] {
   transform: translateY(-15px);
 }
 #habilidades #conteiner-cards .cards:hover {
-  border: 2px solid #ff0000;
-  box-shadow: 1px 1px 10px 5px rgba(255, 0, 0, 0.128);
+  border: 2px solid #31D2F2;
+  box-shadow: 0px 1px 2px 1px #31D2F2;
+  transition: 0.7s ease;
 }
 #habilidades #conteiner-cards .cards:hover .iconHabilits {
   transition: 0.5s;
@@ -429,9 +492,9 @@ input[type=checkbox] {
   height: 100%;
   left: 0;
   right: 0;
-  border-radius: 10%;
+  border-radius: 15px;
   border: solid 3px rgb(255, 255, 255);
-  box-shadow: 0px 1px 9px rgb(255, 255, 255);
+  box-shadow: 0px 1px 8px rgb(255, 255, 255);
   overflow: hidden;
   margin: 20px auto;
   cursor: pointer;
@@ -444,77 +507,23 @@ input[type=checkbox] {
   border-radius: 10px;
   object-fit: cover;
 }
-#projetos .cardsCarrosel .btn {
-  background-color: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
+#projetos .cardsCarrosel .btnPersonalizado {
+  background-color: black;
   position: absolute;
   bottom: 10px;
-  overflow: hidden;
-  display: block;
-  font-weight: bold;
-  border: 3px solid aqua;
-  text-decoration: none;
   padding: 10px 50px;
-  z-index: 999;
-  transition: 0.7s ease;
 }
-#projetos .cardsCarrosel .btn::before {
-  background-color: rgb(255, 255, 255);
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-  width: 110%;
-  height: 0;
-  z-index: -1;
-  transition: 0.7s ease;
-}
-#projetos .cardsCarrosel .btn .detalhes-btn {
-  background-color: rgb(0, 172, 172);
-  position: absolute;
-  width: 30px;
-  height: 6px;
-  border-radius: 0px 0px 50% 50%;
-  transition: 0.7s ease;
-}
-#projetos .cardsCarrosel .btn .detalhes-btn.quadrado_1 {
-  top: -1px;
-  left: 10px;
-  border-radius: 0px 0px 50% 50%;
-}
-#projetos .cardsCarrosel .btn .detalhes-btn.quadrado_2 {
-  bottom: -1px;
-  right: 10px;
-  border-radius: 50% 50% 0px 0px;
-}
-#projetos .cardsCarrosel .btn.deploy {
+#projetos .cardsCarrosel .btnPersonalizado.deploy {
   left: 50%;
   transform: translateX(-120%);
 }
-#projetos .cardsCarrosel .btn.github {
+#projetos .cardsCarrosel .btnPersonalizado.github {
   right: 50%;
   transform: translateX(120%);
 }
-#projetos .cardsCarrosel .btn:hover {
-  color: black;
-}
-#projetos .cardsCarrosel .btn:hover .detalhes-btn {
-  background-color: black;
-}
-#projetos .cardsCarrosel .btn:hover .detalhes-btn.quadrado_1 {
-  left: 70%;
-}
-#projetos .cardsCarrosel .btn:hover .detalhes-btn.quadrado_2 {
-  right: 70%;
-}
-#projetos .cardsCarrosel .btn:hover::before {
-  background-color: aqua;
-  height: 350%;
-}
 #projetos .cardsCarrosel:hover {
   border: solid 3px aqua;
-  box-shadow: 0px 1px 14px aqua;
+  box-shadow: 0px 1px 8px aqua;
 }
 #projetos #container-slider {
   width: 80%;
@@ -586,6 +595,18 @@ footer#contatos #animação-texto-contatos {
   flex-direction: column;
   gap: 10px;
   text-align: center;
+}
+footer#contatos #animação-texto-contatos .btnPersonalizado {
+  padding: 10px;
+}
+footer#contatos #animação-texto-contatos .btnPersonalizado::before {
+  width: 200%;
+  height: 0;
+}
+footer#contatos #animação-texto-contatos .btnPersonalizado:hover::before {
+  background-color: aqua;
+  height: 450%;
+  width: 200%;
 }
 footer#contatos #animação-texto-contatos .footer-cards {
   max-width: 200px;
