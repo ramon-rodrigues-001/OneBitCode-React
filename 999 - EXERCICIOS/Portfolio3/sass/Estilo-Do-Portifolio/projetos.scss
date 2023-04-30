@@ -20,6 +20,7 @@
         margin: 10px 0px;
 
         .item-projetos {
+            position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -33,6 +34,10 @@
             min-height: 190px;
             text-decoration: none;
             overflow: hidden;
+
+            &.SUBSTITUTO {
+                display: none;
+            }
             
             p {
                 position: relative;
@@ -47,6 +52,21 @@
                 width: 100%;
             }
 
+            img {
+                width: 101%;
+                height: 150px;
+            }
+
+            .containerBTN {
+
+                .btnPersonalizado{
+                    border-radius: 0px;
+                    border-width: 2px;
+                    padding: 5px;
+                    width: 135px;
+                }
+            }
+
             &:hover {
                 border: solid 2px rgb(255, 0, 0);
 
@@ -55,7 +75,7 @@
                     transition: .4s;
                 }
             }
-        }    
+        }
     }
     
 
@@ -164,6 +184,19 @@
             .projeto-descartavel {
                 display: none;
             }
+
+            .item-projetos {
+                &.SUBSTITUTO {
+                    display: inline-block;
+                }
+            }
+        }
+
+        .cardsCarrosel {
+            display: none;
+        }
+        #container-slider {
+            display: none;
         }
 
         #btn-mais-projetos {

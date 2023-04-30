@@ -26,7 +26,7 @@ h2 {
 
 .span-azulMarinho {
   color: #31D2F2;
-  text-shadow: 2px 2px 20px #31D2F2;
+  text-shadow: 0px 0px 10px #31D2F2;
 }
 
 input[type=checkbox] {
@@ -194,7 +194,7 @@ input[type=checkbox] {
     padding: 5px;
   }
   #header-home #hamburguer #menu .tracos {
-    background-color: red;
+    background-color: #31D2F2;
     margin: 5px 0px;
     transition: 0.1s;
     width: 40px;
@@ -239,7 +239,8 @@ input[type=checkbox] {
   width: 100vw;
 }
 #scroll #barra-de-scroll {
-  background-color: rgb(255, 0, 0);
+  background-color: #31D2F2;
+  box-shadow: 0px 0px 30px 0px #31D2F2;
   height: 3px;
   width: 0%;
   position: fixed;
@@ -451,6 +452,7 @@ input[type=checkbox] {
   margin: 10px 0px;
 }
 #projetos .contain-projetos .item-projetos {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -465,6 +467,9 @@ input[type=checkbox] {
   text-decoration: none;
   overflow: hidden;
 }
+#projetos .contain-projetos .item-projetos.SUBSTITUTO {
+  display: none;
+}
 #projetos .contain-projetos .item-projetos p {
   position: relative;
   background-color: rgba(4, 4, 4, 0.27);
@@ -475,6 +480,16 @@ input[type=checkbox] {
   backdrop-filter: blur(10px);
   z-index: 999;
   width: 100%;
+}
+#projetos .contain-projetos .item-projetos img {
+  width: 101%;
+  height: 150px;
+}
+#projetos .contain-projetos .item-projetos .containerBTN .btnPersonalizado {
+  border-radius: 0px;
+  border-width: 2px;
+  padding: 5px;
+  width: 135px;
 }
 #projetos .contain-projetos .item-projetos:hover {
   border: solid 2px rgb(255, 0, 0);
@@ -569,6 +584,15 @@ input[type=checkbox] {
 
 @media screen and (max-width: 920px) {
   #projetos .contain-projetos .projeto-descartavel {
+    display: none;
+  }
+  #projetos .contain-projetos .item-projetos.SUBSTITUTO {
+    display: inline-block;
+  }
+  #projetos .cardsCarrosel {
+    display: none;
+  }
+  #projetos #container-slider {
     display: none;
   }
   #projetos #btn-mais-projetos {
