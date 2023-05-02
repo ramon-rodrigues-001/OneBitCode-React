@@ -13,7 +13,8 @@ class Pontuacion extends React.Component {
             <Fragment>
                 <h1>Olaa</h1>
                 <div>
-                    <img src="../../../images/image-rules-svg" alt="Rules" />
+                    {/* COMO DEVO DESCREVER O CAMINHO DO IMG QUANTOS ../ DEVO ESCREVER */}
+                    <img src="../images/bg-pentagon.svg" alt="Rules" />
                 </div>
             </Fragment>
         )
