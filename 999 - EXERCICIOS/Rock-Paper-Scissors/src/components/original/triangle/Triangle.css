@@ -1,0 +1,38 @@
+#container-de-triangulo {
+    position: relative;
+    display: inline-block;
+    padding: 40px;
+}
+
+#container-de-triangulo #triangle {
+    width: 220px;
+}
+
+#container-de-triangulo button {
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+    
+    transition: .5s;
+}
+#container-de-triangulo button:Hover {
+    box-shadow: 2px 2px 20px 2px rgba(255, 255, 255, 0.452);
+}
+#container-de-triangulo button#Rock {
+    border: 12px solid rgba(255, 0, 0, 0.806);
+    top: 0;
+    left: 0;
+}
+#container-de-triangulo button#Scissors {
+    border: 12px solid rgba(255, 255, 0, 0.807);
+    top: 0;
+    right: 0;
+}
+#container-de-triangulo button#Paper {
+    border: 12px solid rgba(0, 0, 255, 0.863);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
