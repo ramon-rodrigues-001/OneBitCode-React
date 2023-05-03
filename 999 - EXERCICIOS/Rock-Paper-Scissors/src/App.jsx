@@ -1,11 +1,12 @@
 import React, { Fragment } from 'react';
+import Pontuacion from './components/original/pontuacion/Score';
+import Triangle from './components/original/triangle/Triangle';
 
 function App() {
   return (
     <Fragment>
-      <img src="./logo192.png" alt="pentagon"></img>
-      <img src="./design/desktop-preview.jpg" alt=""></img>
-      <h1>HELLO, WORLD!!</h1>
+      <Pontuacion />
+      <Triangle />
     </Fragment>
   );
 }
