@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Fragment} from "react";
 import "./Pentagon.css"
 
 class Pentagon extends React.Component {
@@ -10,29 +10,38 @@ class Pentagon extends React.Component {
     }
 
     render() {
-        return (
-            <div id="container-de-Pentagon">
-                <img src="images/image-rules-bonus.svg" alt="Pentagon" id="Pentagon"/>
-
-                <button id="Rock">
-                    <img src="images/icon-rock.svg" alt="Rock" />
-                </button>
-                <button id="Scissors">
-                    <img src="images/icon-scissors.svg" alt="Scissors" />
-                </button>
-                <button id="Paper">
-                    <img src="images/icon-paper.svg" alt="Paper" />
-                </button>
-
-                
-                <button id="Lizard">
-                    <img src="images/icon-Lizard.svg" alt="Lizard" />
-                </button>
-                <button id="Spock">
-                    <img src="images/icon-Spock.svg" alt="Spock" />
-                </button>
-            </div>
-        )
+        if (this.props.position == 1) {
+            return (
+                <Fragment>
+                    <div id="container-de-Pentagon">
+                        <img src="images/image-rules-bonus.svg" alt="Pentagon" id="Pentagon"/>
+                        <button id="Rock">
+                            <img src="images/icon-rock.svg" alt="Rock" />
+                        </button>
+                        <button id="Scissors">
+                            <img src="images/icon-scissors.svg" alt="Scissors" />
+                        </button>
+                        <button id="Paper">
+                            <img src="images/icon-paper.svg" alt="Paper" />
+                        </button>
+                        <button id="Lizard">
+                            <img src="images/icon-Lizard.svg" alt="Lizard" />
+                        </button>
+                        <button id="Spock">
+                            <img src="images/icon-Spock.svg" alt="Spock" />
+                        </button>
+                    </div>
+    
+                    {/* BTN voltar para jogo orioginal */}
+                    <button id="voltar" onClick={this.props.mudarPosition}>Voltar</button>
+                </Fragment>
+            )
+        }
+        else {
+            return (
+                null
+            )
+        }
     }
 }
 
