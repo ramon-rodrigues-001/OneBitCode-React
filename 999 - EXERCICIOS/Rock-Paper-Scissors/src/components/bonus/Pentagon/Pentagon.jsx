@@ -10,25 +10,25 @@ class Pentagon extends React.Component {
     }
 
     render() {
-        if (this.props.position == 1) {
+        if (this.props.position == 1  && this.props.escolhaIA_escolhaPlayer.escolhaIA == '') {
             return (
                 <Fragment>
                     <div id="container-de-Pentagon">
                         <img src="images/image-rules-bonus.svg" alt="Pentagon" id="Pentagon"/>
-                        <button id="Rock" onClick={this.props.youEscolha}>
+                        <button id="rock" onClick={this.props.youEscolha}>
                             <img src="images/icon-rock.svg" alt="Rock" />
                         </button>
-                        <button id="Scissors" onClick={this.props.youEscolha}>
+                        <button id="scissors" onClick={this.props.youEscolha}>
                             <img src="images/icon-scissors.svg" alt="Scissors" />
                         </button>
-                        <button id="Paper" onClick={this.props.youEscolha}>
+                        <button id="paper" onClick={this.props.youEscolha}>
                             <img src="images/icon-paper.svg" alt="Paper" />
                         </button>
-                        <button id="Lizard" onClick={this.props.youEscolha}>
-                            <img src="images/icon-Lizard.svg" alt="Lizard" />
+                        <button id="lizard" onClick={this.props.youEscolha}>
+                            <img src="images/icon-lizard.svg" alt="Lizard" />
                         </button>
-                        <button id="Spock" onClick={this.props.youEscolha}>
-                            <img src="images/icon-Spock.svg" alt="Spock" />
+                        <button id="spock" onClick={this.props.youEscolha}>
+                            <img src="images/icon-spock.svg" alt="Spock" />
                         </button>
                     </div>
     

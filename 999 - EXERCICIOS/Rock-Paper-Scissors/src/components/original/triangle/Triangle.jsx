@@ -10,18 +10,18 @@ class Triangle extends React.Component {
     }
 
     render() {
-        if (this.props.position == 0) {
+        if (this.props.position == 0 && this.props.escolhaIA_escolhaPlayer.escolhaIA == '') {
             return (
                 <Fragment>
                     <div id="container-de-triangulo">
                         <img src="images/bg-triangle.svg" alt="triangle" id="triangle"/>
-                        <button id="Rock" onClick={this.props.youEscolha}>
+                        <button id="rock" onClick={this.props.youEscolha}>
                             <img src="images/icon-rock.svg" alt="Rock" />
                         </button>
-                        <button id="Scissors" onClick={this.props.youEscolha}>
+                        <button id="scissors" onClick={this.props.youEscolha}>
                             <img src="images/icon-scissors.svg" alt="Scissors" />
                         </button>
-                        <button id="Paper" onClick={this.props.youEscolha}>
+                        <button id="paper" onClick={this.props.youEscolha}>
                             <img src="images/icon-paper.svg" alt="Paper" />
                         </button>
                     </div>
