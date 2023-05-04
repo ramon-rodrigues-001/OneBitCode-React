@@ -18,6 +18,9 @@
     border-radius: 50%;
     border: solid 20px;
 }
+#container_resultado .ganhador {
+    box-shadow: 5px 5px 100px 10px white;
+}
 #container_resultado #div_Jogador {
     border-color: blue;
 }
@@ -42,7 +45,10 @@
 
 /* Button voltar {continuar} */
 #continuar {
-    position: relative;
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: black;
     border: solid 2px rgb(0, 0, 0);
     overflow: hidden;
@@ -63,13 +69,12 @@
     width: 0px;
     height: 350%;
     transition: .7s ease;
-    z-index: -1;
 }
 
 #continuar:hover {
     color: white;
 }
 #continuar:hover::before {
-    width: 100%;
     z-index: -1;
+    width: 100%;
 }

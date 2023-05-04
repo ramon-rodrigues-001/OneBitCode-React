@@ -76,15 +76,12 @@ class Resultado extends React.Component {
         }
     }
 
-    renderH2 = (resulted) => {
+    renderGanhador = (resulted) => {
         if (resulted === 'ganhou') {
-            return <h2>YOU WIN</h2>
+            return "YOU WIN"
         }
         else if (resulted === 'perdeu') {
-            return <h2>YOU LOSE</h2>
-        }
-        else {
-            return <h2>YOU WILL TIE</h2>
+            return "YOU LOSE"
         }
     }
 
@@ -93,22 +90,68 @@ class Resultado extends React.Component {
         if (this.props.escolhaIA_escolhaPlayer.escolhaIA !== '') {
             const resulted = definirResultado(this.props.escolhaIA_escolhaPlayer.escolhaIA, this.props.escolhaIA_escolhaPlayer.escolhaPlayer)
 
-            return (
-                <div id="container_resultado">
-                    <div className="div_img" id="div_Jogador">
-                        <p className="paragrafh">YOU PICKED</p>
-                       <img src={"images/icon-" + this.props.escolhaIA_escolhaPlayer.escolhaPlayer + ".svg"} alt="Spock" className="img" id="img_Jogador" />
+
+            if (this.renderGanhador(resulted) === "YOU WIN") {
+                return (
+                    <div id="container_resultado">
+                        <div className="div_img ganhador" id="div_Jogador">
+                            <p className="paragrafh">YOU PICKED</p>
+                           <img src={"images/icon-" + this.props.escolhaIA_escolhaPlayer.escolhaPlayer + ".svg"} alt="Spock" className="img" id="img_Jogador" />
+                        </div>
+                        <div id="div_Text">
+                            <h2>YOU WIN</h2>
+                            <button id="continuar" onClick={this.props.reiniciarEscolhas}>
+                                CONTINUAR
+                            </button>
+                        </div>
+                        <div className="div_img" id="div_IA">
+                            <p className="paragrafh">THE IA PICKED</p>
+                            <img src={`images/icon-${this.props.escolhaIA_escolhaPlayer.escolhaIA}.svg`} alt="Spock" className="img" id="img_IA" />
+                        </div>
                     </div>
-                    <div id="div_Text">
-                        {this.renderH2(resulted)}
-                        <button id="continuar">CONTINUAR</button>
+                )
+            }
+            else if (this.renderGanhador(resulted) === "YOU LOSE") {
+                return (
+                    <div id="container_resultado">
+                        <div className="div_img" id="div_Jogador">
+                            <p className="paragrafh">YOU PICKED</p>
+                           <img src={"images/icon-" + this.props.escolhaIA_escolhaPlayer.escolhaPlayer + ".svg"} alt="Spock" className="img" id="img_Jogador" />
+                        </div>
+                        <div id="div_Text">
+                            <h2>YOU LOSE</h2>
+                            <button id="continuar" onClick={this.props.reiniciarEscolhas}>
+                                CONTINUAR
+                            </button>
+                        </div>
+                        <div className="div_img ganhador" id="div_IA">
+                            <p className="paragrafh">THE IA PICKED</p>
+                            <img src={`images/icon-${this.props.escolhaIA_escolhaPlayer.escolhaIA}.svg`} alt="Spock" className="img" id="img_IA" />
+                        </div>
                     </div>
-                    <div className="div_img" id="div_IA">
-                        <p className="paragrafh">THE IA PICKED</p>
-                        <img src={`images/icon-${this.props.escolhaIA_escolhaPlayer.escolhaIA}.svg`} alt="Spock" className="img" id="img_IA" />
+                )
+            }
+            else {
+                return (
+                    <div id="container_resultado">
+                        <div className="div_img" id="div_Jogador">
+                            <p className="paragrafh">YOU PICKED</p>
+                           <img src={"images/icon-" + this.props.escolhaIA_escolhaPlayer.escolhaPlayer + ".svg"} alt="Spock" className="img" id="img_Jogador" />
+                        </div>
+                        <div id="div_Text">
+                            <h2>YOU WILL TIE</h2>
+                            <button id="continuar" onClick={this.props.reiniciarEscolhas}>
+                                CONTINUAR
+                            </button>
+                        </div>
+                        <div className="div_img" id="div_IA">
+                            <p className="paragrafh">THE IA PICKED</p>
+                            <img src={`images/icon-${this.props.escolhaIA_escolhaPlayer.escolhaIA}.svg`} alt="Spock" className="img" id="img_IA" />
+                        </div>
                     </div>
-                </div>
-            )
+                )
+            }
+            
         }
         else {
             return null

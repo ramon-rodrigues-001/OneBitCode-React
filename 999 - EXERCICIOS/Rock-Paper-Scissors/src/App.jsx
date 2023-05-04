@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Component, Fragment, useState } from 'react';
 import Pontuacion from './components/pontuacion/Score';
 import Triangle from './components/original/triangle/Triangle';
 import Pentagon from './components/bonus/Pentagon/Pentagon';
@@ -12,13 +12,20 @@ function App() {
     setPosition(position === 0 ? 1 : 0);
   }
 
-
   let [escolhaIA_escolhaPlayer, setEscolhaIA_escolhaPlayer] = useState(
     {
       escolhaIA: '',
       escolhaPlayer: ''
     }
   )
+  
+
+  function reiniciarEscolhas() {
+    setEscolhaIA_escolhaPlayer(escolhaIA_escolhaPlayer = {
+      escolhaIA: '',
+      escolhaPlayer: ''
+    })
+  }
 
   function youEscolha(evento) {
     // Defenido a escolha do IA
@@ -72,6 +79,7 @@ function App() {
       />
       <Resultado 
         escolhaIA_escolhaPlayer={escolhaIA_escolhaPlayer}
+        reiniciarEscolhas={reiniciarEscolhas}
       />
     </Fragment>
   ); 
