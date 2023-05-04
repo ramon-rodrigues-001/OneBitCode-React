@@ -58,11 +58,16 @@ function App() {
     })
   };
 
+  let [pontos, setPontos] = useState(0)
+  function somarPontos() {
+    setPontos(pontos + 1)
+  }
 
   return (
     <Fragment>
       <Pontuacion 
         position={position}
+        pontos={pontos}
       />
       <Pentagon  
         position={position}
@@ -80,6 +85,7 @@ function App() {
       <Resultado 
         escolhaIA_escolhaPlayer={escolhaIA_escolhaPlayer}
         reiniciarEscolhas={reiniciarEscolhas}
+        somarPontos={somarPontos}
       />
     </Fragment>
   ); 

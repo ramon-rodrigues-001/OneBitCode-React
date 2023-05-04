@@ -10,13 +10,13 @@ class Pontacion extends React.Component {
     }
 
     render() {
-        if (this.props.position == 0) {
+        if (this.props.position === 0) {
             return (
                 <div id="container-de-pontuacion">
                     <img src="images/logo.svg" alt="logo" />
                     <span id="pontos">
                         <p id="score">Score</p>
-                        12
+                        {this.props.pontos}
                     </span>
                 </div>
             )
@@ -27,7 +27,7 @@ class Pontacion extends React.Component {
                     <img src="images/logo-bonus.svg" alt="logo" />
                     <span id="pontos">
                         <p id="score">Score</p>
-                        12
+                        {this.props.pontos}
                     </span>
                 </div>
             )
