@@ -15,13 +15,13 @@ class Triangle extends React.Component {
                 <Fragment>
                     <div id="container-de-triangulo">
                         <img src="images/bg-triangle.svg" alt="triangle" id="triangle"/>
-                        <button id="Rock">
+                        <button id="Rock" onClick={this.props.youEscolha}>
                             <img src="images/icon-rock.svg" alt="Rock" />
                         </button>
-                        <button id="Scissors">
+                        <button id="Scissors" onClick={this.props.youEscolha}>
                             <img src="images/icon-scissors.svg" alt="Scissors" />
                         </button>
-                        <button id="Paper">
+                        <button id="Paper" onClick={this.props.youEscolha}>
                             <img src="images/icon-paper.svg" alt="Paper" />
                         </button>
                     </div>

@@ -15,19 +15,19 @@ class Pentagon extends React.Component {
                 <Fragment>
                     <div id="container-de-Pentagon">
                         <img src="images/image-rules-bonus.svg" alt="Pentagon" id="Pentagon"/>
-                        <button id="Rock">
+                        <button id="Rock" onClick={this.props.youEscolha}>
                             <img src="images/icon-rock.svg" alt="Rock" />
                         </button>
-                        <button id="Scissors">
+                        <button id="Scissors" onClick={this.props.youEscolha}>
                             <img src="images/icon-scissors.svg" alt="Scissors" />
                         </button>
-                        <button id="Paper">
+                        <button id="Paper" onClick={this.props.youEscolha}>
                             <img src="images/icon-paper.svg" alt="Paper" />
                         </button>
-                        <button id="Lizard">
+                        <button id="Lizard" onClick={this.props.youEscolha}>
                             <img src="images/icon-Lizard.svg" alt="Lizard" />
                         </button>
-                        <button id="Spock">
+                        <button id="Spock" onClick={this.props.youEscolha}>
                             <img src="images/icon-Spock.svg" alt="Spock" />
                         </button>
                     </div>
