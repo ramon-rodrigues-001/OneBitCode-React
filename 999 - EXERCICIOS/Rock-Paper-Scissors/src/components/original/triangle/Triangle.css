@@ -39,12 +39,10 @@
 
 
 /* ESTILO PARA O BUTÃO DE TROCAR DE JOGO */
-
-/* Button voltar para jogo original */
-#proximo {
+#root #proximo {
     position: absolute;
     top: 50%;
-    right: 10%;
+    right: 2%;
     transform: translateY(-50%);
     color: black;
     border: solid 2px rgb(0, 0, 0);
@@ -74,4 +72,20 @@
 #proximo:hover::before {
     z-index: -1;
     width: 100%;
+}
+
+
+@media screen and (max-width: 840px) {
+    #root #proximo {
+        height: 50px;
+        width: 200px;
+        left: 50%;
+        top:90%;
+        transform: translateX(-50%);
+    }
+}
+@media screen and (max-width: 420px) {
+    #container-de-triangulo #triangle {
+        width: 180px;
+    }
 }

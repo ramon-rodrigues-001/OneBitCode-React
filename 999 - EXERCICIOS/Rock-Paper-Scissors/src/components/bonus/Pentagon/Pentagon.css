@@ -52,10 +52,10 @@
 
 
 /* Button voltar para jogo original */
-#voltar {
+#root #voltar {
     position: absolute;
     top: 50%;
-    left: 10%;
+    left: 2%;
     transform: translateY(-50%);
     color: black;
     border: solid 2px rgb(0, 0, 0);
@@ -85,4 +85,19 @@
 #voltar:hover::before {
     z-index: -1;
     width: 100%;
+}
+
+@media screen and (max-width: 840px) {
+    #root #voltar {
+        height: 50px;
+        width: 200px;
+        left: 50%;
+        top:90%;
+        transform: translateX(-50%);
+    }
+}
+@media screen and (max-width: 420px) {
+    #container-de-Pentagon #Pentagon {
+        width: 270px;
+    }
 }
