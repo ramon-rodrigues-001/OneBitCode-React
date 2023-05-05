@@ -1,8 +1,7 @@
 import React, { Fragment } from "react";
 import "./Resultado.css"
 
-function definirResultado(escolhaIA, escolhaPlayer) {
-    alert('CErto')
+export function definirResultado(escolhaIA, escolhaPlayer) {
     if (escolhaPlayer === "rock") {
         if (escolhaIA === "scissors" || escolhaIA === "lizard") {
             return "ganhou"
@@ -69,17 +68,16 @@ function definirResultado(escolhaIA, escolhaPlayer) {
 
 
 
-class Resultado extends React.Component {
+export class Resultado extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            resulted: definirResultado(this.props.escolhaIA_escolhaPlayer.escolhaIA, this.props.escolhaIA_escolhaPlayer.escolhaPlayer)
+            null: null
         }
     }
 
     renderGanhador = (resulted) => {
         if (resulted === 'ganhou') {
-            this.props.somarPontos()
             return "YOU WIN"
         }
         else if (resulted === 'perdeu') {
@@ -90,8 +88,9 @@ class Resultado extends React.Component {
 
     render() {
         if (this.props.escolhaIA_escolhaPlayer.escolhaIA !== '') {
+            const resulted = definirResultado(this.props.escolhaIA_escolhaPlayer.escolhaIA, this.props.escolhaIA_escolhaPlayer.escolhaPlayer)
 
-            if (this.renderGanhador(this.state.resulted) === "YOU WIN") {
+            if (resulted === "ganhou") {
                 return (
                     <div id="container_resultado">
                         <div className="div_img ganhador" id="div_Jogador">
@@ -111,7 +110,7 @@ class Resultado extends React.Component {
                     </div>
                 )
             }
-            else if (this.renderGanhador(this.state.resulted) === "YOU LOSE") {
+            else if (resulted === "perdeu") {
                 return (
                     <div id="container_resultado">
                         <div className="div_img" id="div_Jogador">
@@ -158,7 +157,3 @@ class Resultado extends React.Component {
         }
     }
 }
-
-
-
-export default Resultado
