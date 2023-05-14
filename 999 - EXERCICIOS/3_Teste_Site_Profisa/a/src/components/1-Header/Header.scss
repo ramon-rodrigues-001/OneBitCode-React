@@ -1,0 +1,19 @@
+#header {
+    #nav {
+        background-color: black;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding: 0px 10px;
+        height: 50px;
+    }
+    #extensao_nav {
+        position: relative;
+        background-color: rgb(37, 37, 37);
+        display: none;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.73);
+        height: 40px;
+        z-index: 10;
+        transition: .5s;
+    }
+}
