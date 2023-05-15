@@ -110,8 +110,10 @@
 }
 
 #CardsFlutuante {
+  font-size: 0.8em;
   background-color: black;
-  height: 100vh;
+  color: white;
+  height: 42vh;
 }
 
 /*# sourceMappingURL=style.css.map */
