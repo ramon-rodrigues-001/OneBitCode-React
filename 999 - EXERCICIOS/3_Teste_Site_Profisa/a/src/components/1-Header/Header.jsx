@@ -10,31 +10,31 @@ export default class Header extends Component {
 
     functionScroll = ()=> {
         const scroll = document.documentElement.scrollTop
-    
-        let altura = document.documentElement.scrollHeight - document.documentElement.clientHeight
-    
-        let rolagem = (scroll / altura) * 100
-    
-        alert(rolagem)
-        
+
         this.setState(state => ({
-            Scroll: rolagem
+            Scroll: scroll
         }))
     }
 
     chamarScroll = window.onscroll = ()=> {
-        scroll = functionScroll
+        scroll = this.functionScroll()
     }
 
     render() {
-        if (this.state.Scroll == '0') {
+        if (this.state.Scroll < .5) {
             return (
                 <header id="header">
                     <nav id='nav'>
-                        <h2>Logo</h2>
+                        <h1>Logo</h1>
                     </nav>
-                    <div id='extensao_nav'>
-                        
+                    <div id='extensao_nav' className='ativo'>
+                        <ul>
+                            <li>HOME</li>
+                            <li>FLORES</li>
+                            <li>LOCALIDADE</li>
+                            <li>AREA PIX</li>
+                            <li>CONTATOS</li>
+                        </ul>
                     </div>
                 </header>
             )
@@ -43,8 +43,11 @@ export default class Header extends Component {
             return (
                 <header id="header">
                     <nav id='nav'>
-                        <h2>Logo</h2>
+                        <h1>Logo</h1>
                     </nav>
+                    <div id='extensao_nav' className='passivo'>
+                        
+                    </div>
                 </header>
             )
         }
