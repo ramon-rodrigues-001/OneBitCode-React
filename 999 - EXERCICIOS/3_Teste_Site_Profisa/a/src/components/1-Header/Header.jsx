@@ -25,14 +25,16 @@ export default class Header extends Component {
             return (
                 <header id="header">
                     <nav id='nav'>
-                        <h1>Logo</h1>
+                        <h1>Flor De Liz</h1>
+                        <button id='icon-carrinho'>
+                            <i class="bi bi-cart4"></i>
+                        </button>
                     </nav>
                     <div id='extensao_nav' className='ativo'>
                         <ul>
                             <li>HOME</li>
                             <li>FLORES</li>
                             <li>LOCALIDADE</li>
-                            <li>AREA PIX</li>
                             <li>CONTATOS</li>
                         </ul>
                     </div>
@@ -43,7 +45,10 @@ export default class Header extends Component {
             return (
                 <header id="header">
                     <nav id='nav'>
-                        <h1>Logo</h1>
+                        <h1>Liz</h1>
+                        <button id='icon-carrinho'>
+                            <i class="bi bi-cart4"></i>
+                        </button>
                     </nav>
                     <div id='extensao_nav' className='passivo'>
                         
