@@ -1,12 +1,33 @@
-import React from 'react'
+import React, { Component, getScroll } from 'react'
 
-export default function Header(Props) {
+export default class Header extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            Scroll: ''
+        }
+    }
 
-    window.onscroll = ()=> {
+    functionScroll = ()=> {
         const scroll = document.documentElement.scrollTop
+    
+        let altura = document.documentElement.scrollHeight - document.documentElement.clientHeight
+    
+        let rolagem = (scroll / altura) * 100
+    
+        alert(rolagem)
         
-        
-        if (scroll == "0") {
+        this.setState(state => ({
+            Scroll: rolagem
+        }))
+    }
+
+    chamarScroll = window.onscroll = ()=> {
+        scroll = functionScroll
+    }
+
+    render() {
+        if (this.state.Scroll == '0') {
             return (
                 <header id="header">
                     <nav id='nav'>
@@ -28,6 +49,4 @@ export default function Header(Props) {
             )
         }
     }
-
-    
 }
