@@ -16,7 +16,6 @@
 #header #extensao_nav {
   position: relative;
   background-color: rgb(37, 37, 37);
-  display: none;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.73);
   height: 40px;
   z-index: 10;
@@ -28,8 +27,7 @@
   background-size: cover;
   color: white;
   padding: 10vh 10px 20px 10px;
-  height: 40vh;
-  max-height: 300px;
+  height: 400vh;
 }
 #apresentacao p {
   color: rgb(201, 201, 201);
