@@ -39,8 +39,8 @@
   position: relative;
   background-color: rgb(24, 24, 24);
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.605);
-  border: solid 2px #d53ffe;
-  border-radius: 0px 0px 10px 10px;
+  border: solid 2px #d43efe;
+  border-radius: 0px 0px 30px 30px;
   overflow: hidden;
   padding: 0px 10px;
   transition: height 0.5s ease;
@@ -67,7 +67,7 @@
   color: #ffffff;
   font-size: 0.9em;
   position: relative;
-  padding: 15px;
+  padding: 10px 20px;
   height: 50vh;
   margin-top: 50px;
   display: flex;
@@ -114,6 +114,19 @@
   background-color: black;
   color: white;
   height: 42vh;
+  padding: 10px 20px;
+}
+#CardsFlutuante .cards {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#CardsFlutuante .cards #text-card {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+#CardsFlutuante #img-check {
+  width: 150px;
 }
 
 /*# sourceMappingURL=style.css.map */
