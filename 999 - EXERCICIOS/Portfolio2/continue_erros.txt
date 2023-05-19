@@ -1,5 +1,0 @@
-1 - As animações ainda é um problema 
-
-2 - As funções estão junto com os componente e não estão sendo lidos mesmo colocando eles dentro do component eles ainda não funciona tentei um pouco exportalas junto com o componente mais ainda não deu
-
-3 - colocar as ferramentas de animações dentro do html e elas serem execultadas na hora certa e com os elementos certos ainda é um problema, nem mesmo a animção do Bootstrap quem ja vem com as classes importadas no component não funciona
