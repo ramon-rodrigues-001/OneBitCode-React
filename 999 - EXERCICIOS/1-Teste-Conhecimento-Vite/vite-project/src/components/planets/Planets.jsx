@@ -1,10 +1,14 @@
 import React, {Fragment} from "react"
+import Planetas from "/planetas/Planetas.jsx"
 
 export default function Planets(props) {
     return (
         <Fragment>
-            <h2>{props.title}</h2>
-            <p>{props.paragrafh}</p>
+            <Planetas
+                title={props.Title}
+                paragrafh={props.Paragrafh}
+                img={props.Img}
+            />
         </Fragment>
     )
 }
