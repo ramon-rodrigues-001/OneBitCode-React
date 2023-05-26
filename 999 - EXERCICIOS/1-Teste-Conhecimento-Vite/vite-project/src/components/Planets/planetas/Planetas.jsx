@@ -15,6 +15,7 @@ export default function Planetas(props) {
             <Descrition 
                 paragrafh={props.paragrafh}
             />
+            
         </Fragment>
     )
 }
