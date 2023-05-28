@@ -1,5 +1,5 @@
 
-export default function Planetas(props) {
+export default function Link(props) {
     if (props.title && props.img && props.paragrafh) {
         <p>Fim</p>
     }
