@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { Component, Fragment } from "react"
 import "./index.css"
 import CadaPlaneta from "./cada-planeta/CadaPlaneta"
 
@@ -30,24 +30,46 @@ export default class Planetas extends Component {
         }
     }
 
-    addPlanets(objeto_planet) {
-      this.state.Planets.push(objeto_planet)
-      console.log(this.state.Planets)
-      this.render()
+    addPlanets = () => {
+      const Title = prompt('Name of planet')
+      const Img = prompt('Ulr imagem')
+      const Paragrafh = prompt('Descrition of planet')
+      const Link = prompt('link for wikpedia of planet') 
+
+      const newPlanets = {id:Title, Title, Img, Paragrafh, Link}
+
+      this.setState(state => ({
+        Planets: [...this.state.Planets, newPlanets]
+      }))
+    }
+
+    removerPlanets = () => {
+      const newPlanets = [...this.state.Planets]
+      newPlanets.pop()
+      this.setState(state => ({
+        Planets: [...newPlanets]
+      }))
     }
 
     render() {
         return (
-            this.state.Planets.map((e) => {
-                return (
-                    <CadaPlaneta key={e.id}
-                      title={e.Title}
-                      img={e.Img}
-                      paragrafh={e.Paragrafh}
-                      link={e.Link}
-                    />
-                )
-            })
+            <Fragment>
+              <button onClick={this.removerPlanets}> Remover </button>
+              <button onClick={this.addPlanets}> Adicionar </button>
+
+              {
+                this.state.Planets.map((e) => {
+                    return (
+                        <CadaPlaneta key={e.id}
+                          title={e.Title}
+                          img={e.Img}
+                          paragrafh={e.Paragrafh}
+                          link={e.Link}
+                        />
+                    )
+                })
+              }
+            </Fragment>
         )
     }
     
