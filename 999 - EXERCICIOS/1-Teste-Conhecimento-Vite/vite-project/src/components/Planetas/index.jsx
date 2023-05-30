@@ -3,6 +3,7 @@ import "./index.css"
 import CadaPlaneta from "./cada-planeta/CadaPlaneta"
 
 
+// Pegar os dados da API e retorna para o componentDidMount
 async function getPlanets() {
   const response = await fetch ('http://127.0.0.1:5173/API/planets.json')
   const data = response.json()
@@ -27,6 +28,7 @@ export default class Planetas extends Component {
     }
 
 
+    // Acesar a function getPlanets() e adicionar os elementos no state
     componentDidMount() {
       getPlanets().then(data => {
         this.setState(state => ({
@@ -64,13 +66,15 @@ export default class Planetas extends Component {
               <button onClick={this.addPlanets}> Adicionar </button>
 
               {
-                this.state.Planets.map((e) => {
+                this.state.Planets.map((elemento, index) => {
                     return (
-                        <CadaPlaneta id={e.id}
-                          title={e.Title}
-                          img={e.Img}
-                          paragrafh={e.Paragrafh}
-                          link={e.Link}
+                        <CadaPlaneta 
+                          key={index}
+                          id={elemento.id}
+                          title={elemento.Title}
+                          img={elemento.Img}
+                          paragrafh={elemento.Paragrafh}
+                          link={elemento.Link}
                         />
                     )
                 })

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Planet from './planet'
 import './style.css'
 
@@ -10,68 +10,108 @@ async function getPlanets() {
 }
 
 
-class Planets extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            planets: [
-                /*  {
-                    title: "Mercurio",
-                    description: "Mercúrio é o menor[nota 1][nota 2] e mais interno planeta do Sistema Solar, orbitando o Sol a cada 87,969 dias terrestres.",
-                    link: "https://pt.wikipedia.org/wiki/Merc%C3%BArio_(planeta)",
-                    img_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mercury_in_color_-_Prockter07-edit1.jpg/280px-Mercury_in_color_-_Prockter07-edit1.jpg"
-                } */
-            ]
-        }
-    }
 
-    componentDidMount() {
+function Planets(props) {
+    const [Planets, setPlanets] = useState([])
+
+    useEffect(() => {
         getPlanets().then(date => {
-            this.setState(state => ({
-                planets: date['planets']
-            }))
+             setPlanets(Planets + data['planets'])
         })
-    }
-
+    })
 
     removePlanet = () => {
-        const planetas = [...this.state.planets]
+        const planetas = [...state.planets]
         planetas.pop()
-        this.setState(state => ({
-            planets: [...planetas]
-        }))
+        setPlanets(Planets - planetas)
     }
 
-    newRenderizar = () => {
-        const lastPlanet = this.state.planets[this.state.planets.length - 1]
-        this.setState(stata => ({
-            planets: [...this.state.planets, lastPlanet]
-        }))
+    adicionarPlanet = () => {
+        const lastPlanet = state.planets[state.planets.length - 1]
+        setPlanets(Planets + lastPlanet)
     }
 
-    render() {
-        return (
-            <div className='div-planets'>
-                <h2>Planets</h2>
-                <button onClick={this.removePlanet}>Remove Planet</button><button onClick={this.newRenderizar}>Add New Planet</button>
-                <hr />
+    return (
+        <div className='div-planets'>
+            <h2>Planets</h2>
+            <button onClick={removePlanet}>Remove Planet</button><button onClick={adicionarPlanet}>Add New Planet</button>
+            <hr />
 
-                {
-                    this.state.planets.map((planet) => {
-                        return (
-                            <Planet
-                                title={planet.title}
-                                description={planet.description}
-                                link={planet.link}
-                                img_url={planet.img_url}
+            {
+                state.planets.map((planet) => {
+                    return (
+                        <Planet
+                            title={planet.title}
+                            description={planet.description}
+                            link={planet.link}
+                            img_url={planet.img_url}
 
-                            />
-                        )
-                    })
-                }
-            </div>
-        )
-    }
+                        />
+                    )
+                })
+            }
+        </div>
+    )
 }
 
 export default Planets
+
+
+// class Planets extends React.Component {
+//     constructor(props) {
+//         super(props)
+//         this.state = {
+//             planets: [
+//                 
+//             ]
+//         }
+//     }
+
+//     componentDidMount() {
+//         getPlanets().then(date => {
+//             this.setState(state => ({
+//                 planets: date['planets']
+//             }))
+//         })
+//     }
+
+
+//     removePlanet = () => {
+//         const planetas = [...this.state.planets]
+//         planetas.pop()
+//         this.setState(state => ({
+//             planets: [...planetas]
+//         }))
+//     }
+
+//     newRenderizar = () => {
+//         const lastPlanet = this.state.planets[this.state.planets.length - 1]
+//         this.setState(stata => ({
+//             planets: [...this.state.planets, lastPlanet]
+//         }))
+//     }
+
+//     render() {
+//         return (
+//             <div className='div-planets'>
+//                 <h2>Planets</h2>
+//                 <button onClick={this.removePlanet}>Remove Planet</button><button onClick={this.newRenderizar}>Add New Planet</button>
+//                 <hr />
+
+//                 {
+//                     this.state.planets.map((planet) => {
+//                         return (
+//                             <Planet
+//                                 title={planet.title}
+//                                 description={planet.description}
+//                                 link={planet.link}
+//                                 img_url={planet.img_url}
+
+//                             />
+//                         )
+//                     })
+//                 }
+//             </div>
+//         )
+//     }
+// }
