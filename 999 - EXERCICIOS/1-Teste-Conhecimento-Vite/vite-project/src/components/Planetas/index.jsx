@@ -66,7 +66,7 @@ export default class Planetas extends Component {
               {
                 this.state.Planets.map((e) => {
                     return (
-                        <CadaPlaneta key={e.id}
+                        <CadaPlaneta id={e.id}
                           title={e.Title}
                           img={e.Img}
                           paragrafh={e.Paragrafh}
