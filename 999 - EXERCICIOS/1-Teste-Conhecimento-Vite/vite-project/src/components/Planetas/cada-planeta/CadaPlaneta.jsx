@@ -5,6 +5,7 @@ import Title from "../shared/title/Title"
 import Descrition from "../shared/descrition/Descrition"
 import Link from "../shared/link/Link"
 
+// Chamada de uma API inline
 async function getSatellits(id_lua) {
     const response = await fetch(`http://127.0.0.1:5173/API/${id_lua}.json`)
     const date = response.json()
@@ -12,9 +13,12 @@ async function getSatellits(id_lua) {
 }
 
 
+// ======= FORMATO COM FUNCTION E HOOKS ======= //
+
 export default function CadaPlaneta(props) {
     const [satellits, setSatellits] = useState([])
 
+    // UseEffect e Como o ComponentDidMounting, "[]" não deixa atulizar e crir um loop
     useEffect(() => {
         console.log(satellits)
 
@@ -69,7 +73,7 @@ export default function CadaPlaneta(props) {
 
 
 
-
+// ======= FORMATO COM CLASS E CONSTRUCTOR ======= //
 
 // export default class CadaPlaneta extends Component {
 //     constructor(props) {

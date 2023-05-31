@@ -12,23 +12,23 @@ async function getPlanets() {
 
 
 function Planets(props) {
-    const [Planets, setPlanets] = useState([])
+    const [planets, setPlanets] = useState([])
 
     useEffect(() => {
         getPlanets().then(date => {
-             setPlanets(Planets + data['planets'])
+             setPlanets(data['planets'])
         })
-    })
+    }, [])
 
     removePlanet = () => {
         const planetas = [...state.planets]
         planetas.pop()
-        setPlanets(Planets - planetas)
+        setPlanets(planetas)
     }
 
     adicionarPlanet = () => {
         const lastPlanet = state.planets[state.planets.length - 1]
-        setPlanets(Planets + lastPlanet)
+        setPlanets([ ...planets ,lastPlanet ])
     }
 
     return (
@@ -38,7 +38,7 @@ function Planets(props) {
             <hr />
 
             {
-                state.planets.map((planet) => {
+                planets.map((planet) => {
                     return (
                         <Planet
                             title={planet.title}
