@@ -16,16 +16,20 @@ export default function CadaPlaneta(props) {
     const [satellits, setSatellits] = useState([])
 
     useEffect(() => {
+        console.log(satellits)
+
         getSatellits(props.id).then(date => {
-            setSatellits(satellits + date["satellites"])
+            setSatellits(date["satellites"])
         })
-    })
+        
+    }, [])
 
     // Cria as tegs <li> e retorna em um array como props
     function create_li_satellits() {
         const li_satellits = satellits.map((elemento, index) => {
             return <li key={index}>{elemento.name}</li>
         })
+
         return li_satellits
     }
 
