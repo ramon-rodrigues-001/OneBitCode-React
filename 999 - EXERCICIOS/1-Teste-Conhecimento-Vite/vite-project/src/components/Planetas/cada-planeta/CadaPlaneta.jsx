@@ -20,8 +20,6 @@ export default function CadaPlaneta(props) {
 
     // UseEffect e Como o ComponentDidMounting, "[]" não deixa atulizar e crir um loop
     useEffect(() => {
-        console.log(satellits)
-
         getSatellits(props.id).then(date => {
             setSatellits(date["satellites"])
         })
@@ -40,6 +38,7 @@ export default function CadaPlaneta(props) {
 
     return (
         <div id="main-planets">
+            <hr />
             <Title 
                 title={props.title}
             />

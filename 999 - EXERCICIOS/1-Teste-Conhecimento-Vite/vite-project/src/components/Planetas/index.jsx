@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react"
 import "./index.css"
 import CadaPlaneta from "./cada-planeta/CadaPlaneta"
+import Form from "./shared/form/Form"
 
 
 // Pegar os dados da API e retorna para o componentDidMount
@@ -16,13 +17,7 @@ export default class Planetas extends Component {
         super(props) 
         this.state = {
             Planets: [
-              // {
-              //   id: 'Mercurio',
-              //   Title: 'Mercurio', 
-              //   Img: "https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg",
-              //   Paragrafh: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, obcaecati velit consequatur doloremque qui asperiores distinctio culpa ducimus recusandae. Facilis aliquid sequi amet. Pariatur eveniet molestiae exercitationem voluptate eligendi fuga.",
-              //   Link: "https://pt.wikipedia.org/wiki/Marte_(planeta)"
-              // }
+              
             ]
         }
     }
@@ -36,34 +31,23 @@ export default class Planetas extends Component {
         }))
       })
     }
+    
 
-
-    addPlanets = () => {
-      const Title = prompt('Name of planet')
-      const Img = prompt('Ulr imagem')
-      const Paragrafh = prompt('Descrition of planet')
-      const Link = prompt('link for wikpedia of planet') 
-
-      const newPlanets = {id:Title, Title, Img, Paragrafh, Link}
-
+    addPlanet = (new_planet) => {
+      console.log(new_planet)
       this.setState(state => ({
-        Planets: [...this.state.Planets, newPlanets]
+        Planets: [...this.state.Planets, new_planet]
       }))
     }
 
-    removerPlanets = () => {
-      const newPlanets = [...this.state.Planets]
-      newPlanets.pop()
-      this.setState(state => ({
-        Planets: [...newPlanets]
-      }))
-    }
+
 
     render() {
         return (
             <Fragment>
-              <button onClick={this.removerPlanets}> Remover </button>
-              <button onClick={this.addPlanets}> Adicionar </button>
+              <Form 
+                addPlanet={this.addPlanet}
+              />
 
               {
                 this.state.Planets.map((elemento, index) => {
