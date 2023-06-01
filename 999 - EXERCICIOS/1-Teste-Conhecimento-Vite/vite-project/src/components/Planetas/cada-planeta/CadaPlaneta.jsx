@@ -4,6 +4,7 @@ import Satellits from "../shared/satellits/Satellits"
 import Title from "../shared/title/Title"
 import Descrition from "../shared/descrition/Descrition"
 import Link from "../shared/link/Link"
+import FormSatellits from "../shared/form/FormSatellits"
 
 // Chamada de uma API inline
 async function getSatellits(id_lua) {
@@ -26,6 +27,12 @@ export default function CadaPlaneta(props) {
         
     }, [])
 
+
+    function addSatellits(new_Satellit) {
+        setSatellits([...satellits, new_Satellit])
+    }
+
+
     // Cria as tegs <li> e retorna em um array como props
     function create_li_satellits() {
         const li_satellits = satellits.map((elemento, index) => {
@@ -46,14 +53,17 @@ export default function CadaPlaneta(props) {
                 img={props.img} 
                 title={props.title}          
             />
-            <Satellits 
-                img={props.img}
-                li_satellits={create_li_satellits()}
-            />
             <Descrition 
                 paragrafh={props.paragrafh}
                 img={props.img} 
                 title={props.title}
+            />
+            <FormSatellits 
+                addSatellits={addSatellits}
+            />
+            <Satellits 
+                img={props.img}
+                li_satellits={create_li_satellits()}
             />
             <Link 
                 link={props.link}

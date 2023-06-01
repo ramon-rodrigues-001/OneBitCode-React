@@ -1,13 +1,16 @@
 import { Fragment, useState } from "react";
 
-export default function Form(props) {
-    const [fields, setFields] = useState({
-        id: '',
-        Title: '',
-        Paragrafh: '',
-        Link: '',
-        Img: ''
-    })
+const initialState = {
+    id: '',
+    Title: '',
+    Paragrafh: '',
+    Link: '',
+    Img: ''
+}
+
+export default function FormPlanet(props) {
+
+    const [fields, setFields] = useState(initialState)
 
     const handleChange = (event) => {
         setFields({
@@ -19,6 +22,7 @@ export default function Form(props) {
     const handleSubmit = (event) => {
         event.preventDefault()
         props.addPlanet(fields)
+        setFields(initialState)
     }
 
     return (
@@ -30,7 +34,7 @@ export default function Form(props) {
                     <input type="text" name="id" id="id" value={fields.id} onChange={handleChange} /> <br /><br />
 
                     <label htmlFor="Title">Name: </label>
-                    <input type="text" name="Title" id="Title" value={fields.name} onChange={handleChange} /> <br /><br />
+                    <input type="text" name="Title" id="Title" value={fields.Title} onChange={handleChange} /> <br /><br />
 
                     <label htmlFor="Paragrafh">Descrition: </label>
                     <input type="text" name="Paragrafh" id="Paragrafh" value={fields.Paragrafh} onChange={handleChange} /> <br /><br />

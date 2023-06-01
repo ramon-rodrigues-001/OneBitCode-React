@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react"
 import "./index.css"
 import CadaPlaneta from "./cada-planeta/CadaPlaneta"
-import Form from "./shared/form/Form"
+import Form from "./shared/form/FormPlanet"
 
 
 // Pegar os dados da API e retorna para o componentDidMount
@@ -34,7 +34,6 @@ export default class Planetas extends Component {
     
 
     addPlanet = (new_planet) => {
-      console.log(new_planet)
       this.setState(state => ({
         Planets: [...this.state.Planets, new_planet]
       }))
