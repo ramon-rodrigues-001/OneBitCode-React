@@ -28,6 +28,7 @@ export default function CadaPlaneta(props) {
     }, [])
 
 
+    // Adicionar satellit em cada planeta
     function addSatellits(new_Satellit) {
         setSatellits([...satellits, new_Satellit])
     }
@@ -74,70 +75,3 @@ export default function CadaPlaneta(props) {
         </div>
     )
 }
-
-
-
-
-
-
-
-
-// ======= FORMATO COM CLASS E CONSTRUCTOR ======= //
-
-// export default class CadaPlaneta extends Component {
-//     constructor(props) {
-//         super(props)
-//         this.state = {
-//             satellits: [
-
-//             ]
-//         }
-//     }
-
-//     componentDidMount() {
-//         getSatellits(this.props.id).then(date => {
-//             this.setState(state => ({
-//                 satellits: date['satellites']
-//             }))
-//         })
-//     }
-
-
-//     // Cria as tegs <li> e retorna em um array como props
-//     create_li_satellits = () => {
-//         const li_satellits = this.state.satellits.map((elemento, index) => {
-//             return <li key={index}>{elemento.name}</li>
-//         })
-//         return li_satellits
-//     }
-
-
-//     render() {
-//         return (
-//             <div id="main-planets">
-//                 <Title 
-//                     title={this.props.title}
-//                 />
-//                 <Img 
-//                     img={this.props.img} 
-//                     title={this.props.title}          
-//                 />
-//                 <Satellits 
-//                     img={this.props.img}
-//                     li_satellits={this.create_li_satellits()}
-//                 />
-//                 <Descrition 
-//                     paragrafh={this.props.paragrafh}
-//                     img={this.props.img} 
-//                     title={this.props.title}
-//                 />
-//                 <Link 
-//                     link={this.props.link}
-//                     paragrafh={this.props.paragrafh}
-//                     img={this.props.img} 
-//                     title={this.props.title}
-//                 />
-//             </div>
-//         )
-//     }
-// }
