@@ -6,6 +6,9 @@ import Descrition from "../shared/descrition/Descrition"
 import Link from "../shared/link/Link"
 import FormSatellits from "../shared/form/FormSatellits"
 
+// Pegar os parametros URL
+import { useParams } from "react-router-dom"
+
 // Chamada de uma API inline
 async function getSatellits(id_lua) {
     const response = await fetch(`http://127.0.0.1:5173/API/${id_lua}.json`)
@@ -26,6 +29,10 @@ export default function CadaPlaneta(props) {
         })
         
     }, [])
+
+
+    let { id } = useParams()
+    console.log(id)
 
 
     // Adicionar satellit em cada planeta

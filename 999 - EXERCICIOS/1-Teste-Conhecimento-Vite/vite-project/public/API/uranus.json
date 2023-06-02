@@ -5,5 +5,12 @@
     {"name": "Umbriel"},
     {"name": "Titania"},
     {"name": "Oberon"}
-  ]
+  ],
+  "data": {
+    "id": "uranus",
+    "Title": "Uranus",
+    "Paragrafh": "Uranus (from the Latin name Ūranus for the Greek god Οὐρανός) is the seventh planet from the Sun. It has the third-largest planetary radius and fourth-largest planetary in the Solar System.",
+    "Link": "https://en.wikipedia.org/wiki/Uranus",
+    "Img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Uranus2.jpg/280px-Uranus2.jpg"
+  }
 }
