@@ -5,8 +5,8 @@ const appExpress = express();
 // Dizendo para o express utilizar o "ejs" do view engine
 appExpress.set('view engine', 'ejs')
 
-appExpress.get('/', (req, res) => {
-    const nome = "Ramon"
+appExpress.get('/:nome?', (req, res) => {
+    const nome = req.params.nome
 
     res.render('index', {
         nome: nome,
@@ -17,7 +17,7 @@ appExpress.get('/', (req, res) => {
 
 appExpress.get('/perfil', (req, res) => {
     res.render('principal/perfil', {
-        Usuario: "Ramon",
+        usuario: "Ramon",
         idade: 19,
         proficion: "Desenvolvedor Web",
         empregado: false
