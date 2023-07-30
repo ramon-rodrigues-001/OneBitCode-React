@@ -14,8 +14,28 @@
 <body>
     <h1>Hello, World!!</h1>
     <ul>
+
+        <!-- Variaveis -->
         <li>Nome: <%= nome %></li>
         <li>Curso: <%= curso %></li>
+
+        <!-- Condicionais (if else) -->
+        <% if(idade > 18) { %>
+            <li>Maior de idade</li>
+        <% } else { %>
+            <li>Menor de idade</li>
+        <% } %>
+    </ul>
+
+
+
+    <ul>
+        <!-- Repetiçoes (forEach) -->
+        <% produtos.forEach((produto) => { %>
+            <li><%= produto.nome %></li>
+            <li><%= produto.preco %></li>
+            <hr>
+        <% }) %>
     </ul>
 </body>
 </html>

@@ -6,11 +6,20 @@ const appExpress = express();
 appExpress.set('view engine', 'ejs')
 
 appExpress.get('/:nome?', (req, res) => {
+    
     const nome = req.params.nome
+    const produtos = [
+        {nome: 'TV', preco: 3000},
+        {nome: 'Notebook', preco: 2300},
+        {nome: 'tablet', preco: 1200},
+        {nome: 'sofa', preco: 2700}
+    ]
 
     res.render('index', {
         nome: nome,
-        curso: "Funçoes Node.js"
+        idade: 19,
+        curso: "Funçoes Node.js",
+        produtos: produtos
     })
 });
 
