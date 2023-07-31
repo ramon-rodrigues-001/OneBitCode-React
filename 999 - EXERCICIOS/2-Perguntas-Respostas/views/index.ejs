@@ -4,38 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
-    <style>
-        ul {
-            font-size: 1.1em;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
 </head>
 <body>
     <h1>Hello, World!!</h1>
-    <ul>
-
-        <!-- Variaveis -->
-        <li>Nome: <%= nome %></li>
-        <li>Curso: <%= curso %></li>
-
-        <!-- Condicionais (if else) -->
-        <% if(idade > 18) { %>
-            <li>Maior de idade</li>
-        <% } else { %>
-            <li>Menor de idade</li>
-        <% } %>
-    </ul>
-
-
-
-    <ul>
-        <!-- Repetiçoes (forEach) -->
-        <% produtos.forEach((produto) => { %>
-            <li><%= produto.nome %></li>
-            <li><%= produto.preco %></li>
-            <hr>
-        <% }) %>
-    </ul>
 </body>
 </html>
