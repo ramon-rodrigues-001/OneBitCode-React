@@ -1,3 +1,13 @@
-h1 {
-    color: red;
+
+body {
+    background-color: #e5e8e9;
+}
+
+label {
+    font-weight: bold;
+}
+
+#btnPerguntar  {
+    width: 150px;
+    font-weight: bold;
 }

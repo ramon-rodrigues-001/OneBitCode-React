@@ -10,9 +10,12 @@ appExpress.use(express.static('public'))
 
 appExpress.get('/', (req, res) => {
     res.render('index', {
-        
     })
 });
+
+appExpress.get('/perguntar', (req, res) => {
+    res.render('perguntar')
+})
 
 appExpress.listen('4000', () => {
     console.log('Servidor rodando...');
