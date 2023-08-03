@@ -11,3 +11,7 @@ label {
     width: 150px;
     font-weight: bold;
 }
+
+nav {
+    margin-bottom: 20px;
+}
