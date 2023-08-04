@@ -33,6 +33,8 @@ appExpress.post('/salvarPergunta', (req, res) => {
     const title = req.body.title
     const descrition = req.body.descrition
 
+    const pergunta1 = new perguntaSchema({title, descrition})
+
     res.send(`<h1>Formulario recebido!</h1> 
     <h3>title = ${title} </br> desctrition = ${descrition}</h3>`)
 })
