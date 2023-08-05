@@ -1,28 +1,27 @@
-// Configurando o express
+// Imports //
 const express = require('express');
+const bodyParser = require('body-parser')
+const perguntaSchema = require('./models/pergunta.js')
+
 const appExpress = express();
 
 
-// Configurando o body-parser
-const bodyParser = require('body-parser')
+// Configurando o body-parser //
 appExpress.use(bodyParser.urlencoded({extended: false}))
-// Opisional para trabalhar com json
 appExpress.use(bodyParser.json()) 
 
-
-// Dizendo para o express utilizar o "ejs" do view engine
+// Dizendo para o express utilizar o "ejs" do view engine //
 appExpress.set('view engine', 'ejs')
-// Inserindo arquivos estaticos como CSS e JS no express
+
+// Inserindo arquivos estaticos como CSS e JS no express //
 appExpress.use(express.static('public'))
 
 
-const perguntaSchema = require('./models/pergunta.js')
-
-
-
 appExpress.get('/', (req, res) => {
-    res.render('index', {
-    })
+    // res.render('index', {
+    // })
+    res.status(200).json({smg: "Bem-vindo a nossa API!!"})
+    console.log(req.body)
 });
 
 appExpress.get('/perguntar', (req, res) => {
@@ -32,8 +31,6 @@ appExpress.get('/perguntar', (req, res) => {
 appExpress.post('/salvarPergunta', (req, res) => {
     const title = req.body.title
     const descrition = req.body.descrition
-
-    const pergunta1 = new perguntaSchema({title, descrition})
 
     res.send(`<h1>Formulario recebido!</h1> 
     <h3>title = ${title} </br> desctrition = ${descrition}</h3>`)
