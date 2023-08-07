@@ -1,7 +1,7 @@
 const express = require('express');
 const appExpress = express();
 const bodyParser = require('body-parser');
-const Pergunta = require('./models/pergunta.js');
+const Pergunta = require('./models/Pergunta.js');
 const mongoose = require('mongoose');
 
 // Configurando o body-parser //
@@ -18,10 +18,8 @@ appExpress.use(express.static('public'));
 
 // CONFIGURANDO AS ROTAS
 appExpress.get('/', (req, res) => {
-    // res.render('index', {
-    // })
-    res.status(200).json({ msg: "Bem-vindo a nossa API!!" });
-    console.log(req.body);
+    res.render('index', {
+    })
 });
 
 appExpress.get('/perguntar', (req, res) => {
@@ -32,18 +30,16 @@ appExpress.post('/salvarPergunta', async (req, res) => {
     const title = req.body.title;
     const descrition = req.body.descrition;
 
-    try {
-        const criarPergunta = await Pergunta.create({
-            title,
-            descrition
-        });
+    const criarPergunta = await Pergunta.create({
+        title,
+        descrition
+    }).then(()=> {
         console.log('Pergunta salva!');
-        return res.send(`<h1>Formulário recebido!</h1> 
-        <h3>title = ${title} </br> description = ${descrition}</h3>`);
-    } catch (erro) {
-        console.log('Erro ao salvar a pergunta: ' + erro);
+        res.redirect('/')
+    }).catch((smgErro) => {
+        console.log('Erro ao salvar a pergunta: ' + smgErro);
         return res.status(500).send('Erro ao salvar a pergunta');
-    }
+    })
 });
 
 
@@ -58,8 +54,7 @@ mongoose.connect("mongodb+srv://ramon:ramon123456789@cluster0.vmlmrz3.mongodb.ne
     appExpress.listen('4000', () => {
         console.log('Servidor rodando...');
     });
-})
-.catch(err => {
+}).catch(err => {
     console.log('Erro ao conectar ao banco de dados: ' + err);
 });
 
