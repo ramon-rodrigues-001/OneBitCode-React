@@ -18,8 +18,16 @@ appExpress.use(express.static('public'));
 
 // CONFIGURANDO AS ROTAS
 appExpress.get('/', (req, res) => {
-    res.render('index', {
+
+    Pergunta.find()
+    .then(perguntas => {
+        res.render('index', {
+            perguntas: perguntas
+        })
     })
+    .catch(erro => {
+        console.log('Erro ao buscar perguntas: ' + erro);
+    });
 });
 
 appExpress.get('/perguntar', (req, res) => {

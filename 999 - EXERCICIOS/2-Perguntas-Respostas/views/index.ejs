@@ -1,10 +1,23 @@
 <%- include ("partials/header.ejs") %>
 <body>
-
     <%- include ("partials/navbar.ejs") %>
 
-    <h1>Hello, World!!</h1>
 
+    <div class="container">
+        <% perguntas.forEach((p)=> { %> 
+            <div class="card m-4">
+                <div class="card-header">
+                    <h4><%= p.title %></h4>
+                </div>
+
+                <div class="card-body">
+                    <p><%= p.descrition %></p>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+
+    
     <%- include ("partials/footer.ejs") %>
 </body>
 </html>
