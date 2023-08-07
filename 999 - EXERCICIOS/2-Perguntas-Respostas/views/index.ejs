@@ -2,16 +2,20 @@
 <body>
     <%- include ("partials/navbar.ejs") %>
 
-
     <div class="container">
+
+        <h1>Perguntas</h1>
+        <a href="/perguntar" class="btn btn-success px-5">Perguntar</a>
+        <hr>
+
         <% perguntas.forEach((p)=> { %> 
             <div class="card m-4">
-                <div class="card-header">
+                <div class="card-body">
                     <h4><%= p.title %></h4>
                 </div>
 
-                <div class="card-body">
-                    <p><%= p.descrition %></p>
+                <div class="card-footer">
+                    <button class="btn btn-success">Responder</button>
                 </div>
             </div>
         <% }) %>

@@ -19,7 +19,7 @@ appExpress.use(express.static('public'));
 // CONFIGURANDO AS ROTAS
 appExpress.get('/', (req, res) => {
 
-    Pergunta.find()
+    Pergunta.find().sort({ _id: -1 })
     .then(perguntas => {
         res.render('index', {
             perguntas: perguntas
