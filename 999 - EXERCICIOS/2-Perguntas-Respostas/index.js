@@ -30,8 +30,8 @@ appExpress.get('/', (req, res) => {
     });
 });
 
-appExpress.get('/perguntar', (req, res) => {
-    res.render('perguntar');
+appExpress.get('/fazerPergunta', (req, res) => {
+    res.render('fazerPergunta');
 });
 
 appExpress.post('/salvarPergunta', async (req, res) => {
@@ -49,6 +49,21 @@ appExpress.post('/salvarPergunta', async (req, res) => {
         return res.status(500).send('Erro ao salvar a pergunta');
     })
 });
+
+
+appExpress.get('/fazerPergunta/:id', (req, res) => {
+    const id = req.params.id
+    Pergunta.findOne({_id: id}).then(pergunta => {
+        if (pergunta != undefined) {
+            res.render('pergunta', {
+                pergunta: pergunta
+            })
+        }
+    }).catch((smgErro) => {
+        console.log('Busca por id desconhecido!: ' + smgErro)
+        res.redirect('/')
+    })
+})
 
 
 
