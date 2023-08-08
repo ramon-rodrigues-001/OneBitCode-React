@@ -56,8 +56,12 @@ appExpress.get('/fazerPergunta/:id', (req, res) => {
     const id = req.params.id
     Pergunta.findOne({_id: id}).then(pergunta => {
         if (pergunta != undefined) {
-            res.render('pergunta', {
-                pergunta: pergunta
+            
+            Resposta.find( {perguntaId: id} ).then((respostas) => {
+                res.render('pergunta', {
+                    pergunta: pergunta,
+                    respostas: respostas
+                }) 
             })
         }
     })
@@ -71,10 +75,9 @@ appExpress.post('/resposta', (req, res) => {
 
     Resposta.create({
         texto: texto,
-        perguntaId: idPergunta
+        perguntaId: idPerguntaLimpo
     }).then(() => {
         res.redirect(`/fazerPergunta/` + idPerguntaLimpo)
-        console.log(`/fazerPergunta/` + idPerguntaLimpo)
     })  
 })
 

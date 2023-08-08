@@ -1,10 +1,10 @@
 <%- include ("partials/header.ejs") %>
 <body>
-    <%- include ("partials/navbar.ejs"); %>
+    <%- include ("partials/navbar.ejs"); %> <br>
     
     <div class="container">
-        <h3><%= pergunta.title %></h3>
-        <p><%= pergunta.descrition %></p>
+        <h3><%= pergunta.title %></h3> <br>
+        <p><%= pergunta.descrition %></p> <br>
         <hr>
 
         <h5>Responda</h5>
@@ -12,9 +12,24 @@
             <textarea name="resposta" id="idResposta" class="form-control mb-3" placeholder="Digite sua resposta!"></textarea>
             <input type="hidden" name="inputIDPergunta" value=`<%= pergunta.id %>`>
             <button type="submit" class="btn btn-success">Responder</button>
-        </form>
-    </div>
+        </form> <br>
+        <hr>
 
-    <%- include ("partials/footer.ejs"); %>
+    
+        <div>
+            <% respostas.forEach((e) => { %>
+                <div class="card my-3">
+                    <div class="card-header">
+                        10/03/2029
+                    </div>
+                    <div class="card-body">
+                        <h6><%= e.texto %></h6>
+                    </div>
+                </div>
+            <% }) %> <br>
+        </div>
+    </div> 
+
+    <%- include ("partials/footer.ejs"); %> 
 </body>
 </html>
