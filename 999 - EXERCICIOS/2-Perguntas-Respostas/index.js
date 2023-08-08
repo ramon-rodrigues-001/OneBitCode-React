@@ -60,12 +60,23 @@ appExpress.get('/fazerPergunta/:id', (req, res) => {
                 pergunta: pergunta
             })
         }
-    }).catch((smgErro) => {
-        console.log('Busca por id desconhecido!: ' + smgErro)
-        res.redirect('/')
     })
 })
 
+
+appExpress.post('/resposta', (req, res) => {
+    const texto = req.body.resposta
+    const idPergunta = req.body.inputIDPergunta
+    const idPerguntaLimpo = idPergunta.replace(/`/g, '')
+
+    Resposta.create({
+        texto: texto,
+        perguntaId: idPergunta
+    }).then(() => {
+        res.redirect(`/fazerPergunta/` + idPerguntaLimpo)
+        console.log(`/fazerPergunta/` + idPerguntaLimpo)
+    })  
+})
 
 
 //CONECTANDO AO MONGO
