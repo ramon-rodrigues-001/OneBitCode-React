@@ -1,8 +1,9 @@
 const express = require('express');
 const appExpress = express();
 const bodyParser = require('body-parser');
-const Pergunta = require('./models/Pergunta.js');
 const mongoose = require('mongoose');
+const Pergunta = require('./models/Pergunta.js');
+const Resposta = require('./models/Resposta.js');
 
 // Configurando o body-parser //
 appExpress.use(bodyParser.urlencoded({ extended: false }));
