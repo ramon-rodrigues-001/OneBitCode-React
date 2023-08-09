@@ -27,8 +27,6 @@ appExpress.get('/', async (req, res) => {
             return { ...pergunta.toObject(), numComentarios: numComentarios };
         }));
 
-        console.log(perguntasComComentarios)
-
         res.render('index', {
             perguntas: perguntasComComentarios
         });

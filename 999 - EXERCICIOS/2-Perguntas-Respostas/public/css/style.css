@@ -1,11 +1,27 @@
+* {
+    font-family: 'Averia Serif Libre', cursive;
+    box-sizing: border-box;
+}
+
 
 body {
     background-color: #e5e8e9;
 }
 
+
+.container {
+    max-width: 90vw;
+}
+
 label {
     font-weight: bold;
 }
+
+p {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
 
 #btnPerguntar  {
     width: 150px;
@@ -14,4 +30,17 @@ label {
 
 nav {
     margin-bottom: 20px;
+}
+
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #151515;
+}
+::-webkit-scrollbar-track {
+    background-color: #151515;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(66, 159, 15);
+    border-radius: 10px;
 }

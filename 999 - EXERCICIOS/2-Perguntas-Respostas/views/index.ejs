@@ -14,13 +14,9 @@
                     <h5 style="font-weight: bold;"><%= p.title %></h5>
                 </div>
 
-                <div class="card-footer">
-                    <div style="display: flex; justify-content: space-between;">
-                        <p>Ramon Rodrigues</p>
-                        <p><%= p.numComentarios %></p>
-                        <p>09/08/2023</p>
-                    </div>
-                    <a class="btn btn-success" style="width: 100%;" href="/fazerPergunta/<%= p.id %>">Responder</a>
+                <div class="card-footer" style="display: flex; flex-direction: column; align-items: end;"> 
+                    <p><%= p.numComentarios %> comentarios</p>
+                    <a class="btn btn-success" style="width: 100%;" href="/fazerPergunta/<%= p._id %>">Ver Pergunta</a>
                 </div>
             </div>
         <% }) %>
