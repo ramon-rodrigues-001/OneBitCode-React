@@ -1,8 +1,9 @@
 const mongoose = require('mongoose')
 
 const Resposta = mongoose.model('Resposta', {
-    texto: {type: String, require: true},
-    perguntaId: {type: String, require: true}
+    data: {type: String, required: true},
+    texto: {type: String, required: true},
+    perguntaId: {type: String, required: true}
 })
 
 module.exports = Resposta

@@ -57,23 +57,37 @@ appExpress.get('/fazerPergunta/:id', (req, res) => {
     Pergunta.findOne({_id: id}).then(pergunta => {
         if (pergunta != undefined) {
             
-            Resposta.find( {perguntaId: id} ).then((respostas) => {
+            Resposta.find({ perguntaId: id }).sort({ _id: -1 }).then((respostas) => {
                 res.render('pergunta', {
                     pergunta: pergunta,
                     respostas: respostas
-                }) 
-            })
+                });
+            });
         }
     })
 })
 
 
 appExpress.post('/resposta', (req, res) => {
+    let data = `${new Date().getDate()}/${new Date().getMonth()+1}/${new Date().getFullYear()}`
+
+    if ((new Date().getDate()) < 10) {
+        data = `0${new Date().getDate()}/${new Date().getMonth()+1}/${new Date().getFullYear()}`
+    }else if ((new Date().getMonth() + 1) < 10) {
+        data = `${new Date().getDate()}/0${new Date().getMonth()+1}/${new Date().getFullYear()}`
+    }
+
+    if ((new Date().getMonth() + 1) < 10 && (new Date().getDate()) < 10) {
+        data = `0${new Date().getDate()}/0${new Date().getMonth()+1}/${new Date().getFullYear()}`
+    }
+    
+
     const texto = req.body.resposta
     const idPergunta = req.body.inputIDPergunta
     const idPerguntaLimpo = idPergunta.replace(/`/g, '')
 
     Resposta.create({
+        data: data,
         texto: texto,
         perguntaId: idPerguntaLimpo
     }).then(() => {
@@ -95,4 +109,6 @@ mongoose.connect("mongodb+srv://ramon:ramon123456789@cluster0.vmlmrz3.mongodb.ne
 }).catch(err => {
     console.log('Erro ao conectar ao banco de dados: ' + err);
 });
+
+
 
