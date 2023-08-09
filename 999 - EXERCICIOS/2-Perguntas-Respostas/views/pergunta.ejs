@@ -2,10 +2,17 @@
 <body>
     <%- include ("partials/navbar.ejs"); %> <br>
     
+    <div style="border-radius: 15px; max-width: 90%; margin: auto;" class="card">
+        <div class="card-header">
+            <h3><%= pergunta.title %></h3>
+        </div>
+        <div class="card-body">
+            <p style="font-weight: bold;"><%= pergunta.descrition %></p>
+        </div>
+    </div> <br>
+    <hr>
     <div class="container">
-        <h3><%= pergunta.title %></h3> <br>
-        <p style="font-weight: bold;"><%= pergunta.descrition %></p> <br>
-        <hr>
+        
 
         <h5>Responda</h5> 
         <form action="/resposta" method="post">

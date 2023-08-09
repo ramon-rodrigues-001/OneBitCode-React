@@ -18,17 +18,25 @@ appExpress.use(express.static('public'));
 
 
 // CONFIGURANDO AS ROTAS
-appExpress.get('/', (req, res) => {
+appExpress.get('/', async (req, res) => {
+    try {
+        const perguntas = await Pergunta.find().sort({ _id: -1 });
 
-    Pergunta.find().sort({ _id: -1 })
-    .then(perguntas => {
+        const perguntasComComentarios = await Promise.all(perguntas.map(async (pergunta) => {
+            const numComentarios = await Resposta.countDocuments({ perguntaId: pergunta._id });
+            return { ...pergunta.toObject(), numComentarios: numComentarios };
+        }));
+
+        console.log(perguntasComComentarios)
+
         res.render('index', {
-            perguntas: perguntas
-        })
-    })
-    .catch(erro => {
-        console.log('Erro ao buscar perguntas: ' + erro);
-    });
+            perguntas: perguntasComComentarios
+        });
+
+    } catch (erro) {
+        console.error('Erro:', erro);
+        res.status(500).send('Erro ao buscar perguntas e contar comentários.');
+    }
 });
 
 appExpress.get('/fazerPergunta', (req, res) => {
@@ -50,6 +58,8 @@ appExpress.post('/salvarPergunta', async (req, res) => {
         return res.status(500).send('Erro ao salvar a pergunta');
     })
 });
+
+
 
 
 appExpress.get('/fazerPergunta/:id', (req, res) => {

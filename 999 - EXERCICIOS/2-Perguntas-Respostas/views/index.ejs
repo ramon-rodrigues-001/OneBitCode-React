@@ -11,11 +11,16 @@
         <% perguntas.forEach((p)=> { %> 
             <div class="card m-4">
                 <div class="card-body">
-                    <h4><%= p.title %></h4>
+                    <h5 style="font-weight: bold;"><%= p.title %></h5>
                 </div>
 
                 <div class="card-footer">
-                    <a class="btn btn-success" href="/fazerPergunta/<%= p.id %>">Responder</a>
+                    <div style="display: flex; justify-content: space-between;">
+                        <p>Ramon Rodrigues</p>
+                        <p><%= p.numComentarios %></p>
+                        <p>09/08/2023</p>
+                    </div>
+                    <a class="btn btn-success" style="width: 100%;" href="/fazerPergunta/<%= p.id %>">Responder</a>
                 </div>
             </div>
         <% }) %>
