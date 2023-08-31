@@ -1,0 +1,129 @@
+footer#contatos {
+    font-size: .9em;
+    font-weight: bold;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #010f25;
+    color: $color;
+    min-height: 100vh;
+
+    #animação-texto-contatos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        text-align: center;
+        
+        .btnPersonalizado {
+            padding: 10px;
+
+            &::before {
+                width: 200%;
+                height: 0;
+            }
+            &:hover {
+        
+                &::before {
+                    background-color: aqua;
+                    height: 450%;
+                    width: 200%;
+                }
+            }
+        }
+        
+        .footer-cards {
+            max-width: 200px;
+            margin: 10px;
+        }
+
+
+        form {
+            text-align: left;
+            padding: 10px;
+            margin-top: 15px;
+
+            h2 {
+                margin-bottom: 15px;
+            }
+
+            #div-name-email {
+                display: flex;
+                gap: 20px;
+
+                input {
+                    font-weight: bold;
+                    border-radius: 10px;
+                    border: none;
+                    padding: 10px 20px;
+                }
+            }
+
+            #div-textarea {
+
+                textarea {
+                    font-weight: bold;
+                    width: 98%;
+                    border-radius: 10px;
+                    padding: 10px 20px;
+                }
+            }
+
+            #submit {
+                background-color: #010f25;
+                color: white;
+                font-weight: bold;
+                border-radius: 10px;
+                border: solid 1.5px white;
+                margin: 30px 0px;
+                width: 240px;
+                padding: 10px 20px;
+
+                &:hover {
+                    border: solid 1.5px aqua;
+                    box-shadow: 1px 1px 5px 1px rgba(0, 255, 255, 0.208);
+                    color: aqua;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 930px) {
+    footer#contatos {
+        padding-top: 50px;
+        
+        #animação-texto-contatos {
+            flex-direction: column;
+            gap: 0px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    footer#contatos {
+
+        #animação-texto-contatos {
+
+            form {
+
+                #div-name-email {
+                    display: inline-block;
+                    width: 90vw;
+
+                    input {
+                        width: 100%;
+                    }
+
+                    * {
+                        margin: 5px 0px;
+                    }
+                }
+            }
+        }
+    }
+}
