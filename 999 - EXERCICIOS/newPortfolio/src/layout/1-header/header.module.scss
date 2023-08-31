@@ -1,0 +1,213 @@
+@import "../../style/colors.scss";
+
+
+#headerHome {
+    position: fixed;
+    background-color: #031b3d;
+    color: $color;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: solid .5px #5283c7;
+    z-index: 10;
+    padding: 3px;
+    width: 100vw;
+    height: 63px;
+    z-index: 999;
+
+
+    #logo {
+        font-size: 2em;
+        text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.656);
+    }
+
+
+    #navbar{
+        display: flex;
+        gap: 28px;
+
+        .aspasNavbar {
+            color: transparent;
+        }
+
+        a {
+            font: bold 0.8em normal Arial, sans-serif;
+            color: $color;
+            text-decoration: none;
+            transition: .4s;
+
+            &:hover {
+                color: $info;
+
+                .aspasNavbar {
+                    color: $info;
+                }
+            }
+        }
+    }
+
+    #hamburguer {
+        display: none;
+    }
+
+    #containerFluid {
+        position: relative;
+        z-index: 999;
+        padding: 0;
+
+        #offcanvasNavbar {
+            background-color: transparent;
+            color: white;
+            width: 100vw;
+            backdrop-filter: blur(8px);
+
+            #offcanvas-body {
+                
+                .itens_menu {
+                    display: block;
+                    border-width: 2px;
+                    font-size: 1.1em;
+                    margin: 10px 0px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    #butaoGithub {
+        font-size: 1.4em;
+        padding: 1px 7px;
+        border-radius: 50%;
+        background-color: transparent;
+        border-width: 0px;
+
+        &:hover {
+            scale: 1.2;
+        }
+    }
+}
+
+
+// ====== deixando o nav mais confortavel ======
+@media screen and (max-width: 900px) {
+    #header-home {
+        justify-content: space-evenly;
+
+        #logo {
+            font-size: 1.7em;
+        }
+
+        #navbar {
+            gap: 20;
+
+            a {
+                font-size: .8em;
+            }
+        }
+
+        #butao-github {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #header-home {
+        padding: 10px;
+    }
+}
+
+
+// ====== Mudando o leyout do header para menu hamburguer ======
+
+@media screen and (max-width: 700px) {
+    #header-home {
+        justify-content: left;
+
+        #logo {
+            padding-left: 20px;
+        }
+
+        #navbar {
+            display: none;
+        }
+        
+        #hamburguer {
+            display: inline-block;
+
+            #menu {
+                position: absolute;
+                top: 10px;
+                right: 10%;
+                z-index: 9999;
+                padding: 5px;
+                .tracos {
+                    background-color: $info;
+                    margin: 5px 0px;
+                    transition: .1s;
+                    width: 40px;
+                    height: 5px;
+                }
+            }
+        }
+
+
+        // ====== Menu itens apareçe e desapareçe ======
+
+        input[type="checkbox"]:checked ~ label #hamburguer #itens {
+            position: fixed;
+            right: 0;
+            top: 0;
+            background-color: rgba(222, 220, 220, 0.876);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            transition: transform 2s, height 2s;
+        }
+
+
+        // ====== Menu fechando em forma de X ======
+
+        input[type="checkbox"]:checked ~ label #hamburguer #menu {
+            position: absolute;
+            top: 10px;
+        }
+        input[type="checkbox"]:checked ~ #hamburguer label #menu #traco-1 {
+            position: absolute;
+            top: 10px;
+            transform: rotate(45deg);
+            transition: .7s;
+        }
+        input[type="checkbox"]:checked ~ #hamburguer label #menu #traco-2 {
+            transform: translateX(-100px);
+            visibility: hidden;
+            transition: .1s;
+        }
+        input[type="checkbox"]:checked ~ #hamburguer label #menu #traco-3 {
+            position: absolute;
+            top: 10px;
+            transform: rotate(-45deg);
+            transition: .7s;
+        }
+    }
+}
+
+
+// barra de rolagem
+
+#scroll {
+    width: 100vw;
+
+    #barra-de-scroll {
+        background-color: $info;
+        box-shadow: 0px 0px 30px 0px $info;
+        height: 1.8px;
+        width: 0%;
+        position: fixed;
+        top: 60px;
+        z-index: 999;
+    }
+}
