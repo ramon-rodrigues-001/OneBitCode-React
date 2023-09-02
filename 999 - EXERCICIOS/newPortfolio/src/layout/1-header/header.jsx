@@ -1,8 +1,10 @@
 import styles from "./header.module.scss"
-// import React from 'react';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-import { Envelope, Github, Linkedin } from 'react-bootstrap-icons'; 
+import { Github, Linkedin } from 'react-bootstrap-icons'; 
 
+/* 
+Falta uns detalhes no menu
+O estilo geral não esta sendo aplicados nos elementos com {styles}
+*/
 
 export default function Header() {
     return (
@@ -51,10 +53,10 @@ export default function Header() {
                 </label>
                 
                 <div className="container-fluid" id={styles.containerFluid}>
-                    <div className="offcanvas offcanvas-end bg-transparent" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" data-bs-backdrop="false">
+                    <div className="offcanvas offcanvas-end bg-transparent w-100" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" data-bs-backdrop="false">
                         <div id={styles.offcanvasNavbar}>
                             <div className="offcanvas-header mx-5">
-                                <h5 className="offcanvas-title" id="offcanvasNavbarLabel">&lt; DEV / &gt;</h5>
+                                <h1 className="offcanvas-title" id="offcanvasNavbarLabel">&lt; MENU / &gt;</h1>
                             </div>
                             <div className="offcanvas-body" id={styles.offcanvasBody}>
                                 <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">

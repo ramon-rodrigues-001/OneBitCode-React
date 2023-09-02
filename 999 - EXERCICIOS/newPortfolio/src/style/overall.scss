@@ -15,7 +15,7 @@
 }
 
 #container-hmf {
-    background-color: $preto-absoluto;
+    background-color: black;
     font-size: 1.1em;
 }
 .h1 {
@@ -27,8 +27,8 @@ h2 {
     margin-bottom: 20px;
 }
 .span-azulMarinho {
-    color: $info;
-    text-shadow: 0px 0px 10px $info;
+    color: $ciano;
+    text-shadow: 0px 0px 10px $ciano;
 }
 
 // Removendo o icone do input checkbox
@@ -104,7 +104,7 @@ input[type="checkbox"] {
         }
 
         &::before {
-            background-color: aqua;
+            background-color: $ciano;
             height: 450%;
         }
     }

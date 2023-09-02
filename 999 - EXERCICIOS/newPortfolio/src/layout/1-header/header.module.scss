@@ -3,12 +3,11 @@
 
 #headerHome {
     position: fixed;
-    background-color: #031b3d;
-    color: $color;
+    background-color: $azul-escuro;
+    color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom: solid .5px #5283c7;
     z-index: 10;
     padding: 3px;
     width: 100vw;
@@ -17,7 +16,9 @@
 
 
     #logo {
+        cursor: pointer;
         font-size: 2em;
+        min-width: 180px;
         text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.656);
     }
 
@@ -32,15 +33,15 @@
 
         a {
             font: bold 0.8em normal Arial, sans-serif;
-            color: $color;
+            color: white;
             text-decoration: none;
             transition: .4s;
 
             &:hover {
-                color: $info;
+                color: $ciano;
 
                 .aspasNavbar {
-                    color: $info;
+                    color: $ciano;
                 }
             }
         }
@@ -62,15 +63,12 @@
             height: 100%;
             backdrop-filter: blur(8px);
 
-            #offcanvasBody {
-                
-                #itensMenu {
-                    display: block;
-                    border-width: 2px;
-                    font-size: 1.1em;
-                    margin: 10px 0px;
-                    text-align: center;
-                }
+            #itensMenu {
+                display: block;
+                border-width: 2px;
+                font-size: 1.1em;
+                margin: 10px 0px;
+                text-align: center;
             }
         }
     }
@@ -78,12 +76,14 @@
     #butaoRepositorios {
         font-size: 1.4em;
         padding: 1px 7px;
-        border-radius: 50%;
         background-color: transparent;
+        color: white;
         border-width: 0px;
+        transition: .3s;
         
         &:hover {
             scale: 1.2;
+            color: $ciano;
         }
     }
 }
@@ -92,11 +92,7 @@
 // ====== deixando o nav mais confortavel ======
 @media screen and (max-width: 900px) {
     #headerHome {
-        justify-content: space-evenly;
-
-        #logo {
-            font-size: 1.7em;
-        }
+        padding: 0px 20px;
 
         #navbar {
             gap: 20;
@@ -112,22 +108,11 @@
     }
 }
 
-@media screen and (max-width: 750px) {
-    #headerHome {
-        padding: 10px;
-    }
-}
-
 
 // ====== Mudando o leyout do header para menu hamburguer ======
 
 @media screen and (max-width: 700px) {
     #headerHome {
-        justify-content: left;
-
-        #logo {
-            padding-left: 20px;
-        }
 
         #navbar {
             display: none;
@@ -142,8 +127,9 @@
                 right: 10%;
                 z-index: 9999;
                 padding: 5px;
+
                 .tracos {
-                    background-color: $info;
+                    background-color: $ciano;
                     margin: 5px 0px;
                     transition: .1s;
                     width: 40px;
@@ -193,21 +179,5 @@
             transform: rotate(-45deg);
             transition: .7s;
         }
-    }
-}
-
-
-// barra de rolagem
-#scroll {
-    width: 100vw;
-
-    #barra-de-scroll {
-        background-color: $info;
-        box-shadow: 0px 0px 30px 0px $info;
-        height: 1.8px;
-        width: 0%;
-        position: fixed;
-        top: 60px;
-        z-index: 999;
     }
 }
