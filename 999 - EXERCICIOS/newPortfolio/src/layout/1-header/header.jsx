@@ -1,102 +1,109 @@
 import styles from "./header.module.scss"
-import { Github, Linkedin } from 'react-bootstrap-icons'; 
+import { Github, Linkedin, MoonStarsFill, BrightnessHighFill } from 'react-bootstrap-icons';
+import React, { useState } from "react"; 
 
 /* 
 Falta uns detalhes no menu
 O estilo geral não esta sendo aplicados nos elementos com {styles}
 */
 
-export default function Header() {
-    return (
-        <header id={styles.headerHome}>
-            <h1 id={styles.logo}>
-                {/* detalhe */}
-                <span className={styles.spanAzulMarinho}>&lt; / D</span>EV &gt;
-            </h1>
+export default function Header(props) {
+    const { tema, mudarTema } = props
 
-            {/* Navbar para tela quandes */}
-            <nav id={styles.navbar}>
-                {/* <Envelope color="blue" size={32} /> */}
-                <a href="#sobre-mim">
-                    <span className={styles.aspasNavbar}>&lt; </span>
-                        SOBRE MIM
-                    <span className={styles.aspasNavbar}> &gt;</span>
-                </a>
-                <a href="#habilidades">
-                    <span className={styles.aspasNavbar}>&lt; </span>
-                        HABILIDADES
-                    <span className={styles.aspasNavbar}> &gt;</span>
-                </a>
-                <a href="#ancora-projetos">
-                    <span className={styles.aspasNavbar}>&lt; </span>
-                        PROJETOS
-                    <span className={styles.aspasNavbar}> &gt;</span>
-                </a>
-                <a href="#contatos">
-                    <span className={styles.aspasNavbar}>&lt; </span>
-                        CONTATOS
-                    <span className={styles.aspasNavbar}> &gt;</span>
-                </a>
-            </nav>
-            {/* / Navbar para tela quandes */}
-            
-            {/* Navbar menu hamburguer tela peguena até 650px */}
-            {/* Detalhe */}
-            <input type="checkbox" name="check-menu" id="check-menu" />
-            <menu id={styles.hamburguer}>
-                <label htmlFor="check-menu">
-                    <div id={styles.menu} type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                        <div className={styles.tracos} id={styles.tracoOne}></div>
-                        <div className={styles.tracos} id={styles.tracoTwo}></div>
-                        <div className={styles.tracos} id={styles.tracoThree}></div>
-                    </div>
-                </label>
+    return (
+        <header className={styles.header_Home} 
+        id={`${tema === 'Light' ? styles.Light : styles.Dark}`}>
+            <div className={styles.container_Header}>
+                <h1 id={styles.logo}>
+                    {/* detalhe */}
+                    <span className={styles.span_Azul_Marinho}>&lt; / D</span>EV &gt;
+                </h1>
+                {/* Navbar para tela quandes */}
+                <nav id={styles.navbar}>
+                    <a href="#sobre-mim">
+                        <span className={styles.aspas_Navbar}>&lt; </span>
+                            SOBRE MIM
+                        <span className={styles.aspas_Navbar}> &gt;</span>
+                    </a>
+                    <a href="#habilidades">
+                        <span className={styles.aspas_Navbar}>&lt; </span>
+                            HABILIDADES
+                        <span className={styles.aspas_Navbar}> &gt;</span>
+                    </a>
+                    <a href="#ancora-projetos">
+                        <span className={styles.aspas_Navbar}>&lt; </span>
+                            PROJETOS
+                        <span className={styles.aspas_Navbar}> &gt;</span>
+                    </a>
+                    <a href="#contatos">
+                        <span className={styles.aspas_Navbar}>&lt; </span>
+                            CONTATOS
+                        <span className={styles.aspas_Navbar}> &gt;</span>
+                    </a>
+                </nav>
+                {/* / Navbar para tela quandes */}
                 
-                <div className="container-fluid" id={styles.containerFluid}>
-                    <div className="offcanvas offcanvas-end bg-transparent w-100" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" data-bs-backdrop="false">
-                        <div id={styles.offcanvasNavbar}>
-                            <div className="offcanvas-header mx-5">
-                                <h1 className="offcanvas-title" id="offcanvasNavbarLabel">&lt; MENU / &gt;</h1>
-                            </div>
-                            <div className="offcanvas-body" id={styles.offcanvasBody}>
-                                <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                    <li className="nav-item">
-                                        <a className="btn btn-outline-light btnPersonalizado itensMenu" href="#sobre-mim">Sobre Mim</a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a className="btn btn-outline-light btnPersonalizado itensMenu" href="#habilidades">Habilidades</a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a className="btn btn-outline-light btnPersonalizado" id={styles.itensMenu} href="#ancora-projetos">Projetos</a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a className="btn btn-outline-light btnPersonalizado itensMenu" href="#vamos-trabalhar-juntos">Iniciar um conversa</a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a className="btn btn-outline-light btnPersonalizado itensMenu" href="#contatos">contatos</a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a className="btn btn-outline-danger btnPersonalizado itensMenu" href="https://github.com/ramon-rodrigues-001" target="_blank">GITHUB</a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a className="btn btn-outline-danger btnPersonalizado itensMenu" href="https://www.linkedin.com/in/ramon-rodrigues-515a9b244/" target="_blank">LINKEDIN</a>
-                                    </li>
-                                </ul>
+                {/* Navbar menu hamburguer tela peguena até 650px */}
+                {/* Detalhe */}
+                <input type="checkbox" name="check-menu" id="check-menu" />
+                <menu id={styles.hamburguer}>
+                    <label htmlFor="check-menu">
+                        <div id={styles.menu} type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                            <div className={styles.tracos} id={styles.tracoOne}></div>
+                            <div className={styles.tracos} id={styles.tracoTwo}></div>
+                            <div className={styles.tracos} id={styles.tracoThree}></div>
+                        </div>
+                    </label>
+                
+                    <div className="container-fluid" id={styles.container_Fluid}>
+                        <div className="offcanvas offcanvas-end bg-transparent w-100" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" data-bs-backdrop="false">
+                            <div id={styles.offcanvas_Navbar}>
+                                <div className="offcanvas-body" id={styles.offcanvas_Body}>
+                                    <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                        <li className="nav-item">
+                                            <buton className="btn btn-outline-light btnPersonalizado" id={styles.itens_Menu} onClick={mudarTema}>
+                                                Mudar Tema <MoonStarsFill/>
+                                            </buton>
+                                        </li>
+                                        <li className="nav-item">
+                                            <a className="btn btn-outline-light btnPersonalizado" id={styles.itens_Menu} href="#sobre-mim">Sobre Mim</a>
+                                        </li>
+                                        <li className="nav-item">
+                                            <a className="btn btn-outline-light btnPersonalizado" id={styles.itens_Menu} href="#habilidades">Habilidades</a>
+                                        </li>
+                                        <li className="nav-item">
+                                            <a className="btn btn-outline-light btnPersonalizado" id={styles.itens_Menu} href="#ancora-projetos">Projetos</a>
+                                        </li>
+                                        <li className="nav-item">
+                                            <a className="btn btn-outline-light btnPersonalizado" id={styles.itens_Menu} href="#vamos-trabalhar-juntos">Iniciar um conversa</a>
+                                        </li>
+                                        <li className="nav-item">
+                                            <a className="btn btn-outline-light btnPersonalizado" id={styles.itens_Menu} href="#contatos">contatos</a>
+                                        </li>
+                                        <li className="nav-item">
+                                            <a className="btn btn-outline-danger btnPersonalizado" id={styles.itens_Menu} href="https://github.com/ramon-rodrigues-001" target="_blank">GITHUB</a>
+                                        </li>
+                                        <li className="nav-item">
+                                            <a className="btn btn-outline-danger btnPersonalizado" id={styles.itens_Menu} href="https://www.linkedin.com/in/ramon-rodrigues-515a9b244/" target="_blank">LINKEDIN</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </menu>
+                 {/* / Menu hamburguer */}
+                <div>
+                    <a className="btn btn-outline-info me-2" href="https://github.com/ramon-rodrigues-001/" target="_blank" id={styles.butao_Repositorios}>
+                        <Github/>
+                    </a>
+                    <a className="btn btn-outline-info me-2" href="https://www.linkedin.com/in/ramon-rodrigues-515a9b244/" target="_blank" id={styles.butao_Repositorios}>
+                        <Linkedin/>
+                    </a>
+                    <button onClick={mudarTema} className="btn btn-outline-info me-2" id={styles.butao_Repositorios}>
+                        {tema === 'Dark' ? <MoonStarsFill/> : <BrightnessHighFill/>}
+                    </button>
                 </div>
-            </menu>
-             {/* / Menu hamburguer */}
-
-
-            <div>
-                <a className="btn btn-outline-info btnPersonalizado me-2" href="https://github.com/ramon-rodrigues-001/" target="_blank" id={styles.butaoRepositorios}>
-                    <Github/>
-                </a>
-                <a className="btn btn-outline-info btnPersonalizado me-2" href="https://www.linkedin.com/in/ramon-rodrigues-515a9b244/" target="_blank" id={styles.butaoRepositorios}>
-                    <Linkedin/>
-                </a>
             </div>
         </header>
     )

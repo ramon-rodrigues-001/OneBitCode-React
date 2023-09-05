@@ -1,6 +1,8 @@
 // Font 'Averia Serif Libre'
 @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
+@import "./colors.scss";
+
 * {
     font-family: 'Averia Serif Libre', cursive;
     font-weight: bold;
@@ -9,27 +11,42 @@
     padding: 0;
 }
 
-#container-hmf {
-    scroll-behavior: smooth;
-    overflow: hidden;
+.container_overall {
+    background-color: rgba(0, 0, 0, 0.923);
+
+    .container_main {
+        max-width: 1100px;
+        width: 93vw;
+        margin: auto;
+    }
+
+    &#Ligth {
+        background-color: $cinza-claro;
+        color: $preto;
+    }
 }
 
-#container-hmf {
-    background-color: black;
-    font-size: 1.1em;
-}
-.h1 {
-    font-size: 2em;
-    color: white;
-}
-h2 {
-    color: white;
-    margin-bottom: 20px;
-}
-.span-azulMarinho {
-    color: $ciano;
-    text-shadow: 0px 0px 10px $ciano;
-}
+// #container-hmf {
+//     scroll-behavior: smooth;
+//     overflow: hidden;
+// }
+
+// #container-hmf {
+//     background-color: black;
+//     font-size: 1.1em;
+// }
+// .h1 {
+//     font-size: 2em;
+//     color: white;
+// }
+// h2 {
+//     color: white;
+//     margin-bottom: 20px;
+// }
+// .span-azulMarinho {
+//     color: white;
+//     text-shadow: 0px 0px 10px white;
+// }
 
 // Removendo o icone do input checkbox
 input[type="checkbox"] {
@@ -104,7 +121,7 @@ input[type="checkbox"] {
         }
 
         &::before {
-            background-color: $ciano;
+            background-color: white;
             height: 450%;
         }
     }
