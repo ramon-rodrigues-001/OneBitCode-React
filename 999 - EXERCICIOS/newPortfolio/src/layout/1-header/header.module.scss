@@ -115,7 +115,7 @@
 
     &#Light {
         background-color: $cinza-escuro;
-        color: $branco;
+        color: $verde-header-claro;
         
         #logo {
             color: $branco;
@@ -124,16 +124,16 @@
         a {
             color: $branco;
             &:hover {
-                color: $preto;
+                color: $verde-header-claro;
                 .aspas_Navbar {
-                    color: $preto;
+                    color: $verde-header-claro;
                 }
             }
         }
 
         #butao_Repositorios {
             &:hover {
-                color: $preto;
+                color: $verde-header-claro;
             }
         }
 

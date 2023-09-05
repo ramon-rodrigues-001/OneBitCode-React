@@ -1,23 +1,48 @@
 // IMPORTANDO LAYOUT
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./style/overall.scss"
 import Header from "./layout/1-header/header";
 import SobreMim from "./layout/2-sobreMim/sobre-mim";
 
 function App() {
   const [tema, setTema] = useState('Dark')
+  const [olhos, setOlhos] = useState('false')
+  const [intervalTime, setIntervalTime] = useState(2000);
 
+  // EXIBIR OLHOS
+  const toggleOlhos = () => {
+    setOlhos((prevOlhos) => !prevOlhos);
+  };
+
+  useEffect(() => {
+    const intervalId = setInterval(toggleOlhos, intervalTime);
+
+    return () => clearInterval(intervalId);
+  }, [intervalTime]);
+
+  useEffect(() => {
+    if (olhos) {
+      setIntervalTime(2000)
+    } else {
+      setIntervalTime(4000)
+    }
+  }, [olhos]);
+
+
+  // Mudar Tema CLARO / ESCURO
   const mudarTema = () => {
     setTema(tema === 'Light' ? 'Dark' : 'Light')
     return tema
   } 
+
+  console.log(olhos)
 
   return (
     <div className="container_overall" id={tema === 'Light' ? 'Ligth' : 'Dark'}>
       <Header tema={tema} mudarTema={mudarTema}/>
 
       <main className="container_main">
-        <SobreMim tema={tema}/>
+        <SobreMim tema={tema} olhos={olhos}/>
       </main>
     </div>
   )

@@ -1,15 +1,25 @@
 import styles from "./sobre-mim.module.scss"
 
 export default function SobreMim(props) {
-    const tema = props.tema
+    const { tema, olhos } = props
+    // console.log(olhos)
 
     return (
         <section className={styles.home_sobreMim} id={tema === 'Light' ? styles.Light : styles.Dark}>
-            <p className={styles.subTitle}>Welcome</p>
-            <h1 className={styles.title}>DESENVOLVEDOR WEB</h1>
-            <p className={styles.descrition}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat assumenda doloremque deserunt, praesentium aperiam officia dolorem minima molestias soluta quidem facere nemo eaque error quisquam adipisci enim ea ipsum voluptate?
-            </p>
+            <div className={styles.container_sobreMim}>
+                {olhos && (
+                    <img src="/olhos.webp" alt="" className={styles.olhos_sobreMim} />
+                )}
+                
+                <p className={styles.subTitle}>Welcome</p>
+                <h1 className={styles.title}>DESENVOLVEDOR WEB</h1>
+                <p className={styles.descrition}>
+                    🖐 Ola me chamo Ramon. <br />
+                    💻 Desenvolvedor Front-End <br />
+                    🤵 Buscando novas oportunidades de trabalho <br />
+                    🚀 HTML │ CSS │ JavaScript │ React │ Sass │ Bootstrap │ Node │ MongoDB
+                </p>
+            </div>
         </section>
     )
 }

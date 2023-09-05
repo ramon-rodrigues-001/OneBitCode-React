@@ -2,45 +2,70 @@
 
 
 .home_sobreMim {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-    padding-top: 70px;
-    color: $branco;
-    width: 60%;
+    background-image: linear-gradient(to bottom, #2a2828ea, #151515e9), 
+    url(/fundo-de-codigo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 
-    .subTitle {
-        font-size: 1.1em;
-        color: $verde;
-    }
-    .title {
-        font-weight: bold;
-        font-size: 2em;
-    }
-    .descrition {
-        padding-bottom: 10px;
-    }
+    .container_sobreMim {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 70px;
+        color: $branco;
+        max-width: 1100px;
+        width: 93vw;
+        height: 100vh;
+        margin: auto;
 
-    &#Light {
-        color: rgb(3, 135, 140);
 
+        .olhos_sobreMim {
+            position: absolute;
+            top: 80px;
+            width: 50px;
+            padding: 10px;
+            border-radius: 50%;
+    
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.053);
+                border: solid 1px $verde;
+            }
+        }
+    
         .subTitle {
             font-size: 1.1em;
-            color: rgb(116, 119, 116);
+            margin: 0px;
+            color: $verde;
         }
+        .title {
+            margin: 0px 0px 20px 0px;
+            font-weight: bold;
+            font-size: 2em;
+        }
+        .descrition {
+            padding-bottom: 10px;
+        }
+    }
 
-        // .title {
-        //     font-weight: bold;
-        //     font-size: 2em;
-        // }
 
-        // .descrition {
+    &#Light {
 
-        // }
+        
+        background-image: linear-gradient(to bottom, #ffffffeb, #ffffffbf), 
+        url(/fundo-de-codigo.jpg);
+
+        .container_sobreMim {
+            color: $cinza-verde;
+
+            .subTitle {
+                font-size: 1.1em;
+                color: rgb(116, 119, 116);
+            }
+        }
     }
 }
 
+    
 
 
 
