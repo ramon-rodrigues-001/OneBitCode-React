@@ -1,17 +1,6 @@
 @import "../../style/colors.scss";
 
 
-@keyframes mudarTemaComOlhos {
-    0% {
-        transform: translateY(10px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(10px);
-    }
-}
 
 
 .home_sobreMim {
@@ -22,7 +11,7 @@
 
     .container_sobreMim {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         // flex-direction: column;
         // justify-content: center;
@@ -32,16 +21,6 @@
         width: 93vw;
         height: 100vh;
         margin: auto;
-
-        #anime {
-            font-size: 1.4em;
-            padding-right: 200px;
-            max-width: 500px;
-
-            #it {
-                width: 180px;
-            }
-        }
 
         .olhos_sobreMim {
             position: absolute;
@@ -69,13 +48,19 @@
         }
         .descrition {
             font-weight: bold;
+            font-size: 1.1em;
             padding-bottom: 10px;
         }
     }
 
+    .img_programador {
+        border-radius: 50%;
+        max-width: 500px;
+    }
+
 
     &#Light {
-        background-image: linear-gradient(to bottom, #ffffffeb, #fffbfbcc), 
+        background-image: linear-gradient(to bottom, #e0dedee5, #fffbfbcc), 
         url(/fundo-de-codigo.jpg);
 
         .container_sobreMim {
@@ -89,7 +74,53 @@
     }
 }
 
+
+@media screen and (max-width: 950px) {
     
+    .home_sobreMim {
+        .container_sobreMim {
+            justify-content: left;
+
+            .img_programador {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                max-width: 500px;
+                z-index: 1;
+                opacity: 20%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    
+    .home_sobreMim {
+        .container_sobreMim {
+            flex-direction: column-reverse;
+            gap: 30px;
+
+            .container_img_programador {
+                text-align: center;
+                
+                .img_programador {
+                    opacity: 90%;
+                    position: relative;
+                    width: 80%;
+                    margin: auto;
+                }
+            }
+
+            .descrition {
+                font-weight: bold;
+                font-size: 1em;
+                padding-bottom: 10px;
+            }
+        }
+    }
+}
+
 
 
 

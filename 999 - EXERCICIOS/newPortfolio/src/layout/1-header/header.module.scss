@@ -3,10 +3,11 @@
 
 
 .header_Home {
-    background-color: $preto;
+    background-image: linear-gradient(to bottom, rgba(55, 53, 53, 0.796), rgb(0, 0, 0));
     width: 100vw;
     position: fixed;
-    z-index: 10;
+    border-bottom: solid .5px $cinza-verde;
+    z-index: 999;
 
     .container_Header {
         color: $verde;
@@ -114,7 +115,7 @@
 
 
     &#Light {
-        background-color: $cinza-escuro;
+        background-image: linear-gradient(to bottom, rgba(156, 155, 155, 0.75) ,$cinza-escuro);
         color: $verde-header-claro;
         
         #logo {

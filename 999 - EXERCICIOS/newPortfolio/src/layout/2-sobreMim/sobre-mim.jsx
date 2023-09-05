@@ -5,26 +5,6 @@ import { useEffect } from 'react';
 export default function SobreMim(props) {
     const { tema, olhos } = props
 
-    useEffect(() => {
-        anime({
-            targets: '.function-based-values-demo .el',
-            translateX: function(el) {
-                return el.getAttribute('data-x');
-            },
-            translateY: function(el, i) {
-                return 50 + (-50 * i);
-            },
-            scale: function(el, i, l) {
-                return (l - i) + 0.25;
-            },
-            rotate: function() { return anime.random(-360, 360); },
-            borderRadius: function() { return ['50%', anime.random(10, 35) + '%']; },
-            duration: function() { return anime.random(5000, 5000); },
-            delay: function() { return anime.random(700, 1000); },
-            direction: 'alternate',
-            loop: true
-        });
-    }, []);
 
     return (
         <section className={styles.home_sobreMim} id={tema === 'Light' ? styles.Light : styles.Dark}>
@@ -45,13 +25,8 @@ export default function SobreMim(props) {
                     </p>
                 </div>
 
-                <div className="function-based-values-demo" id={styles.anime}>
-                    <div className="el" id={styles.it} data-x="20">
-                        Ramon
-                    </div>
-                    <div className="el" id={styles.it} data-x="50">
-                        Front-end
-                    </div>
+                <div className={styles.container_img_programador}>
+                    <img src="/newProgramador.png" alt="" className={styles.img_programador}/>
                 </div>
             </div>
         </section>
