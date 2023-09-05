@@ -21,7 +21,7 @@ export default function SobreMim(props) {
                         💻 Desenvolvedor Front-End <br />
                         🤵 Buscando novas oportunidades de trabalho <br />
                         🎓 Curso tecnico: OneBitCode <br />
-                        🚀 HTML │ CSS │ JavaScript │ React │ Sass │ Bootstrap │ Node │ MongoDB
+                        🚀 Afinidade: JavaScript │ React
                     </p>
                 </div>
 
