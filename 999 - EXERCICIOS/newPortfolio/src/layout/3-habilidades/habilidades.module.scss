@@ -43,7 +43,8 @@
         padding: 0px 20px;
 
         .cards { 
-            border: 1px solid transparent;
+            border: 1px solid black;
+            box-shadow: 5px 10px 2px rgba(0, 0, 0, 0.139);
             border-radius: 7px;
             min-width: 200px;
             padding: 10px 20px;
@@ -65,6 +66,7 @@
             }
 
             &:hover {
+                box-shadow: 20px 10px 2px rgba(0, 0, 0, 0.072);
                 border: 1px solid rgb(122, 113, 113);
                 transition: .7s ease;
                 scale: 1.1;
@@ -105,25 +107,34 @@
 
 
     &#temaLight {
-        background-image: linear-gradient(to top, #e4cbcb, #d4d2d2);
+        background-image: linear-gradient(to right top, #ffffff, #d4d2d2);
         color: $cinza-verde;
 
         .subTitle {
             color: rgb(104, 101, 101);
         }
         .title {
+            text-shadow: 5px -5px 2px rgba(0, 0, 0, 0.098);
             color: $cinza-verde;
         }
 
 
         #conteiner_cards {
             .cards {
+                border-color: white;
+                box-shadow: 5px -10px 2px rgba(0, 0, 0, 0.139);
+
                 .iconHabilits {
                     filter: grayscale(0);
                 }
 
                 a {
                     color: $cinza-verde;
+                }
+
+                &:hover {
+                    box-shadow: 15px -10px 10px rgba(0, 0, 0, 0.11);
+                    border-color: rgb(0, 0, 0);
                 }
             }
         }
@@ -132,6 +143,7 @@
             background-color: rgb(230, 225, 225);
             color: $cinza-verde;
             border: solid .5px white;
+            box-shadow: 5px -6px 4px rgba(0, 0, 0, 0.11);
 
             &:hover {
                 background-color: $ciano-claro;
