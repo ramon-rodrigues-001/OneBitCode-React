@@ -4,10 +4,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: linear-gradient(to top, #000000, #02132B);
+    background-image: linear-gradient(to top, #000000, #171716);
     color: rgb(71, 71, 71);
     padding: 30px 0px 10px 0px;
-    min-height: 85vh;
+    min-height: 100vh;
 
     .subTitle {
         font-size: 1.2em;
@@ -31,31 +31,30 @@
         padding: 0px 20px;
 
         .cards { 
-            position: relative;
-            border: 1px solid red;
+            border: 1px solid transparent;
             border-radius: 7px;
-            flex: 0 0 280px;
-            width: 280px;
+            min-width: 200px;
+            padding: 10px 20px;
             cursor: pointer;
 
             a {
+                display: flex;
+                align-items: center;
                 color: rgb(81, 81, 81);
                 text-decoration: none;
             }
 
             .iconHabilits {
-                position: absolute;
-                top: 0;
-                right: 0;
                 width: 50px;
-                border-radius: 10% 10% 10% 50%;
+                border-radius: 10px;
                 filter: grayscale(100%);
                 transition: .5s;
             }
 
             &:hover {
-                border: 1px solid red;
+                border: 1px solid rgb(122, 113, 113);
                 transition: .7s ease;
+                scale: 1.1;
 
                 .iconHabilits {
                     transition: .5s;
