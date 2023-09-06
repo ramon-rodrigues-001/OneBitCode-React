@@ -116,7 +116,7 @@
 
     &#Light {
         background-image: linear-gradient(to bottom, rgba(156, 155, 155, 0.75) ,$cinza-escuro);
-        color: $verde-header-claro;
+        color: $ciano-claro;
         
         #logo {
             color: $branco;
@@ -125,16 +125,16 @@
         a {
             color: $branco;
             &:hover {
-                color: $verde-header-claro;
+                color: $ciano-claro;
                 .aspas_Navbar {
-                    color: $verde-header-claro;
+                    color: $ciano-claro;
                 }
             }
         }
 
         #butao_Repositorios {
             &:hover {
-                color: $verde-header-claro;
+                color: $ciano-claro;
             }
         }
 

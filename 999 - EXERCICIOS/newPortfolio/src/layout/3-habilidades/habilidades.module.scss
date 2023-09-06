@@ -1,5 +1,7 @@
+@import "../../style/colors.scss";
 
-#habilidades {
+
+.habilidades {
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -9,11 +11,21 @@
     padding: 30px 0px 10px 0px;
     min-height: 100vh;
 
+    .container_habilidades {
+        margin: auto;
+        width: 90vw;
+        max-width: 1100px;
+    }
+
     .subTitle {
         font-size: 1.2em;
         margin: 0px;
-        padding-left: 120px;
-        color: rgb(58, 210, 3);
+        padding-left: 2%;
+        color: $verde;
+    }
+    .title {
+        padding-left: 2%;
+        color: $branco;
     }
     
     .title_ability {
@@ -40,6 +52,7 @@
             a {
                 display: flex;
                 align-items: center;
+                gap: 2px;
                 color: rgb(81, 81, 81);
                 text-decoration: none;
             }
@@ -71,14 +84,61 @@
     }
 
 
-    #btn-mais-habilidades {
-        display: none;
+    #btn_mais_habilidades {
+        // display: none;
+        width: 100%;
+        border: none;
+
+
+        .ii {
+            width: 25px;
+        }
+
+        &:hover {
+            background-color: $verde;
+        }
     }
     label {
         width: 100%;
         display: block;
     }
 
+
+    &#temaLight {
+        background-image: linear-gradient(to top, #e4cbcb, #d4d2d2);
+        color: $cinza-verde;
+
+        .subTitle {
+            color: rgb(104, 101, 101);
+        }
+        .title {
+            color: $cinza-verde;
+        }
+
+
+        #conteiner_cards {
+            .cards {
+                .iconHabilits {
+                    filter: grayscale(0);
+                }
+
+                a {
+                    color: $cinza-verde;
+                }
+            }
+        }
+
+        #btn_mais_habilidades {
+            background-color: rgb(230, 225, 225);
+            color: $cinza-verde;
+            border: solid .5px white;
+
+            &:hover {
+                background-color: $ciano-claro;
+                border-color: transparent;
+            }
+        }
+    }
 }
 
 

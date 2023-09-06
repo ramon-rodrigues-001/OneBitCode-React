@@ -46,7 +46,7 @@ function App() {
       <main className="container_main">
         <SobreMim tema={tema} olhos={olhos}/>
         <Barra tema={tema}/>
-        < Habilidades />
+        < Habilidades tema={tema}/>
       </main>
     </div>
   )
