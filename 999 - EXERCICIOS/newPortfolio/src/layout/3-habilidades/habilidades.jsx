@@ -1,9 +1,32 @@
+import { useEffect, useState } from "react"
 import styles from "./habilidades.module.scss"
 
 
 // RETIRAR OS ELEMENTOS DE ANimação 
 export default function Habilidades(props) {
     const tema = props.tema
+    const [maisHabilidades, setMaisHabilidades] = useState(true)
+    
+
+    useEffect(() => {
+        let mediaQuery = window.innerWidth
+    
+        if (mediaQuery < 560) {
+            setMaisHabilidades(false)
+        }
+        else if (mediaQuery > 560) {
+            setMaisHabilidades(true)
+        }
+    }, [window.innerWidth]);
+
+    const mudarStateHabilidade = () => {
+        if (maisHabilidades === true) {
+            setMaisHabilidades(false)
+        }
+        else if (maisHabilidades === false) {
+            setMaisHabilidades(true)
+        }
+    }
 
     return (
         <section className={styles.habilidades} id={tema == 'Light' ? styles.temaLight : null}>
@@ -13,7 +36,7 @@ export default function Habilidades(props) {
                         Habilidades
                     </p>
                     <h3 className={styles.title}>Tecnologias que utilizo</h3>
-                    <input type="checkbox" name="input-habilidades" id="mais-habilidades" />
+                    {/* <input type="checkbox" name="input-habilidades" id="mais-habilidades" /> */}
                     <div id={styles.conteiner_cards}>
                         <div className={styles.cards} data-aos="zoom-in" id="hab-1">
                             <a href="#habilidades" >
@@ -43,42 +66,60 @@ export default function Habilidades(props) {
                                 <p className="h5 px-1">SASS</p>
                             </a>
                         </div>
-                        <div className={styles.cards} data-aos="zoom-in" id="hab-5">
-                            <a href="#habilidades">
-                                <img src="public/icon-habilits/bootstrap-plain.svg" className={styles.iconHabilits} alt="icon_BOOTSTRAP" />
-                                <h3 className={styles.title_ability}></h3>
-                                <p className="h5 px-1">BOOTS...</p>
-                            </a>
-                        </div>
-                        <div className={styles.cards} data-aos="zoom-in" id="hab-6">
-                            <a href="#habilidades">
-                                <img src="public/icone-habilidades/react.png" className={styles.iconHabilits} alt="icon_REACT" />
-                                <h3 className={styles.title_ability}></h3>
-                                <p className="h5 px-1">REACT</p>
-                            </a>
-                        </div>
-                        <div className={styles.cards}  data-aos="zoom-in"  id="hab-7">
-                            <a href="#habilidades">
-                                <img src="public/icon-habilits/mongodb-plain.svg" className={styles.iconHabilits} alt="icon_mongoDB" />
-                                <h3 className={styles.title_ability}></h3>
-                                <p className="h5 px-1">MONGO.DB</p>
-                            </a>
-                        </div>
-                        <div className={styles.cards} data-aos="zoom-in" id="hab-8">
-                            <a href="#habilidades">
-                                <img src="public/icon-habilits/nodejs-plain.svg" className={styles.iconHabilits} alt="icon_NodeJs" />
-                                <h3 className={styles.title_ability}></h3>
-                                <p className="h5 px-1">NODE.JS</p>
-                            </a>
-                        </div>
+
+                        {maisHabilidades && (
+                                <div className={styles.cards} data-aos="zoom-in" id="hab-5">
+                                    <a href="#habilidades">
+                                        <img src="public/icon-habilits/bootstrap-plain.svg" className={styles.iconHabilits} alt="icon_BOOTSTRAP" />
+                                        <h3 className={styles.title_ability}></h3>
+                                        <p className="h5 px-1">BOOTS...</p>
+                                    </a>
+                                </div>
+                        )}
+                        {maisHabilidades && (
+                            <div className={styles.cards} data-aos="zoom-in" id="hab-6">
+                                <a href="#habilidades">
+                                    <img src="public/icone-habilidades/react.png" className={styles.iconHabilits} alt="icon_REACT" />
+                                    <h3 className={styles.title_ability}></h3>
+                                    <p className="h5 px-1">REACT</p>
+                                </a>
+                            </div>
+                        )}
+                        {maisHabilidades && (
+                            <div className={styles.cards}  data-aos="zoom-in"  id="hab-7">
+                                <a href="#habilidades">
+                                    <img src="public/icon-habilits/mongodb-plain.svg" className={styles.iconHabilits} alt="icon_mongoDB" />
+                                    <h3 className={styles.title_ability}></h3>
+                                    <p className="h5 px-1">MONGO.DB</p>
+                                </a>
+                            </div>
+                        )}
+                        {maisHabilidades && (
+                            <div className={styles.cards} data-aos="zoom-in" id="hab-8">
+                                <a href="#habilidades">
+                                    <img src="public/icon-habilits/nodejs-plain.svg" className={styles.iconHabilits} alt="icon_NodeJs" />
+                                    <h3 className={styles.title_ability}></h3>
+                                    <p className="h5 px-1">NODE.JS</p>
+                                </a>
+                            </div>
+                        )}
+                        
                 
                         <label for="mais-habilidades">
-                            <a className="btn btn-outline-info btnPersonalizado" id={styles.btn_mais_habilidades}>
-                                <img src="https://images.vexels.com/media/users/3/189736/isolated/lists/5301d109614cc1af7ef2b7b29ecafe91-goong-vetor-de-seta-para-baixo.png" alt="" className={styles.ii}/>
-                                VER MAIS 
-                                <img src="https://images.vexels.com/media/users/3/189736/isolated/lists/5301d109614cc1af7ef2b7b29ecafe91-goong-vetor-de-seta-para-baixo.png" alt="" className={styles.ii}/>
-                            </a>
-                            
+                            {maisHabilidades && (
+                                <button className="btn btn-outline-info btnPersonalizado" id={styles.btn_mais_habilidades} onClick={mudarStateHabilidade}>
+                                    <img src="https://images.vexels.com/media/users/3/189736/isolated/lists/5301d109614cc1af7ef2b7b29ecafe91-goong-vetor-de-seta-para-baixo.png" alt="" className={styles.setaBTN} id={styles.setaMostrarMenos}/>
+                                    VER MENOS
+                                    <img src="https://images.vexels.com/media/users/3/189736/isolated/lists/5301d109614cc1af7ef2b7b29ecafe91-goong-vetor-de-seta-para-baixo.png" alt="" className={styles.setaBTN} id={styles.setaMostrarMenos}/>
+                                </button>
+                            )}
+                            {!maisHabilidades && (
+                                <button className="btn btn-outline-info btnPersonalizado" id={styles.btn_mais_habilidades} onClick={mudarStateHabilidade}>
+                                    <img src="https://images.vexels.com/media/users/3/189736/isolated/lists/5301d109614cc1af7ef2b7b29ecafe91-goong-vetor-de-seta-para-baixo.png" alt="" className={styles.setaBTN}/>
+                                    VER MAIS
+                                    <img src="https://images.vexels.com/media/users/3/189736/isolated/lists/5301d109614cc1af7ef2b7b29ecafe91-goong-vetor-de-seta-para-baixo.png" alt="" className={styles.setaBTN}/>
+                                </button>
+                            )}
                         </label>
                     </div>
                     <div className="container" id="conteiner-resposta-abilidade">

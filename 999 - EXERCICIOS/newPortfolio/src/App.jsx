@@ -37,8 +37,6 @@ function App() {
     return tema
   } 
 
-  console.log(olhos)
-
   return (
     <div className="container_overall" id={tema === 'Light' ? 'Ligth' : 'Dark'}>
       <Header tema={tema} mudarTema={mudarTema}/>

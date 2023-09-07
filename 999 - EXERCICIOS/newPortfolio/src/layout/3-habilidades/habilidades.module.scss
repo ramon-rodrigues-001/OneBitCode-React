@@ -26,12 +26,9 @@
     .title {
         padding-left: 2%;
         color: $branco;
+        padding-bottom: 20px;
     }
     
-    .title_ability {
-        color: red;
-        text-align: center;
-    }
 
     #conteiner_cards {
         display: flex;
@@ -43,7 +40,7 @@
         padding: 0px 20px;
 
         .cards { 
-            border: 1px solid black;
+            border: 1px solid rgb(101, 99, 99);
             box-shadow: 5px 10px 2px rgba(0, 0, 0, 0.139);
             border-radius: 7px;
             min-width: 200px;
@@ -87,13 +84,19 @@
 
 
     #btn_mais_habilidades {
-        // display: none;
+        background-color: #171716;
+        margin-bottom: 10px;
+        display: none;
         width: 100%;
         border: none;
 
 
-        .ii {
+        .setaBTN {
             width: 25px;
+
+            &#setaMostrarMenos {
+                transform: rotateX(160deg);
+            }
         }
 
         &:hover {
@@ -154,28 +157,12 @@
 }
 
 
-@media screen and (max-width: 920px) {
-    #habilidades {
-        #btn-mais-habilidades {
-            margin: 15px 0px;
+@media screen and (max-width: 565px) {
+    .habilidades {
+        text-align: center;
+
+        #btn_mais_habilidades {
             display: block;
-        }
-
-        .habilidade-descartavel {
-            display: none;
-        }
-
-        #mais-habilidades:checked ~ #conteiner-cards .habilidade-descartavel {
-            display: block;
-        }
-
-        #conteiner-cards {
-            .cards {
-                &.impar {
-                    position: relative;
-                    transform: translateY(0px);
-                }
-            }
         }
     }
 }
