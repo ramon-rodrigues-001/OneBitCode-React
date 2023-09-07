@@ -6,6 +6,8 @@ import styles from "./habilidades.module.scss"
 export default function Habilidades(props) {
     const tema = props.tema
     const [maisHabilidades, setMaisHabilidades] = useState(true)
+    const [paragrafHabilit, setParagrafHabilit] = useState("")
+    const [titleHabilit, setTitleHabilit] = useState("")
     
 
     useEffect(() => {
@@ -28,38 +30,76 @@ export default function Habilidades(props) {
         }
     }
 
+
+
+
+    const hab_1 = () => {
+        setTitleHabilit("HTML")
+        setParagrafHabilit("O esqueleto do projeto é o que dá a base para o desenvolvimento da aplicação. Com boas práticas é possível criar um projeto consistente e padronizado, isso torna a aplicação mais fácil de ser entendida e mantida no futuro, além de garantir uma melhor experiência para o usuário final.")
+    }
+    const hab_2 = () => {
+        setTitleHabilit("CSS")
+        setParagrafHabilit("(Cascading Style Sheets) é uma linguagem que define o estilo e a aparência de elementos em páginas web HTML.. deixando o site atraente, ainda mais com sua exteção o SASS")
+    }
+    const hab_3 = () => {
+        setTitleHabilit("JAVASCRIPT")
+        setParagrafHabilit("(JS) esta é força motriz por trás da magia interativa na web, capacitando páginas a ganharem vida com animações deslumbrantes, validação de formulários instantânea e dinamismo que cativa os visitantes. É a ferramenta essencial para transformar ideias em experiências cativantes e envolventes na internet.")
+    }
+    const hab_4 = () => {
+        setTitleHabilit("SASS")
+        setParagrafHabilit("O SASS é uma ferramenta verdadeiramente impressionante! Ao viabilizar a criação de folhas de estilo altamente organizadas e de fácil manutenção, ele encurta consideravelmente o tempo e esforço exigidos para efetuar alterações e atualizações, resultando em um fluxo de trabalho mais eficiente e menos complicado.")
+    }
+    const hab_5 = () => {
+        setTitleHabilit("BOOTSTRAP")
+        setParagrafHabilit("Esta ferramneta busca agilizar o processo de criação de interfaces web, tornando-o mais eficiente, produtivo e consistente.")
+    }
+    const hab_6 = () => {
+        setTitleHabilit("REACT")
+        setParagrafHabilit("Iniciei recentemente os estudos em React, após ter concluído o curso avançado de JavaScript da OneBitCode. A proposta dessa tecnologia é incrível e considero que seja o próximo passo para aperfeiçoar meus conhecimentos. Dessa forma, pretendo refazer meus projetos utilizando essa ferramenta poderosa.")
+    }
+    const hab_7 = () => {
+        setTitleHabilit("MONGO.DB")
+        setParagrafHabilit("MongoDB, meu primeiro banco de dados estudado, é uma poderosa plataforma NoSQL orientada a documentos, oferecendo flexibilidade única, escalabilidade e capacidade de lidar com estruturas de dados variáveis, tornando-o uma escolha moderna para aplicações adaptáveis e eficientes de gerenciamento de dados.")
+    }
+    const hab_8 = () => {
+        setTitleHabilit("NODE.JS")
+        setParagrafHabilit("Node.js revolucionou o uso do JavaScript ao possibilitar a criação de servidores escaláveis e aplicações de alto desempenho, com arquitetura baseada em eventos para serviços web rápidos e em tempo real.")
+    }
+
+
+
     return (
         <section className={styles.habilidades} id={tema == 'Light' ? styles.temaLight : null}>
             <div className={styles.container_habilidades}>
                 <div data-aos="fade-right" data-aos-duration="800">
-                    <p className={styles.subTitle} id="inicio">
-                        Habilidades
-                    </p>
+
+                    <p className={styles.subTitle} id="inicio">Habilidades</p>
                     <h3 className={styles.title}>Tecnologias que utilizo</h3>
-                    {/* <input type="checkbox" name="input-habilidades" id="mais-habilidades" /> */}
+
+                    {/* Cards De Habilidade */}
                     <div id={styles.conteiner_cards}>
-                        <div className={styles.cards} data-aos="zoom-in" id="hab-1">
+                        <div className={styles.cards} onClick={hab_1}>
                             <a href="#habilidades" >
                                 <img src="public/icon-habilits/html5-plain.svg" className={styles.iconHabilits} alt="icon_HTML_5" />
                                 <h3 className={styles.title_ability}></h3>
                                 <p className="h5 px-1">HTML</p>
                             </a>
                         </div>
-                        <div className={styles.cards} data-aos="zoom-in" id="hab-2">
+                        <div className={styles.cards} onClick={hab_2}>
                             <a href="#habilidades">
                                 <img src="public/icon-habilits/css3-plain.svg" className={styles.iconHabilits} alt="icon_CSS_3" />
                                 <h3 className={styles.title_ability}></h3>
                                 <p className="h5 px-1">CSS</p>
                             </a>
                         </div>
-                        <div className={styles.cards} data-aos="zoom-in" id="hab-3">
+                        <div className={styles.cards} onClick={hab_3}>
                             <a href="#habilidades">
                                 <img src="public/icon-habilits/javascript-plain.svg" className={styles.iconHabilits} alt="icon_JS" />
                                 <h3 className="title_ability"></h3>
                                 <p className="h5 px-1">JAVASCRIPT</p>
                             </a>
                         </div>
-                        <div className={styles.cards} data-aos="zoom-in" id="hab-4">
+                        <div className={styles.cards} onClick={hab_4}>
                             <a href="#habilidades">
                                 <img src="/icon-habilits/sass-original.svg" className={styles.iconHabilits} alt="icon_SASS" />
                                 <h3 className={styles.title_ability}></h3>
@@ -67,17 +107,18 @@ export default function Habilidades(props) {
                             </a>
                         </div>
 
+                        {/* Baililidades que somem na tela pequena */}
                         {maisHabilidades && (
-                                <div className={styles.cards} data-aos="zoom-in" id="hab-5">
-                                    <a href="#habilidades">
-                                        <img src="public/icon-habilits/bootstrap-plain.svg" className={styles.iconHabilits} alt="icon_BOOTSTRAP" />
-                                        <h3 className={styles.title_ability}></h3>
-                                        <p className="h5 px-1">BOOTS...</p>
-                                    </a>
-                                </div>
+                            <div className={styles.cards} onClick={hab_5}>
+                                <a href="#habilidades">
+                                    <img src="public/icon-habilits/bootstrap-plain.svg" className={styles.iconHabilits} alt="icon_BOOTSTRAP" />
+                                    <h3 className={styles.title_ability}></h3>
+                                    <p className="h5 px-1">BOOTS...</p>
+                                </a>
+                            </div>
                         )}
                         {maisHabilidades && (
-                            <div className={styles.cards} data-aos="zoom-in" id="hab-6">
+                            <div className={styles.cards} onClick={hab_6}>
                                 <a href="#habilidades">
                                     <img src="public/icone-habilidades/react.png" className={styles.iconHabilits} alt="icon_REACT" />
                                     <h3 className={styles.title_ability}></h3>
@@ -86,7 +127,7 @@ export default function Habilidades(props) {
                             </div>
                         )}
                         {maisHabilidades && (
-                            <div className={styles.cards}  data-aos="zoom-in"  id="hab-7">
+                            <div className={styles.cards} onClick={hab_7}>
                                 <a href="#habilidades">
                                     <img src="public/icon-habilits/mongodb-plain.svg" className={styles.iconHabilits} alt="icon_mongoDB" />
                                     <h3 className={styles.title_ability}></h3>
@@ -95,7 +136,7 @@ export default function Habilidades(props) {
                             </div>
                         )}
                         {maisHabilidades && (
-                            <div className={styles.cards} data-aos="zoom-in" id="hab-8">
+                            <div className={styles.cards} onClick={hab_8}>
                                 <a href="#habilidades">
                                     <img src="public/icon-habilits/nodejs-plain.svg" className={styles.iconHabilits} alt="icon_NodeJs" />
                                     <h3 className={styles.title_ability}></h3>
@@ -103,9 +144,12 @@ export default function Habilidades(props) {
                                 </a>
                             </div>
                         )}
+
                         
                 
-                        <label for="mais-habilidades">
+                        {/* Butão de ver mais / menos */}
+                        <label htmlFor="mais-habilidades">
+                            {/* Mostrar MENOS */}
                             {maisHabilidades && (
                                 <button className="btn btn-outline-info btnPersonalizado" id={styles.btn_mais_habilidades} onClick={mudarStateHabilidade}>
                                     <img src="https://images.vexels.com/media/users/3/189736/isolated/lists/5301d109614cc1af7ef2b7b29ecafe91-goong-vetor-de-seta-para-baixo.png" alt="" className={styles.setaBTN} id={styles.setaMostrarMenos}/>
@@ -113,6 +157,7 @@ export default function Habilidades(props) {
                                     <img src="https://images.vexels.com/media/users/3/189736/isolated/lists/5301d109614cc1af7ef2b7b29ecafe91-goong-vetor-de-seta-para-baixo.png" alt="" className={styles.setaBTN} id={styles.setaMostrarMenos}/>
                                 </button>
                             )}
+                            {/* Mostrar Mais */}
                             {!maisHabilidades && (
                                 <button className="btn btn-outline-info btnPersonalizado" id={styles.btn_mais_habilidades} onClick={mudarStateHabilidade}>
                                     <img src="https://images.vexels.com/media/users/3/189736/isolated/lists/5301d109614cc1af7ef2b7b29ecafe91-goong-vetor-de-seta-para-baixo.png" alt="" className={styles.setaBTN}/>
@@ -122,9 +167,16 @@ export default function Habilidades(props) {
                             )}
                         </label>
                     </div>
-                    <div className="container" id="conteiner-resposta-abilidade">
-                        <h5 id="titliInicial">Click em uma habilidade!</h5>
-                        <p id="paragrafInicial"></p>
+
+
+                    {/* Descrição das habilidades */}
+                    <div className="container" id={styles.conteiner_resposta_abilidade}>
+                        <h5 id="titliInicial">
+                            {titleHabilit === '' ? "Click em uma habilidade!" : titleHabilit}
+                        </h5>
+                        <p id="paragrafInicial">
+                            {paragrafHabilit === '' ? null : paragrafHabilit}
+                        </p>
                     </div>
                 </div>
             </div>

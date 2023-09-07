@@ -76,12 +76,6 @@
         }
     }
 
-    #conteiner-resposta-abilidade {
-        color: red;
-        text-align: center;
-        padding: 10px;
-    }
-
 
     #btn_mais_habilidades {
         background-color: #171716;
@@ -106,6 +100,13 @@
     label {
         width: 100%;
         display: block;
+    }
+
+    #conteiner_resposta_abilidade {
+        color: $branco;
+        font-size: 1.1em;
+        text-align: center;
+        padding: 10px;
     }
 
 
@@ -152,6 +153,10 @@
                 background-color: $ciano-claro;
                 border-color: transparent;
             }
+        }
+
+        #conteiner_resposta_abilidade {
+            color: $cinza-verde;
         }
     }
 }

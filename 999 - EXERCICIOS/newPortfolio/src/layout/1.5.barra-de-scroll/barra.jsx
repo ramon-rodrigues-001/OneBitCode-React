@@ -16,7 +16,7 @@ export default function Barra(props) {
 
     return (
         // <!-- BARRA DE PROGRESO -->
-        <div class={styles.scroll} id={tema === 'Light' ? styles.barraLight : styles.barraDark}>
+        <div className={styles.scroll} id={tema === 'Light' ? styles.barraLight : styles.barraDark}>
             <div id="barra-de-scroll" className={styles.barra_de_scroll}>
                 
             </div>
