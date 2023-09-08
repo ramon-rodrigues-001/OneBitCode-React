@@ -30,12 +30,14 @@ export default function Projeto() {
                             <div className={styles.cardsCarrosel} id={styles.cardLabel_1}>
                                 <img className={styles.imagensProjeto} src="public/god-of-war-tela.jpg" alt="projeto-GodOfWar" />
                                 
-                                <a href="https://ramon-rodrigues-001.github.io/God-Of-War/" target="_blank" className="btn btnPersonalizado deploy"><span className="detalhes-btn quadrado_1"></span>
-                                    DEPLOY
-                                <span className="detalhes-btn quadrado_2"></span></a>
-                                <a href="https://github.com/ramon-rodrigues-001/God-Of-War" target="_blank" className="btn btnPersonalizado github"><span className="detalhes-btn quadrado_1"></span>
-                                    GITHUB
-                                <span className="detalhes-btn quadrado_2"></span></a>
+                                <div className={styles.containerDeBTN}>
+                                    <a href="https://ramon-rodrigues-001.github.io/God-Of-War/" target="_blank" className="btn btnPersonalizado" id={styles.deploy}><span className="detalhes-btn quadrado_1"></span>
+                                        DEPLOY
+                                    <span className="detalhes-btn quadrado_2"></span></a>
+                                    <a href="https://github.com/ramon-rodrigues-001/God-Of-War" target="_blank" className="btn btnPersonalizado" id={styles.github}><span className="detalhes-btn quadrado_1"></span>
+                                        GITHUB
+                                    <span className="detalhes-btn quadrado_2"></span></a>
+                                </div>
                             </div>
                         </label>
 
@@ -43,12 +45,14 @@ export default function Projeto() {
                             <div className={styles.cardsCarrosel} id={styles.cardLabel_2}>
                                 <img className={styles.imagensProjeto} src="public/projeto-blizzard.webp" />
 
-                                <a href="https://ramon-rodrigues-001.github.io/Games-Blizzard/" target="_blank" className="btn btnPersonalizado deploy"><span className="detalhes-btn quadrado_1"></span>
-                                    DEPLOY
-                                <span className="detalhes-btn quadrado_2"></span></a>
-                                <a href="https://github.com/ramon-rodrigues-001/Games-Blizzard" target="_blank" className="btn btnPersonalizado github"><span className="detalhes-btn quadrado_1"></span>
-                                    GITHUB
-                                <span className="detalhes-btn quadrado_2"></span></a>
+                                <div className={styles.containerDeBTN}>
+                                    <a href="https://ramon-rodrigues-001.github.io/Games-Blizzard/" target="_blank" className="btn btnPersonalizado" id={styles.deploy}><span className="detalhes-btn quadrado_1"></span>
+                                        DEPLOY
+                                    <span className="detalhes-btn quadrado_2"></span></a>
+                                    <a href="https://github.com/ramon-rodrigues-001/Games-Blizzard" target="_blank" className="btn btnPersonalizado" id={styles.github}><span className="detalhes-btn quadrado_1"></span>
+                                        GITHUB
+                                    <span className="detalhes-btn quadrado_2"></span></a>
+                                </div>
                             </div>
                         </label>
                         
@@ -56,12 +60,14 @@ export default function Projeto() {
                             <div className={styles.cardsCarrosel} id={styles.cardLabel_3}>
                                 <img className={styles.imagensProjeto} src="public/personal-project.png" alt="livre-leitor" />
                                 
-                                <a href="https://livre-leitor.netlify.app/" target="_blank" className="btn btnPersonalizado deploy"><span className="detalhes-btn quadrado_1"></span>
-                                    DEPLOY
-                                <span className="detalhes-btn quadrado_2"></span></a>
-                                <a href="https://github.com/ramon-rodrigues-001/My-personal-project" target="_blank" className="btn btnPersonalizado github"><span className="detalhes-btn quadrado_1"></span>
-                                    GITHUB
-                                <span className="detalhes-btn quadrado_2"></span></a>
+                                <div className={styles.containerDeBTN}>
+                                    <a href="https://livre-leitor.netlify.app/" target="_blank" className="btn btnPersonalizado" id={styles.deploy}><span className="detalhes-btn quadrado_1"></span>
+                                        DEPLOY
+                                    <span className="detalhes-btn quadrado_2"></span></a>
+                                    <a href="https://github.com/ramon-rodrigues-001/My-personal-project" target="_blank" className="btn btnPersonalizado" id={styles.github}><span className="detalhes-btn quadrado_1"></span>
+                                        GITHUB
+                                    <span className="detalhes-btn quadrado_2"></span></a>
+                                </div>
                             </div>
                         </label>
                     </div>

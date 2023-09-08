@@ -141,6 +141,10 @@
             display: none;
         }
 
+        #card {
+            position: relative;
+        }
+
         .cardsCarrosel {
             position: absolute;
             width: 58%;
@@ -163,20 +167,15 @@
                 object-fit: cover;
             }
     
-            .btnPersonalizado {
-                background-color: black;
+            .containerDeBTN {
+                display: flex;
+                justify-content: space-around;
+                background-color: rgba(0, 0, 0, 0.379);
                 position: absolute;
                 bottom: 10px;
+                width: 100%;
+                border: solid 1px rgba(0, 0, 0, 0.661);
                 padding: 10px 50px;
-    
-                &.deploy {
-                    left: 50%;
-                    transform: translateX(-120%);
-                }
-                &.github {
-                    right: 50%;
-                    transform: translateX(120%);
-                }
             }
     
             &:hover {
