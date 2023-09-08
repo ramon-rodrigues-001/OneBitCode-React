@@ -71,7 +71,7 @@ export default function Habilidades(props) {
     return (
         <section className={styles.habilidades} id={tema == 'Light' ? styles.temaLight : null}>
             <div className={styles.container_habilidades}>
-                <div data-aos="fade-right" data-aos-duration="800">
+                <div> {/* Colocar a animação aqui */}
 
                     <p className={styles.subTitle} id="inicio">Habilidades</p>
                     <h3 className={styles.title}>Tecnologias que utilizo</h3>

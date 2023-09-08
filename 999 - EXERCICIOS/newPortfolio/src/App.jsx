@@ -5,6 +5,7 @@ import Header from "./layout/1-header/header";
 import SobreMim from "./layout/2-sobreMim/sobre-mim";
 import Barra from "./layout/1.5.barra-de-scroll/barra"
 import Habilidades from "./layout/3-habilidades/habilidades";
+import Projeto from "./layout/4-projetos/projetos";
 
 function App() {
   const [tema, setTema] = useState('Dark')
@@ -45,6 +46,7 @@ function App() {
         <SobreMim tema={tema} olhos={olhos}/>
         <Barra tema={tema}/>
         < Habilidades tema={tema}/>
+        < Projeto />
       </main>
     </div>
   )
