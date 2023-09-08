@@ -1,19 +1,26 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import styles from "./projetos.module.scss";
 
 export default function Projeto() {
+    const [mostraCards, setMostrarCards] = useState(false)
 
+    // Iniciar um card do carrosel como Checked
     useEffect(()=> {
         const radio_1 = document.querySelector('#input-slider-2')
         radio_1.checked = true
     }, [])
 
+    // Manitorar tamanho da tela e mudar State (mostraCards)
+    useEffect(()=> {
+        const larguraTela = window.innerWidth
+        larguraTela < 800 ? setMostrarCards(true) : setMostrarCards(false)
+    }, [window.innerWidth])
+
     return (
         <section id={styles.projetos}>
-            <div> {/*  <!-- DIV BIBLIOTECA ANIMAÇÃO AQUI--> */}
-                <h2 className={styles.text_center}>
-                    Projetos
-                </h2>
+            <div className={styles.div_de_animation}> {/*  <!-- DIV BIBLIOTECA ANIMAÇÃO AQUI--> */}
+                <p className={styles.subTitle}>Projetos</p>
+                <h3 className={styles.title}>Top 3 Projetos</h3>
 
                 {/* <!-- CARROSEL DE PROJETOS -->  ANIMAÇÂO AQUI TBM*/}
                 <div id={styles.container_slider}>
@@ -75,7 +82,7 @@ export default function Projeto() {
 
 
                 {/* DESCRIÇÂO DOS PROJETOS */}
-                <div id="descrition-of-project">
+                <div id={styles.descrition_of_project}>
                     <h2>
                         <span className="span-azulMarinho" id="title-descrition-of-project">
                             God Of War
@@ -85,21 +92,59 @@ export default function Projeto() {
                         O projeto consiste em uma página de informações sobre o jogo 'God of War Ragnarök', que apresenta modo de jogar, personagens e trailer. Este projeto tem como foco o desenvolvimento da interfaçe não tendo um back-end robusto. Para a criação utilizei as tecnologias HTML, CSS, Sass, Bootstrap e JavaScript.
                     </p>
                     <div>
-                            <img src="public/icone-habilidades/html.png" alt="HTML" className="icones-de-desenvolvimento" />
+                        <img src="public/icone-habilidades/html.png" alt="HTML" className={styles.icones_de_desenvolvimento} />
 
-                            <img src="public/icone-habilidades/css.png" alt="CSS" className="icones-de-desenvolvimento" />
-                            
-                            <img src="public/icone-habilidades/javascript.png" alt="JavaScript" className="icones-de-desenvolvimento" />
-                            
-                            <img src="public/icone-habilidades/sass.png" alt="SASS" className="icones-de-desenvolvimento" />
-                            
-                            <img src="public/icone-habilidades/bootstrap.png" alt="bootstrap" className="icones-de-desenvolvimento" />
+                        <img src="public/icone-habilidades/css.png" alt="CSS" className={styles.icones_de_desenvolvimento} />
+                        
+                        <img src="public/icone-habilidades/javascript.png" alt="JavaScript" className={styles.icones_de_desenvolvimento} />
+                        
+                        <img src="public/icone-habilidades/sass.png" alt="SASS" className={styles.icones_de_desenvolvimento} />
+                        
+                        <img src="public/icone-habilidades/bootstrap.png" alt="bootstrap" className={styles.icones_de_desenvolvimento} />
                     </div>
                 </div>
                 {/* <!-- / CARROSEL DE PROJETOS --> */}
 
 
                 {/* <!-- CARDS DE PROJETOS --> */}
+                {mostraCards && (
+                    <div id={styles.cardsDeProjetos}>
+                        <div className={styles.item_projetos}>
+                            <img src="public/projeto-blizzard.webp" />
+                            <span className={styles.containerBTN}>
+                                <a href="https://ramon-rodrigues-001.github.io/Games-Blizzard/" target="_blank" className="btn btnPersonalizado">
+                                    DEPLOY
+                                </a>
+                                <a href="https://github.com/ramon-rodrigues-001/Games-Blizzard" target="_blank" className="btn btnPersonalizado">
+                                    GITHUB
+                                </a>
+                            </span>
+                        </div>
+                        <div className={styles.item_projetos}>
+                            <img src="public/god-of-war-tela.jpg" alt="god-of-war" />
+                            <span className={styles.containerBTN}>
+                                <a href="https://ramon-rodrigues-001.github.io/God-Of-War/" target="_blank" className="btn btnPersonalizado">
+                                    DEPLOY
+                                </a>
+                                <a href="https://github.com/ramon-rodrigues-001/God-Of-War" target="_blank" className="btn btnPersonalizado">
+                                    GITHUB
+                                </a>
+                            </span>
+                        </div>
+                        <div className={styles.item_projetos}>
+                            <img src="public/personal-project.png" alt="Livre-leitor" />
+                            <span className={styles.containerBTN}>
+                                <a href="https://livre-leitor.netlify.app/" target="_blank" className="btn btnPersonalizado">
+                                    DEPLOY
+                                </a>
+                                <a href="https://github.com/ramon-rodrigues-001/My-personal-project" target="_blank" className="btn btnPersonalizado">
+                                    GITHUB
+                                </a>
+                            </span>
+                        </div>
+
+                    </div>
+                )}
             </div>
         </section>
     )
@@ -107,72 +152,6 @@ export default function Projeto() {
 
 
 
-
-
-
-{/* <input type="checkbox" name="mais-projetos" id="mais-projetos" />
-                
-                <div className="contain-projetos" data-aos="fade-right">
-                    <div className="item-projetos SUBSTITUTO">
-                        <img src="public/projeto-blizzard.webp" />
-                        <span className="containerBTN">
-                            <a href="https://ramon-rodrigues-001.github.io/Games-Blizzard/" target="_blank" className="btn btnPersonalizado">
-                                DEPLOY
-                            </a>
-                            <a href="https://github.com/ramon-rodrigues-001/Games-Blizzard" target="_blank" className="btn btnPersonalizado">
-                                GITHUB
-                            </a>
-                        </span>
-                    </div>
-
-                    <div className="item-projetos SUBSTITUTO">
-                        <img src="public/god-of-war-tela.jpg" alt="god-of-war" />
-                        <span className="containerBTN">
-                            <a href="https://ramon-rodrigues-001.github.io/God-Of-War/" target="_blank" className="btn btnPersonalizado">
-                                DEPLOY
-                            </a>
-                            <a href="https://github.com/ramon-rodrigues-001/God-Of-War" target="_blank" className="btn btnPersonalizado">GITHUB</a>
-                        </span>
-                    </div>
-
-                    <div className="item-projetos SUBSTITUTO">
-                        <img src="public/personal-project.png" alt="Livre-leitor" />
-                        <span className="containerBTN">
-                            <a href="https://livre-leitor.netlify.app/" target="_blank" className="btn btnPersonalizado">
-                                DEPLOY
-                            </a>
-                            <a href="https://github.com/ramon-rodrigues-001/My-personal-project" target="_blank" className="btn btnPersonalizado">
-                                GITHUB
-                            </a>
-                        </span>
-                    </div>
-
-
-                    <div className="item-projetos projeto-descartavel">
-                        <img src="public/imagen-do-projeto-calculadora_js-Mini.png" />
-                        <span className="containerBTN">
-                            <a href="https://ramon-rodrigues-001.github.io/Calculadora_JS/" target="_blank" className="btn btnPersonalizado">
-                                DEPLOY
-                            </a>
-                            <a href="https://github.com/ramon-rodrigues-001/Calculadora_JS" target="_blank" className="btn btnPersonalizado">
-                                GITHUB
-                            </a>
-                        </span>
-                    </div>
-
-                    <a href="#" className="item-projetos projeto-descartavel">
-                        <p className="h1">VAZIO</p>
-                    </a>
-
-                    <a href="#" className="item-projetos projeto-descartavel">
-                        <p className="h1">VAZIO</p>
-                    </a>
-
-                    
-                </div>
-                {/* <!-- / CARDS DE PROJETOS --> */}
-                
-                {/* <label for="mais-projetos" id="label-projetos">
-                    <a className="btn btn-outline-info btnPersonalizado" id="btn-mais-projetos"  onclick="mostrar_projetos()">MOSTRAR MAIS</a>
-                </label>
-            </div> */}
+            // <label for="mais-projetos" id="label-projetos">
+            //     <a className="btn btn-outline-info btnPersonalizado" id="btn-mais-projetos"  onclick="mostrar_projetos()">MOSTRAR MAIS</a>
+            // </label>
