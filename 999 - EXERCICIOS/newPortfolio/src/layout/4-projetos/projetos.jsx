@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import styles from "./projetos.module.scss";
 
-export default function Projeto() {
+export default function Projeto(props) {
+    const tema = props.tema
     const [mostraCards, setMostrarCards] = useState(false)
     const [titleProjeto, setTitleProjetos] = useState("Blizzard")
     const [descrition, setDescrition] = useState("Inspirado na página de jogos da Blizzard, este é considera por mim o meu projeto mais bonito sendo tambem o meu favorito, foi possível implementar soluções criativas e adaptá-las às necessidades do projeto. Tecnologias HTML, CSS, JavaScript, Sass e Bootstrap")
@@ -39,9 +40,8 @@ export default function Projeto() {
     }
 
 
-
     return (
-        <section id={styles.projetos}>
+        <section className={styles.projetos} id={tema == 'Light' ? styles.temaLigth : null}>
             <div className={styles.div_de_animation}> {/*  <!-- DIV BIBLIOTECA ANIMAÇÃO AQUI--> */}
                 <p className={styles.subTitle}>Projetos</p>
                 <h3 className={styles.title}>Top 3 Projetos</h3>
@@ -56,7 +56,7 @@ export default function Projeto() {
                     name="input-slider" id="input-slider-3" />
 
                     <div id={styles.cards}>
-                        <label for="input-slider-1" id="label-1" onClick={textoGogOfWar}>
+                        <label htmlFor="input-slider-1" id="label-1" onClick={textoGogOfWar}>
                             <div className={styles.cardsCarrosel} id={styles.cardLabel_1}>
                                 <img className={styles.imagensProjeto} src="public/god-of-war-tela.jpg" alt="projeto-GodOfWar" />
                                 
@@ -71,7 +71,7 @@ export default function Projeto() {
                             </div>
                         </label>
 
-                        <label for="input-slider-2" id="label-2" onClick={textoBlizzard}>
+                        <label htmlFor="input-slider-2" id="label-2" onClick={textoBlizzard}>
                             <div className={styles.cardsCarrosel} id={styles.cardLabel_2}>
                                 <img className={styles.imagensProjeto} src="public/projeto-blizzard.webp" />
 
@@ -86,7 +86,7 @@ export default function Projeto() {
                             </div>
                         </label>
                         
-                        <label for="input-slider-3" id="label-3" onClick={textoLivreLeitor}>
+                        <label htmlFor="input-slider-3" id="label-3" onClick={textoLivreLeitor}>
                             <div className={styles.cardsCarrosel} id={styles.cardLabel_3}>
                                 <img className={styles.imagensProjeto} src="public/personal-project.png" alt="livre-leitor" />
                                 
@@ -106,10 +106,10 @@ export default function Projeto() {
 
                 {/* DESCRIÇÂO DOS PROJETOS */}
                 <div id={styles.descrition_of_project}>
-                    <h2>
+                    <h2 id={styles.title_descrition_of_project}>
                         {titleProjeto}
                     </h2>
-                    <p id="paragrafh-descrition-of-project">
+                    <p id={styles.paragrafh_descrition_of_project}>
                         {descrition}
                     </p>
                     <div>
@@ -184,6 +184,9 @@ export default function Projeto() {
 
                     </div>
                 )}
+
+
+                <a href="" className="btn btnPersonalizado" id={styles.btnMaisProjetos}>Ver mais projetos</a>
             </div>
         </section>
     )

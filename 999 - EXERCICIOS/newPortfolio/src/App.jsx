@@ -46,7 +46,7 @@ function App() {
         <SobreMim tema={tema} olhos={olhos}/>
         <Barra tema={tema}/>
         < Habilidades tema={tema}/>
-        < Projeto />
+        < Projeto tema={tema}/>
       </main>
     </div>
   )

@@ -1,6 +1,6 @@
 @import "../../style/colors.scss";
 
-#projetos {
+.projetos {
     background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(26, 26, 26));
     color: rgb(255, 255, 255);
     display: flex;
@@ -8,7 +8,6 @@
     justify-content: center;
     min-height: 100vh;
     padding: 55px 10px 30px 10px;
-
 
 
     .div_de_animation {
@@ -49,8 +48,7 @@
                 left: 0;
                 right: 0;
                 border-radius: 15px;
-                border: solid 3px rgba(255, 255, 255, 0.186);
-                // box-shadow: 0px 1px 8px rgb(255, 255, 255);
+                border: solid 3px rgba(251, 250, 250, 0.562);
                 overflow: hidden;
                 margin: 20px auto;
                 cursor: pointer;
@@ -58,8 +56,8 @@
         
                 .imagensProjeto {
                     position: absolute;
-                    width: 100%;
-                    height: 100%;
+                    width: 105%;
+                    height: 110%;
                     border-radius: 10px;
                     object-fit: cover;
                 }
@@ -93,7 +91,7 @@
             padding: 5px 20px;
             margin: 50px auto 40px auto;
             max-width: 80vw;
-            border-bottom: solid .5px $branco;
+            // border-bottom: solid .5px $branco;
             border-radius: 100px;
     
             p {
@@ -130,6 +128,15 @@
             transform: translateX(0) scale(1);
             opacity: 1;
             z-index: 1;
+        }
+
+        #btnMaisProjetos {
+            background-color: rgb(27, 24, 24);
+            width: 100%;
+
+            &:hover {
+                background-color: $verde;
+            }
         }
     }
 
@@ -177,15 +184,63 @@
         }
     }
     
-    
     label {
         display: block;
+    }
+
+
+    // TEMA CLARO
+    &#temaLigth {
+        background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(214, 213, 213));
+        color: $cinza-verde;
+
+        .div_de_animation {
+
+            .subTitle {
+                color: rgb(93, 86, 86);
+            }
+            .title {
+                color: $cinza-verde;
+                text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.17);
+            }
+
+            #container_slider {
+                .cardsCarrosel {
+                    border: solid 5px rgba(0, 0, 0, 0.843);
+                    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.335);
+                }
+            }
+
+            #descrition_of_project {
+                // border-bottom: solid .5px $cinza-verde;
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.027);
+
+                #title_descrition_of_project {
+                    text-shadow: 4px 4px 4px $ciano-claro;
+                }
+                #paragrafh_descrition_of_project {
+                    color: $cinza-verde;
+                }
+            }
+
+            #btnMaisProjetos {
+                background-color: rgb(234, 230, 230);
+                border-color: $preto;
+                color: $preto;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.227);
+                width: 100%;
+    
+                &:hover {
+                    background-color: $preto;
+                }
+            }
+        }
     }
 }
 
 
 @media screen and (max-width: 915px) {
-    #projetos {
+    .projetos {
 
         .div_de_animation {
 
@@ -206,7 +261,7 @@
 
 
 @media screen and (max-width: 800px) {
-    #projetos {
+    .projetos {
 
         .div_de_animation {
 
