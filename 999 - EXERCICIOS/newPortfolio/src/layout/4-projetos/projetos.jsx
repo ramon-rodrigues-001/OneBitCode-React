@@ -3,6 +3,10 @@ import styles from "./projetos.module.scss";
 
 export default function Projeto() {
     const [mostraCards, setMostrarCards] = useState(false)
+    const [titleProjeto, setTitleProjetos] = useState("Blizzard")
+    const [descrition, setDescrition] = useState("Inspirado na página de jogos da Blizzard, este é considera por mim o meu projeto mais bonito sendo tambem o meu favorito, foi possível implementar soluções criativas e adaptá-las às necessidades do projeto. Tecnologias HTML, CSS, JavaScript, Sass e Bootstrap")
+    const [imgFerramentas, setImgFerramentas] = useState(['html.png', 'css.png', 'javascript.png', 'sass.png', 'bootstrap.png'])
+
 
     // Iniciar um card do carrosel como Checked
     useEffect(()=> {
@@ -15,6 +19,26 @@ export default function Projeto() {
         const larguraTela = window.innerWidth
         larguraTela < 800 ? setMostrarCards(true) : setMostrarCards(false)
     }, [window.innerWidth])
+
+
+    const textoGogOfWar = ()=> {
+        setTitleProjetos("God Of War")
+        setDescrition("O projeto consiste em uma página de informações sobre o jogo 'God of War Ragnarök', que apresenta modo de jogar, personagens e trailer. Este projeto tem como foco o desenvolvimento da interfaçe não tendo um back-end robusto. Para a criação utilizei as tecnologias HTML, CSS, Sass, Bootstrap e JavaScript.")
+        setImgFerramentas(['html.png', 'css.png', 'javascript.png', 'sass.png', 'bootstrap.png'])
+    }
+    const textoBlizzard = ()=> {
+        setTitleProjetos("Blizzard")
+        setDescrition("Inspirado na página de jogos da Blizzard, este é considera por mim o meu projeto mais bonito sendo tambem o meu favorito, foi possível implementar soluções criativas e adaptá-las às necessidades do projeto. Tecnologias HTML, CSS, JavaScript, Sass e Bootstrap")
+        setImgFerramentas(['html.png', 'css.png', 'javascript.png', 'sass.png', 'bootstrap.png'])
+
+    }
+    const textoLivreLeitor = ()=> {
+        setTitleProjetos("Leitor Livre")
+        setDescrition("Este é o projeto mais grandioso que já empreendi, representando também a maior fonte de aprendizado e aprimoramento das minhas habilidades. Trata-se de um website dedicado a disponibilizar gratuitamente livros em formato PD")
+        setImgFerramentas(['html.png', 'css.png', 'javascript.png', 'sass.png', 'bootstrap.png', 'react.png', 'npm.png'])
+    }
+
+
 
     return (
         <section id={styles.projetos}>
@@ -32,8 +56,7 @@ export default function Projeto() {
                     name="input-slider" id="input-slider-3" />
 
                     <div id={styles.cards}>
-                        
-                        <label for="input-slider-1" id="label-1">
+                        <label for="input-slider-1" id="label-1" onClick={textoGogOfWar}>
                             <div className={styles.cardsCarrosel} id={styles.cardLabel_1}>
                                 <img className={styles.imagensProjeto} src="public/god-of-war-tela.jpg" alt="projeto-GodOfWar" />
                                 
@@ -48,7 +71,7 @@ export default function Projeto() {
                             </div>
                         </label>
 
-                        <label for="input-slider-2" id="label-2">
+                        <label for="input-slider-2" id="label-2" onClick={textoBlizzard}>
                             <div className={styles.cardsCarrosel} id={styles.cardLabel_2}>
                                 <img className={styles.imagensProjeto} src="public/projeto-blizzard.webp" />
 
@@ -63,7 +86,7 @@ export default function Projeto() {
                             </div>
                         </label>
                         
-                        <label for="input-slider-3" id="label-3">
+                        <label for="input-slider-3" id="label-3" onClick={textoLivreLeitor}>
                             <div className={styles.cardsCarrosel} id={styles.cardLabel_3}>
                                 <img className={styles.imagensProjeto} src="public/personal-project.png" alt="livre-leitor" />
                                 
@@ -84,23 +107,39 @@ export default function Projeto() {
                 {/* DESCRIÇÂO DOS PROJETOS */}
                 <div id={styles.descrition_of_project}>
                     <h2>
-                        <span className="span-azulMarinho" id="title-descrition-of-project">
-                            God Of War
-                        </span>
+                        {titleProjeto}
                     </h2>
                     <p id="paragrafh-descrition-of-project">
-                        O projeto consiste em uma página de informações sobre o jogo 'God of War Ragnarök', que apresenta modo de jogar, personagens e trailer. Este projeto tem como foco o desenvolvimento da interfaçe não tendo um back-end robusto. Para a criação utilizei as tecnologias HTML, CSS, Sass, Bootstrap e JavaScript.
+                        {descrition}
                     </p>
                     <div>
-                        <img src="public/icone-habilidades/html.png" alt="HTML" className={styles.icones_de_desenvolvimento} />
-
-                        <img src="public/icone-habilidades/css.png" alt="CSS" className={styles.icones_de_desenvolvimento} />
-                        
-                        <img src="public/icone-habilidades/javascript.png" alt="JavaScript" className={styles.icones_de_desenvolvimento} />
-                        
-                        <img src="public/icone-habilidades/sass.png" alt="SASS" className={styles.icones_de_desenvolvimento} />
-                        
-                        <img src="public/icone-habilidades/bootstrap.png" alt="bootstrap" className={styles.icones_de_desenvolvimento} />
+                        {imgFerramentas[0] && (
+                            <img src={`public/icone-habilidades/${imgFerramentas[0]}`} className={styles.icones_de_desenvolvimento} />
+                        )}
+                        {imgFerramentas[1] && (
+                            <img src={`public/icone-habilidades/${imgFerramentas[1]}`} className={styles.icones_de_desenvolvimento} />
+                        )}
+                        {imgFerramentas[2] && (
+                            <img src={`public/icone-habilidades/${imgFerramentas[2]}`} className={styles.icones_de_desenvolvimento} />
+                        )}
+                        {imgFerramentas[3] && (
+                            <img src={`public/icone-habilidades/${imgFerramentas[3]}`} className={styles.icones_de_desenvolvimento} />
+                        )}
+                        {imgFerramentas[4] && (
+                            <img src={`public/icone-habilidades/${imgFerramentas[4]}`} className={styles.icones_de_desenvolvimento} />
+                        )}
+                        {imgFerramentas[5] && (
+                            <img src={`public/icone-habilidades/${imgFerramentas[5]}`} className={styles.icones_de_desenvolvimento} />
+                        )}
+                        {imgFerramentas[6] && (
+                            <img src={`public/icone-habilidades/${imgFerramentas[6]}`} className={styles.icones_de_desenvolvimento} />
+                        )}
+                        {imgFerramentas[7] && (
+                            <img src={`public/icone-habilidades/${imgFerramentas[7]}`} className={styles.icones_de_desenvolvimento} />
+                        )}
+                        {imgFerramentas[8] && (
+                            <img src={`public/icone-habilidades/${imgFerramentas[8]}`} className={styles.icones_de_desenvolvimento} />
+                        )}
                     </div>
                 </div>
                 {/* <!-- / CARROSEL DE PROJETOS --> */}
