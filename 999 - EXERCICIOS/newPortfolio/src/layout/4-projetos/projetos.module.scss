@@ -112,22 +112,25 @@
         .input_slider_2:checked ~ #cards #cardLabel_1,
         .input_slider_3:checked ~ #cards #cardLabel_2 {
             transform: translateX(-50%) scale(.8);
-            opacity: 0.4;
-            z-index: 0;
+            opacity: .5;
+            z-index: 5;
+
         }
         .input_slider_1:checked ~ #cards #cardLabel_2,
         .input_slider_2:checked ~ #cards #cardLabel_3,
         .input_slider_3:checked ~ #cards #cardLabel_1 {
             transform: translateX(50%) scale(.8);
-            opacity: 0.4;
-            z-index: 0;
+            opacity: .5;
+            z-index: 5;
+
+            
         }
         .input_slider_1:checked ~ #cards #cardLabel_1,
         .input_slider_2:checked ~ #cards #cardLabel_2,
         .input_slider_3:checked ~ #cards #cardLabel_3 {
             transform: translateX(0) scale(1);
             opacity: 1;
-            z-index: 1;
+            z-index: 6;
         }
 
         #btnMaisProjetos {
@@ -208,7 +211,7 @@
                 .cardsCarrosel {
                     border: solid 5px rgba(0, 0, 0, 0.843);
                     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.335);
-                }
+                } 
             }
 
             #descrition_of_project {
