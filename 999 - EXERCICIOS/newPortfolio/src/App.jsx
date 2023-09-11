@@ -7,6 +7,7 @@ import Barra from "./layout/1.5.barra-de-scroll/barra"
 import Habilidades from "./layout/3-habilidades/habilidades";
 import Projeto from "./layout/4-projetos/projetos";
 import Convite from "./layout/5-convite-para-conversar/convite";
+import Contatos from "./layout/6-contatos/contatos";
 
 function App() {
   const [tema, setTema] = useState('Dark')
@@ -49,6 +50,7 @@ function App() {
         < Habilidades tema={tema}/>
         < Projeto tema={tema}/>
         < Convite tema={tema} />
+        < Contatos tema={tema} />
       </main>
     </div>
   )
