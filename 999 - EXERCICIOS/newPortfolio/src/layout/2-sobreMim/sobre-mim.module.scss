@@ -19,7 +19,7 @@
         color: $branco;
         max-width: 1100px;
         width: 93vw;
-        height: 100vh;
+        min-height: 100vh;
         margin: auto;
 
         .olhos_sobreMim {
@@ -110,15 +110,17 @@
         .container_sobreMim {
             flex-direction: column-reverse;
             gap: 30px;
-            // min-height: 10vh;
+            min-height: 10vh;
+            padding: 100px 0px 50px 0px;
 
             .container_img_programador {
                 text-align: center;
 
                 .img_programador {
-                    opacity: 90%;
                     position: relative;
+                    opacity: 90%;
                     width: 80%;
+                    transform: translateY(0);
                     margin: auto;
                 }
             }
@@ -137,171 +139,3 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// @keyframes img-flutuante {
-//     0% {
-//         transform: translateY(10px);
-//     }
-//     50% {
-//         transform: translateY(-10px);
-//     }
-//     100% {
-//         transform: translateY(10px);
-//     }
-// }
-
-
-// #sobreMim {
-//     display: flex;
-//     align-items: center;
-//     font-size: 1em;
-//     font-weight: bold;
-//     background-image: linear-gradient(to top, #02132B, #021431);
-//     color: aqua;
-//     max-width: 100vw;
-//     min-height: 90vh;
-//     padding-top: 70px;
-
-//     #divAnimaçãoHeader {
-//         display: flex;
-//         justify-content: space-around;
-//         align-items: center;
-//         text-align: justify;
-//         flex-wrap: wrap;
-
-//         #btnMaisSobreMim {
-//             display: none;
-//         }
-//     }
-
-//     #smEsquerda {
-//         text-align: center;
-//         padding: 10px;
-//         border-radius: 30%;
-
-//         #imgFlutuante {
-//             animation-name: img-flutuante;
-//             animation-duration: 5s;
-//             animation-iteration-count: infinite;
-//             padding: 25px;
-//             border: 1.5px solid transparent;
-//             border-radius: 20%;
-//             max-width: 330px;
-//         }
-//     }
-    
-
-//     #smDireita {
-//         flex: 0 1 600px;
-//         padding: 10px;
-        
-//         #texto {
-//             display: inline;
-//         }
-
-//         .icone_aspas {
-//             width: 15px;
-            
-//             &#aspa2 {
-//                 transform: rotate(160deg);
-//             }
-//         }
-//     }
-
-//     // TEMA CLARO
-//     &#Light {
-
-//     }
-// }
-
-
-
-
-
-
-// @media screen and (max-width: 1100px) {
-//     #sobreMim {
-//         #div-animação-header {
-//             justify-content: center;
-//         }
-//         #smDireita {
-//             padding: 10px 30px 20px 30px;
-//         }  
-//     }
-// }
-
-
-// @media screen and (max-width: 700px) {
-//     #sobreMim {
-//         #divAnimaçãoHeader {
-//             text-align: left;
-
-//             #labelMaisSobreMim {
-//                 display: block;
-
-//                 #btnMaisSobreMim {
-//                     margin: 15px 0px;
-//                     display: block;
-//                     width: 92vw;
-                    
-//                     padding: 10px -30px 10px 0px;
-//                 }
-//             }
-//         }
-
-
-//         #maisSobreMim:checked ~ #smDireita #textoDescartavel2 {
-//             display: inline;
-//         }
-
-        
-//         #textoDescartavel2 {
-//             display: none;
-//         }
-//     }
-// }
-
-// @media screen and (max-width: 457px) {
-//     #sobreMim {
-//         #smEsquerda {
-//             #imgFlutuante {
-//                 max-width: 250px;
-//             }
-//         }
-
-//         #textoDescartavel1 {
-//             display: none;
-//         }
-
-//         #maisSobreMim:checked ~ #smDireita #textoDescartavel1 {
-//             display: inline;
-//         }
-//     }
-// }
