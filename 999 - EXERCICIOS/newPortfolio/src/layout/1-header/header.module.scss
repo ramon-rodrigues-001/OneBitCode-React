@@ -188,23 +188,6 @@
         }
 
 
-        // ====== Menu itens apareçe e desapareçe ======
-
-        input[type="checkbox"]:checked ~ label #hamburguer #itens {
-            position: fixed;
-            right: 0;
-            top: 0;
-            background-color: rgba(222, 220, 220, 0.876);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100vw;
-            height: 100vh;
-            transition: transform 2s, height 2s;
-        }
-
-
         // ====== Menu fechando em forma de X ======
 
         input[type="checkbox"]:checked ~ label #hamburguer #menu {

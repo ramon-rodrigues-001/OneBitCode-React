@@ -80,21 +80,21 @@ export default function Habilidades(props) {
                     <div id={styles.conteiner_cards}>
                         <div className={styles.cards} onClick={hab_1}>
                             <a href="#habilidades" >
-                                <img src="public/icon-habilits/html5-plain.svg" className={styles.iconHabilits} alt="icon_HTML_5" />
+                                <img src="/icon-habilits/html5-plain.svg" className={styles.iconHabilits} alt="icon_HTML_5" />
                                 <h3 className={styles.title_ability}></h3>
                                 <p className="h5 px-1">HTML</p>
                             </a>
                         </div>
                         <div className={styles.cards} onClick={hab_2}>
                             <a href="#habilidades">
-                                <img src="public/icon-habilits/css3-plain.svg" className={styles.iconHabilits} alt="icon_CSS_3" />
+                                <img src="/icon-habilits/css3-plain.svg" className={styles.iconHabilits} alt="icon_CSS_3" />
                                 <h3 className={styles.title_ability}></h3>
                                 <p className="h5 px-1">CSS</p>
                             </a>
                         </div>
                         <div className={styles.cards} onClick={hab_3}>
                             <a href="#habilidades">
-                                <img src="public/icon-habilits/javascript-plain.svg" className={styles.iconHabilits} alt="icon_JS" />
+                                <img src="/icon-habilits/javascript-plain.svg" className={styles.iconHabilits} alt="icon_JS" />
                                 <h3 className="title_ability"></h3>
                                 <p className="h5 px-1">JAVASCRIPT</p>
                             </a>
@@ -111,7 +111,7 @@ export default function Habilidades(props) {
                         {maisHabilidades && (
                             <div className={styles.cards} onClick={hab_5}>
                                 <a href="#habilidades">
-                                    <img src="public/icon-habilits/bootstrap-plain.svg" className={styles.iconHabilits} alt="icon_BOOTSTRAP" />
+                                    <img src="/icon-habilits/bootstrap-plain.svg" className={styles.iconHabilits} alt="icon_BOOTSTRAP" />
                                     <h3 className={styles.title_ability}></h3>
                                     <p className="h5 px-1">BOOTS...</p>
                                 </a>
@@ -120,7 +120,7 @@ export default function Habilidades(props) {
                         {maisHabilidades && (
                             <div className={styles.cards} onClick={hab_6}>
                                 <a href="#habilidades">
-                                    <img src="public/icone-habilidades/react.png" className={styles.iconHabilits} alt="icon_REACT" />
+                                    <img src="/icone-habilidades/react.png" className={styles.iconHabilits} alt="icon_REACT" />
                                     <h3 className={styles.title_ability}></h3>
                                     <p className="h5 px-1">REACT</p>
                                 </a>
@@ -129,7 +129,7 @@ export default function Habilidades(props) {
                         {maisHabilidades && (
                             <div className={styles.cards} onClick={hab_7}>
                                 <a href="#habilidades">
-                                    <img src="public/icon-habilits/mongodb-plain.svg" className={styles.iconHabilits} alt="icon_mongoDB" />
+                                    <img src="/icon-habilits/mongodb-plain.svg" className={styles.iconHabilits} alt="icon_mongoDB" />
                                     <h3 className={styles.title_ability}></h3>
                                     <p className="h5 px-1">MONGO.DB</p>
                                 </a>
@@ -138,7 +138,7 @@ export default function Habilidades(props) {
                         {maisHabilidades && (
                             <div className={styles.cards} onClick={hab_8}>
                                 <a href="#habilidades">
-                                    <img src="public/icon-habilits/nodejs-plain.svg" className={styles.iconHabilits} alt="icon_NodeJs" />
+                                    <img src="/icon-habilits/nodejs-plain.svg" className={styles.iconHabilits} alt="icon_NodeJs" />
                                     <h3 className={styles.title_ability}></h3>
                                     <p className="h5 px-1">NODE.JS</p>
                                 </a>

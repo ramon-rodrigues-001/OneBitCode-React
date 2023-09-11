@@ -58,7 +58,7 @@ export default function Projeto(props) {
                     <div id={styles.cards}>
                         <label htmlFor="input-slider-1" id="label-1" onClick={textoGogOfWar}>
                             <div className={styles.cardsCarrosel} id={styles.cardLabel_1}>
-                                <img className={styles.imagensProjeto} src="public/god-of-war-tela.jpg" alt="projeto-GodOfWar" />
+                                <img className={styles.imagensProjeto} src="/god-of-war-tela.jpg" alt="projeto-GodOfWar" />
                                 
                                 <div className={styles.containerDeBTN}>
                                     <a href="https://ramon-rodrigues-001.github.io/God-Of-War/" target="_blank" className="btn btnPersonalizado" id={styles.deploy}><span className="detalhes-btn quadrado_1"></span>
@@ -73,7 +73,7 @@ export default function Projeto(props) {
 
                         <label htmlFor="input-slider-2" id="label-2" onClick={textoBlizzard}>
                             <div className={styles.cardsCarrosel} id={styles.cardLabel_2}>
-                                <img className={styles.imagensProjeto} src="public/projeto-blizzard.webp" />
+                                <img className={styles.imagensProjeto} src="/projeto-blizzard.webp" />
 
                                 <div className={styles.containerDeBTN}>
                                     <a href="https://ramon-rodrigues-001.github.io/Games-Blizzard/" target="_blank" className="btn btnPersonalizado" id={styles.deploy}><span className="detalhes-btn quadrado_1"></span>
@@ -88,7 +88,7 @@ export default function Projeto(props) {
                         
                         <label htmlFor="input-slider-3" id="label-3" onClick={textoLivreLeitor}>
                             <div className={styles.cardsCarrosel} id={styles.cardLabel_3}>
-                                <img className={styles.imagensProjeto} src="public/personal-project.png" alt="livre-leitor" />
+                                <img className={styles.imagensProjeto} src="/personal-project.png" alt="livre-leitor" />
                                 
                                 <div className={styles.containerDeBTN}>
                                     <a href="https://livre-leitor.netlify.app/" target="_blank" className="btn btnPersonalizado" id={styles.deploy}><span className="detalhes-btn quadrado_1"></span>
@@ -114,31 +114,31 @@ export default function Projeto(props) {
                     </p>
                     <div>
                         {imgFerramentas[0] && (
-                            <img src={`public/icone-habilidades/${imgFerramentas[0]}`} className={styles.icones_de_desenvolvimento} />
+                            <img src={`/icone-habilidades/${imgFerramentas[0]}`} className={styles.icones_de_desenvolvimento} />
                         )}
                         {imgFerramentas[1] && (
-                            <img src={`public/icone-habilidades/${imgFerramentas[1]}`} className={styles.icones_de_desenvolvimento} />
+                            <img src={`/icone-habilidades/${imgFerramentas[1]}`} className={styles.icones_de_desenvolvimento} />
                         )}
                         {imgFerramentas[2] && (
-                            <img src={`public/icone-habilidades/${imgFerramentas[2]}`} className={styles.icones_de_desenvolvimento} />
+                            <img src={`/icone-habilidades/${imgFerramentas[2]}`} className={styles.icones_de_desenvolvimento} />
                         )}
                         {imgFerramentas[3] && (
-                            <img src={`public/icone-habilidades/${imgFerramentas[3]}`} className={styles.icones_de_desenvolvimento} />
+                            <img src={`/icone-habilidades/${imgFerramentas[3]}`} className={styles.icones_de_desenvolvimento} />
                         )}
                         {imgFerramentas[4] && (
-                            <img src={`public/icone-habilidades/${imgFerramentas[4]}`} className={styles.icones_de_desenvolvimento} />
+                            <img src={`/icone-habilidades/${imgFerramentas[4]}`} className={styles.icones_de_desenvolvimento} />
                         )}
                         {imgFerramentas[5] && (
-                            <img src={`public/icone-habilidades/${imgFerramentas[5]}`} className={styles.icones_de_desenvolvimento} />
+                            <img src={`/icone-habilidades/${imgFerramentas[5]}`} className={styles.icones_de_desenvolvimento} />
                         )}
                         {imgFerramentas[6] && (
-                            <img src={`public/icone-habilidades/${imgFerramentas[6]}`} className={styles.icones_de_desenvolvimento} />
+                            <img src={`/icone-habilidades/${imgFerramentas[6]}`} className={styles.icones_de_desenvolvimento} />
                         )}
                         {imgFerramentas[7] && (
-                            <img src={`public/icone-habilidades/${imgFerramentas[7]}`} className={styles.icones_de_desenvolvimento} />
+                            <img src={`/icone-habilidades/${imgFerramentas[7]}`} className={styles.icones_de_desenvolvimento} />
                         )}
                         {imgFerramentas[8] && (
-                            <img src={`public/icone-habilidades/${imgFerramentas[8]}`} className={styles.icones_de_desenvolvimento} />
+                            <img src={`/icone-habilidades/${imgFerramentas[8]}`} className={styles.icones_de_desenvolvimento} />
                         )}
                     </div>
                 </div>
@@ -149,7 +149,7 @@ export default function Projeto(props) {
                 {mostraCards && (
                     <div id={styles.cardsDeProjetos}>
                         <div className={styles.item_projetos}>
-                            <img src="public/projeto-blizzard.webp" />
+                            <img src="/projeto-blizzard.webp" />
                             <span className={styles.containerBTN}>
                                 <a href="https://ramon-rodrigues-001.github.io/Games-Blizzard/" target="_blank" className="btn btnPersonalizado">
                                     DEPLOY
@@ -160,7 +160,7 @@ export default function Projeto(props) {
                             </span>
                         </div>
                         <div className={styles.item_projetos}>
-                            <img src="public/god-of-war-tela.jpg" alt="god-of-war" />
+                            <img src="/god-of-war-tela.jpg" alt="god-of-war" />
                             <span className={styles.containerBTN}>
                                 <a href="https://ramon-rodrigues-001.github.io/God-Of-War/" target="_blank" className="btn btnPersonalizado">
                                     DEPLOY
@@ -171,7 +171,7 @@ export default function Projeto(props) {
                             </span>
                         </div>
                         <div className={styles.item_projetos}>
-                            <img src="public/personal-project.png" alt="Livre-leitor" />
+                            <img src="/personal-project.png" alt="Livre-leitor" />
                             <span className={styles.containerBTN}>
                                 <a href="https://livre-leitor.netlify.app/" target="_blank" className="btn btnPersonalizado">
                                     DEPLOY

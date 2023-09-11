@@ -1,6 +1,13 @@
 // IMPORTANDO LAYOUT
 import { useEffect, useState } from "react";
+
+// Importe do Bootstrap CSS
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+// Importe do JavaScript do Bootstrap 
+import 'bootstrap/dist/js/bootstrap.min.js';
 import "./style/overall.scss"
+
+// Imports dos layOuts
 import Header from "./layout/1-header/header";
 import SobreMim from "./layout/2-sobreMim/sobre-mim";
 import Barra from "./layout/1.5.barra-de-scroll/barra"
@@ -50,7 +57,7 @@ function App() {
         < Habilidades tema={tema}/>
         < Projeto tema={tema}/>
         < Convite tema={tema} />
-        < Contatos tema={tema} />
+        < Contatos />
       </main>
     </div>
   )

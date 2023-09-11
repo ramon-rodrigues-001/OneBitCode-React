@@ -1,8 +1,9 @@
 import styles from "./header.module.scss"
 import { Github, Linkedin, MoonStarsFill, BrightnessHighFill } from 'react-bootstrap-icons';
-import React, { useState } from "react"; 
+// import './node_modules/bootstrap/dist/js/bootstrap.min.js'
+import React from "react"; 
 
-/* 
+/*  
 Falta uns detalhes no menu
 O estilo geral não esta sendo aplicados nos elementos com {styles}
 */
