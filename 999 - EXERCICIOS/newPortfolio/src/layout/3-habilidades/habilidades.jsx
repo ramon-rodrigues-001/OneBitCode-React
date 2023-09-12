@@ -69,6 +69,7 @@ export default function Habilidades(props) {
 
 
     return (
+        <span id="ancora-habilidades">
         <section className={styles.habilidades} id={tema == 'Light' ? styles.temaLight : null}>
             <div className={styles.container_habilidades}>
                 <div> {/* Colocar a animação aqui */}
@@ -79,76 +80,76 @@ export default function Habilidades(props) {
                     {/* Cards De Habilidade */}
                     <div id={styles.conteiner_cards}>
                         <div className={styles.cards} onClick={hab_1}>
-                            <a href="#habilidades" >
+                            <span>
                                 <img src="/icon-habilits/html5-plain.svg" className={styles.iconHabilits} alt="icon_HTML_5" />
                                 <h3 className={styles.title_ability}></h3>
                                 <p className="h5 px-1">HTML</p>
-                            </a>
+                            </span>
                         </div>
                         <div className={styles.cards} onClick={hab_2}>
-                            <a href="#habilidades">
+                            <span>
                                 <img src="/icon-habilits/css3-plain.svg" className={styles.iconHabilits} alt="icon_CSS_3" />
                                 <h3 className={styles.title_ability}></h3>
                                 <p className="h5 px-1">CSS</p>
-                            </a>
+                            </span>
                         </div>
                         <div className={styles.cards} onClick={hab_3}>
-                            <a href="#habilidades">
+                            <span>
                                 <img src="/icon-habilits/javascript-plain.svg" className={styles.iconHabilits} alt="icon_JS" />
                                 <h3 className="title_ability"></h3>
                                 <p className="h5 px-1">JAVASCRIPT</p>
-                            </a>
+                            </span>
                         </div>
                         <div className={styles.cards} onClick={hab_4}>
-                            <a href="#habilidades">
+                            <span>
                                 <img src="/icon-habilits/sass-original.svg" className={styles.iconHabilits} alt="icon_SASS" />
                                 <h3 className={styles.title_ability}></h3>
                                 <p className="h5 px-1">SASS</p>
-                            </a>
+                            </span>
                         </div>
 
                         {/* Baililidades que somem na tela pequena */}
                         {maisHabilidades && (
                             <div className={styles.cards} onClick={hab_5}>
-                                <a href="#habilidades">
+                                <span>
                                     <img src="/icon-habilits/bootstrap-plain.svg" className={styles.iconHabilits} alt="icon_BOOTSTRAP" />
                                     <h3 className={styles.title_ability}></h3>
                                     <p className="h5 px-1">BOOTS...</p>
-                                </a>
+                                </span>
                             </div>
                         )}
                         {maisHabilidades && (
                             <div className={styles.cards} onClick={hab_6}>
-                                <a href="#habilidades">
+                                <span>
                                     <img src="/icone-habilidades/react.png" className={styles.iconHabilits} alt="icon_REACT" />
                                     <h3 className={styles.title_ability}></h3>
                                     <p className="h5 px-1">REACT</p>
-                                </a>
+                                </span>
                             </div>
                         )}
                         {maisHabilidades && (
                             <div className={styles.cards} onClick={hab_7}>
-                                <a href="#habilidades">
+                                <span>
                                     <img src="/icon-habilits/mongodb-plain.svg" className={styles.iconHabilits} alt="icon_mongoDB" />
                                     <h3 className={styles.title_ability}></h3>
                                     <p className="h5 px-1">MONGO.DB</p>
-                                </a>
+                                </span>
                             </div>
                         )}
                         {maisHabilidades && (
                             <div className={styles.cards} onClick={hab_8}>
-                                <a href="#habilidades">
+                                <span>
                                     <img src="/icon-habilits/nodejs-plain.svg" className={styles.iconHabilits} alt="icon_NodeJs" />
                                     <h3 className={styles.title_ability}></h3>
                                     <p className="h5 px-1">NODE.JS</p>
-                                </a>
+                                </span>
                             </div>
                         )}
 
                         
                 
                         {/* Butão de ver mais / menos */}
-                        <label htmlFor="mais-habilidades">
+                        <label htmlFor="mais-habilidades" id="ancoraParaDescrition">
                             {/* Mostrar MENOS */}
                             {maisHabilidades && (
                                 <button className="btn btn-outline-info btnPersonalizado" id={styles.btn_mais_habilidades} onClick={mudarStateHabilidade}>
@@ -181,5 +182,6 @@ export default function Habilidades(props) {
                 </div>
             </div>
         </section>
+        </span>
     )
 }

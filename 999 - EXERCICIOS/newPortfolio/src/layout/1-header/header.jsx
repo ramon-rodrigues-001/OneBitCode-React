@@ -21,12 +21,12 @@ export default function Header(props) {
                 </h1>
                 {/* Navbar para tela quandes */}
                 <nav id={styles.navbar}>
-                    <a href="#sobre-mim">
+                    <a href="#ancora-sobre-mim">
                         <span className={styles.aspas_Navbar}>&lt; </span>
                             SOBRE MIM
                         <span className={styles.aspas_Navbar}> &gt;</span>
                     </a>
-                    <a href="#habilidades">
+                    <a href="#ancora-habilidades">
                         <span className={styles.aspas_Navbar}>&lt; </span>
                             HABILIDADES
                         <span className={styles.aspas_Navbar}> &gt;</span>
@@ -36,7 +36,7 @@ export default function Header(props) {
                             PROJETOS
                         <span className={styles.aspas_Navbar}> &gt;</span>
                     </a>
-                    <a href="#contatos">
+                    <a href="#ancora-contatos">
                         <span className={styles.aspas_Navbar}>&lt; </span>
                             CONTATOS
                         <span className={styles.aspas_Navbar}> &gt;</span>
@@ -67,19 +67,16 @@ export default function Header(props) {
                                             </buton>
                                         </li>
                                         <li className="nav-item">
-                                            <a className="btn btn-outline-light btnPersonalizado" id={styles.itens_Menu} href="#sobre-mim">Sobre Mim</a>
+                                            <a className="btn btn-outline-light btnPersonalizado" id={styles.itens_Menu} href="#ancora-sobre-mim">Sobre Mim</a>
                                         </li>
                                         <li className="nav-item">
-                                            <a className="btn btn-outline-light btnPersonalizado" id={styles.itens_Menu} href="#habilidades">Habilidades</a>
+                                            <a className="btn btn-outline-light btnPersonalizado" id={styles.itens_Menu} href="#ancora-habilidades">Habilidades</a>
                                         </li>
                                         <li className="nav-item">
                                             <a className="btn btn-outline-light btnPersonalizado" id={styles.itens_Menu} href="#ancora-projetos">Projetos</a>
                                         </li>
                                         <li className="nav-item">
-                                            <a className="btn btn-outline-light btnPersonalizado" id={styles.itens_Menu} href="#vamos-trabalhar-juntos">Iniciar um conversa</a>
-                                        </li>
-                                        <li className="nav-item">
-                                            <a className="btn btn-outline-light btnPersonalizado" id={styles.itens_Menu} href="#contatos">contatos</a>
+                                            <a className="btn btn-outline-light btnPersonalizado" id={styles.itens_Menu} href="#ancora-contatos">contatos</a>
                                         </li>
                                         <li className="nav-item">
                                             <a className="btn btn-outline-danger btnPersonalizado" id={styles.itens_Menu} href="https://github.com/ramon-rodrigues-001" target="_blank">GITHUB</a>

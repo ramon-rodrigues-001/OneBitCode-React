@@ -41,6 +41,7 @@ export default function Projeto(props) {
 
 
     return (
+        <span id="ancora-projetos">
         <section className={styles.projetos} id={tema == 'Light' ? styles.temaLigth : null}>
             <div className={styles.div_de_animation}> {/*  <!-- DIV BIBLIOTECA ANIMAÇÃO AQUI--> */}
                 <p className={styles.subTitle}>Projetos</p>
@@ -189,6 +190,7 @@ export default function Projeto(props) {
                 <a href="" className="btn btnPersonalizado" id={styles.btnMaisProjetos}>Ver mais projetos</a>
             </div>
         </section>
+        </span>
     )
 }
 

@@ -47,7 +47,7 @@
             padding: 10px 20px;
             cursor: pointer;
 
-            a {
+            span {
                 display: flex;
                 align-items: center;
                 gap: 2px;
@@ -132,7 +132,7 @@
                     filter: grayscale(0);
                 }
 
-                a {
+                span {
                     color: $cinza-verde;
                 }
 
@@ -168,6 +168,12 @@
 
         #btn_mais_habilidades {
             display: block;
+        }
+
+        #conteiner_cards {
+            .cards {
+                min-width: 220px;
+            }
         }
     }
 }

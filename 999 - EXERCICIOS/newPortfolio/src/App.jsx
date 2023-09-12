@@ -57,7 +57,7 @@ function App() {
         < Habilidades tema={tema}/>
         < Projeto tema={tema}/>
         < Convite tema={tema} />
-        < Contatos />
+        < Contatos id="ancora-contatos" />
       </main>
     </div>
   )

@@ -7,6 +7,7 @@ export default function Convite(props) {
     const tema = props.tema
 
     return (
+        <span  id="ancora-contatos">
         <section className={styles.sectionConvite} id={tema === 'Light' ? styles.Light : null}>
             <div className={styles.containerConvite}>
                 <p className={styles.subTitle}>Convite para conversar</p>
@@ -39,5 +40,6 @@ export default function Convite(props) {
                 </div>
             </div>
         </section>
+        </span>
     )
 }
