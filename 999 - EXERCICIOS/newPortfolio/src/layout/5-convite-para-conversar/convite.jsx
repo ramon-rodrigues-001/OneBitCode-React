@@ -10,7 +10,8 @@ export default function Convite(props) {
         <span  id="ancora-contatos">
         <section className={styles.sectionConvite} id={tema === 'Light' ? styles.Light : null}>
             <div className={styles.containerConvite}>
-                <p className={styles.subTitle}>Convite para conversar</p>
+                <p className={styles.subTitle}>Convite</p>
+                <h3 className={styles.title}>Mande um oi 🖐</h3>
                 
                 <div className={styles.cards}>
                     <div className={styles.cardConvite}>
@@ -33,7 +34,7 @@ export default function Convite(props) {
                         </p>
                         <button class="btnPersonalizado">
                             <a href="#div-name-email" class="a">
-                                < SendFill /> Vamos fazer isso!
+                                < SendFill /> Freelancer!
                             </a>
                         </button>
                     </div>
