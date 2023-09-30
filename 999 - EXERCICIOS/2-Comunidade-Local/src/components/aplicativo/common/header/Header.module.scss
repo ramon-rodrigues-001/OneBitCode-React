@@ -4,6 +4,7 @@
 header {
     position: fixed;
     width: 100vw;
+    background-color: white;
     color: rgb(79, 75, 75);
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.071);
     padding: 7px 10px;
@@ -11,6 +12,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    z-index: 999;
 
     ul {
         display: flex;

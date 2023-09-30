@@ -1,11 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './index.css'
 
-import HeaderRouter from './routers/HeaderRouter.jsx'
+import App from './App'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    < HeaderRouter />
+    < App />
   </React.StrictMode>,
 )
