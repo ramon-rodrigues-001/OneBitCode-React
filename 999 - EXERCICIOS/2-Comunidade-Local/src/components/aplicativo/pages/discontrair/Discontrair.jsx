@@ -1,4 +1,4 @@
-import styles from "./Aside.module.scss"
+import styles from "./Discontrair.module.scss"
 
 function Discontrair() {
   return (

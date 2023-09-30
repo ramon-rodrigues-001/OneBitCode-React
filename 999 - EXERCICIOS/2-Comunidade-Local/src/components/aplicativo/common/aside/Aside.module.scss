@@ -1,8 +1,29 @@
 .aside {
-    background-color: rgb(44, 42, 42);
+    background-color: rgb(57, 55, 55);
     color: white;
     padding: 70px 20px 20px 20px;
     box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.078);
     max-width: 300px;
     border-bottom-right-radius: 10px;
+
+    .containerAmigos {
+        .cardsAmigos {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bolder;
+            padding: 10px;
+            margin-top: 10px;
+            border: solid 1px white;
+            border-radius: 10px;
+
+            .span {
+                display: inline-block;
+                margin: 0px 10px;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: red;
+            }
+        }
+    }
 }
