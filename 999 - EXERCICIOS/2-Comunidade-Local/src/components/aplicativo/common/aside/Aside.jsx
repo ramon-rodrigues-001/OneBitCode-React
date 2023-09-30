@@ -47,7 +47,53 @@ function Aside() {
             </div>
 
             <div className={styles.cardsAmigos}>
-              Lorem ipsum dolor
+              LOREN IP ...
+              <div>
+                <span className={styles.span}></span>
+                <i class="bi bi-pencil-fill"></i>
+              </div>
+            </div>
+            <div className={styles.cardsAmigos}>
+              Ramon
+              <div>
+                <span className={styles.span}></span>
+                <i class="bi bi-pencil-fill"></i>
+              </div>
+            </div>
+
+            <div className={styles.cardsAmigos}>
+              Maria
+              <div>
+                <span className={styles.span}></span>
+                <i class="bi bi-pencil-fill"></i>
+              </div>
+            </div>
+
+            <div className={styles.cardsAmigos}>
+              Lucas
+              <div>
+                <span className={styles.span}></span>
+                <i class="bi bi-pencil-fill"></i>
+              </div>
+            </div>
+
+            <div className={styles.cardsAmigos}>
+              Ray
+              <div>
+                <span className={styles.span}></span>
+                <i class="bi bi-pencil-fill"></i>
+              </div>
+            </div>
+
+            <div className={styles.cardsAmigos}>
+              LOREN IP ...
+              <div>
+                <span className={styles.span}></span>
+                <i class="bi bi-pencil-fill"></i>
+              </div>
+            </div>
+            <div className={styles.cardsAmigos}>
+              Ramon Ro ...
               <div>
                 <span className={styles.span}></span>
                 <i class="bi bi-pencil-fill"></i>
