@@ -11,8 +11,12 @@ export default function App() {
             < Header />
 
             <main className={styles.main}>
-                < Aside />
-                < Discontrair />
+                <div className={styles.containerAsideDaEsquerda}>
+                    < Aside />
+                </div>
+                <div className={styles.containerVitrineDaDireita}>
+                    < Discontrair />
+                </div>
             </main>
         </div>
     )

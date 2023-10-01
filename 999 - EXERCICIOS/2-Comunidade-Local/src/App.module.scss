@@ -1,5 +1,9 @@
+// Font 'Averia Serif Libre'
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Averia Serif Libre', cursive;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -10,7 +14,20 @@
 
   .main {
     display: flex;
+    padding-top: 70px;
 
-    
+    .containerAsideDaEsquerda {
+      flex: 1 0 250px;
+      display: block;
+      width: 550px;
+    }
+
+    .containerVitrineDaDireita {
+      // background-color: red;
+      padding: 20px;
+      border-radius: 20px;
+      min-height: 100vh;
+      margin-right: 5px;
+    }
   }
 }
