@@ -5,6 +5,15 @@ function Aside() {
     <div className={styles.aside}>
         <h2>Seus Amigos</h2>
 
+        <div className={styles.containerInputPrucurarPorAmigo}>
+          <i class="bi bi-search" id={styles.iconeLupa}></i>
+          <input type="text" className={styles.inputPrucurarPorAmigo} />
+        </div>
+
+        <button className={styles.buttonAdicionarNovoAmigo}>
+          <i class="bi bi-plus-lg"></i> New Amigo 
+        </button>
+
       <div className={styles.cardsAmigos}>
         Ramon
         <div className={styles.informationsAmigo}>

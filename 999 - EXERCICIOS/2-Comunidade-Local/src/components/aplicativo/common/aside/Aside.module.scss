@@ -11,6 +11,46 @@
     height: 86vh;
     position: fixed;
 
+    .containerInputPrucurarPorAmigo {
+        position: relative;
+
+        #iconeLupa {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+        }
+
+        .inputPrucurarPorAmigo {
+            color: white;
+            background-color: rgb(80, 78, 78);
+            border: none;
+            border-radius: 10px;
+            margin: 10px 0px;
+            font-size: 1.1em;
+            padding: 3px 10px 3px 33px;
+            width: 100%;
+        }
+    }
+
+    .buttonAdicionarNovoAmigo {
+        color: white;
+        background-color: rgb(80, 78, 78);
+        border: solid 1px transparent;
+        border-radius: 10px;
+        margin-bottom: 13px;
+        font-size: 1.1em;
+        padding: 3px 10px;
+        width: 100%;
+        transition: .3s;
+
+        &:hover {
+            scale: 1.03;
+            border-color: white;
+        }
+        
+    }
+
     .cardsAmigos {
         display: flex;
         justify-content: space-between;
