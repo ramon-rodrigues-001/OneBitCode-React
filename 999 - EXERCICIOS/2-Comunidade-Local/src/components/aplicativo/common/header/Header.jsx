@@ -1,19 +1,19 @@
+import { Link } from "react-router-dom"
 import styles from "./Header.module.scss"
 
 function Header() {
   return (
     <header>
         <h1>Comunity</h1>
-        
         <ul>
           <li id={styles.discontrair}>
-            <i class="bi bi-cup-hot-fill"></i>
+            <a href="/"><i class="bi bi-cup-hot-fill"></i></a>
           </li>
           <li id={styles.batePapo}>
-            <i class="bi bi-people-fill"></i>
+            <a href="/batePapo"><i class="bi bi-people-fill"></i></a>
           </li>
           <li id={styles.noticias}>
-            <i class="bi bi-newspaper"></i>
+            <a href="/noticias"><i class="bi bi-newspaper"></i></a>
           </li>
           
           <li id={styles.noticias}>

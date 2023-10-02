@@ -21,10 +21,14 @@ header {
     
         li {
             text-align: center;
-            padding: 3px 10px;
             font-weight: bold;
             font-size: 1.6em;
             transition: .5s;
+
+            a {
+                color: rgb(79, 75, 75);
+                padding: 3px 10px;
+            }
 
             &:hover {
                 scale: 1.2;
@@ -33,7 +37,7 @@ header {
             &::before {
                 position: absolute;
                 font-size: .46em;
-                bottom: -70%;
+                bottom: -90%;
                 left: 50%;
                 transform: translateX(-55%);
                 background-color: #3333335d;
