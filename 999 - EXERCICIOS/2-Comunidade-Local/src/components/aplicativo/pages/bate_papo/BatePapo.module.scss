@@ -1,3 +1,41 @@
 .SectionBatePapo {
-    background-color: red;
+    padding-bottom: 20px;
+
+    .containerDeCardsDeGrupos {
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        padding: 10px 3px;
+
+        .cardDeGrupos {
+            background-color: rgb(55, 49, 49);
+            border-radius: 15px;
+            min-width: 300px;
+            height: 300px;
+            transition: .4s;
+
+            &:hover {
+                scale: .95;
+            }
+        }
+    }
+
+    .containerCardsNovosGrupos {
+        display: flex;
+        // justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+
+        .cardNovoGrupo {
+            background-color: rgb(55, 49, 49);
+            border-radius: 15px;
+            height: 200px;
+            width: 200px;
+            transition: .4s;
+
+            &:hover {
+                scale: .95;
+            }
+        }
+    }
 }

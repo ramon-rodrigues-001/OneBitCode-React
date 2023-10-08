@@ -71,6 +71,11 @@ header {
                     content: "Noticías";
                 }
             }
+            &#mudarTema {
+                &::before {
+                    content: "Tema";
+                }
+            }
             &#perfil {
                 &::before {
                     content: "Perfil";

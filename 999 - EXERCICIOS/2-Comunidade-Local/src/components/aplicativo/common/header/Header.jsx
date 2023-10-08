@@ -16,7 +16,7 @@ function Header() {
             <a href="/noticias"><i class="bi bi-newspaper"></i></a>
           </li>
           
-          <li id={styles.noticias}>
+          <li id={styles.mudarTema}>
             <i class="bi bi-brightness-high-fill"></i>
           </li>
         </ul>

@@ -23,10 +23,11 @@
     }
 
     .containerVitrineDaDireita {
-      padding: 10px 20px;
+      width: 100%;
+      padding: 0px 20px;
       border-radius: 20px;
-      min-height: 100vh;
       margin-right: 5px;
+      overflow: hidden;
     }
   }
 }
