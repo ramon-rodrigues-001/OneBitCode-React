@@ -24,13 +24,17 @@
         display: flex;
         // justify-content: center;
         gap: 20px;
-        margin-top: 20px;
+        margin-top: 65px;
 
         .cardNovoGrupo {
+            color: white;
+            text-align: center;
+            font-size: 2em;
             background-color: rgb(55, 49, 49);
             border-radius: 15px;
-            height: 200px;
-            width: 200px;
+            // height: 200px;
+            // width: 200px;
+            padding: 20px;
             transition: .4s;
 
             &:hover {
