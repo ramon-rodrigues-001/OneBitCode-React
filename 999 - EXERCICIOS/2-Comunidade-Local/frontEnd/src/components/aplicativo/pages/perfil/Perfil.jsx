@@ -4,10 +4,35 @@ import styles from "./Perfil.module.scss"
 function Perfil() {
     const [logado, setLogado] = useState(false)
 
+    const handleSubmit = async ( event ) => {
+        event.preventDefault()
+
+        const formData = new FormData(event.target);
+    
+        try {
+            const response = await fetch("http://localhost:4000/api/login", {
+              method: "POST",
+              body: formData,
+            });
+      
+            if (response.status === 200) {
+              setLogado(true);
+              alert("Certo === 200")
+            } else {
+                // Tá chegando aqui !! qual o erro?
+                alert("Erro Status !== 200")
+            }
+        } 
+        catch (error) {
+            console.error("Erro ao fazer login:", error);
+        }
+        
+    }
+
     return (
         [!logado && (
             <div className={styles.formularioLogin}>
-                <form id="login-form">
+                <form id="login-form" onSubmit={handleSubmit}>
                     <h1 className={styles.titleLogin}>Login</h1>
 
                     <div className={styles.inputContainer}>
