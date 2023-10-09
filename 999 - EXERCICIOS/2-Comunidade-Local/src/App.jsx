@@ -6,6 +6,7 @@ import Aside from './components/aplicativo/common/aside/Aside'
 import Discontrair from './components/aplicativo/pages/discontrair/Discontrair'
 import BatePapo from './components/aplicativo/pages/bate_papo/BatePapo';
 import Noticias from './components/aplicativo/pages/noticias/Noticias';
+import Perfil from './components/aplicativo/pages/perfil/Perfil';
 
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
                             <Route path="/" element={< Discontrair />} />
                             <Route path="/batePapo" element={< BatePapo />} />
                             <Route path="/noticias" element={< Noticias />} />
+                            <Route path="/perfil" element={< Perfil />} />
                         </Routes>
                     </BrowserRouter>
                 </div>

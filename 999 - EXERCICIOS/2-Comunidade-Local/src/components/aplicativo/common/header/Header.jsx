@@ -27,7 +27,7 @@ function Header() {
               <i class="bi bi-bell-fill"></i>
             </li>
             <li id={styles.perfil}>
-              <i class="bi bi-person-fill"></i>
+              <a href="/perfil"><i class="bi bi-person-fill"></i></a>
             </li>
           </ul>
         </div>

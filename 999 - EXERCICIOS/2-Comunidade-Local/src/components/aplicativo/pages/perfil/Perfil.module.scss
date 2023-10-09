@@ -1,0 +1,52 @@
+.formularioLogin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46vw;
+}
+
+
+
+.titleLogin {
+    text-align: center;
+    color: #333;
+}
+
+.inputContainer {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+
+    .label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+    }
+    
+    .input {
+        background-color: transparent;
+        border: solid 1px black;
+        width: 100%;
+        padding: 10px;
+        // border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+}
+
+
+.buttonSubmit {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: #555;
+    }
+}
