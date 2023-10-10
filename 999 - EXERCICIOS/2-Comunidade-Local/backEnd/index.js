@@ -1,5 +1,9 @@
 const express = require('express')
 const cors = require("cors");
+const mongoose = require('mongoose')
+
+// Rotas
+const login = require('./routers/login.js')
 
 // Configurando o express
 const app = express()
@@ -9,14 +13,18 @@ app.use(express.json());
 app.use(cors());
 
 
-app.post("/api/login", (req, res) => { 
-    const { username, email, password } = req.body;
-    console.log("Dados recebidos: ", req.body);
 
+const port = 'mongodb+srv://ramon:13153080552@cluster0.cij4gvt.mongodb.net/'
+mongoose.connect(port, {
+    useUnifiedTopology: true,
+})
+.then(()=> {
+    app.use('/', login);
 
-    res.sendStatus(200); // Credenciais corretas
-});  
-
-app.listen(4000, ()=> {
-    console.log('certo')
+    app.listen(4000, ()=> {
+        console.log('Conectado ao banco de dados, e servidor esta rodando!')
+    })
+})
+.catch((err)=> {
+    console.log('Erro ao conectar ao MongoDB')
 })
