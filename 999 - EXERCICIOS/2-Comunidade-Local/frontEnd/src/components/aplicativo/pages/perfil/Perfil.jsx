@@ -7,12 +7,19 @@ function Perfil() {
     const handleSubmit = async ( event ) => {
         event.preventDefault()
 
-        const formData = new FormData(event.target);
+        const username = event.target.username.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+
+        const formData = { username, email, password }
     
         try {
             const response = await fetch("http://localhost:4000/api/login", {
-              method: "POST",
-              body: formData,
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
             });
       
             if (response.status === 200) {
@@ -26,9 +33,11 @@ function Perfil() {
         catch (error) {
             console.error("Erro ao fazer login:", error);
         }
-        
     }
 
+
+
+    
     return (
         [!logado && (
             <div className={styles.formularioLogin}>

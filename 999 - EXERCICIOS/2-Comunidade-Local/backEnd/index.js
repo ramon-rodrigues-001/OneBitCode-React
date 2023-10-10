@@ -1,21 +1,20 @@
 const express = require('express')
-const bodyParser = require('body-parser');
+const cors = require("cors");
 
+// Configurando o express
 const app = express()
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-// Configuração do body-parser
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(cors());
 
-app.post("/api/login", (req, res) => {
+
+app.post("/api/login", (req, res) => { 
     const { username, email, password } = req.body;
-    console.log(`${username} www`)
+    console.log("Dados recebidos: ", req.body);
+
+
     res.sendStatus(200); // Credenciais corretas
-    
-    // if (username !== "" && password !== "") {
-    // } else {
-    //   res.status(401).send("Credenciais inválidas"); // Credenciais incorretas
-    // }
 });  
 
 app.listen(4000, ()=> {
