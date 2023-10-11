@@ -36,6 +36,9 @@
 
 
 .buttonSubmit {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
     width: 100%;
     padding: 10px;
     background-color: #333;
@@ -45,6 +48,7 @@
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s;
+    margin-bottom: 10px;
 
     &:hover {
         background-color: #555;
