@@ -1,10 +1,13 @@
 import styles from '../Perfil.module.scss'
 
-export default function Login() {
+export default function Login(props) {
+
+    const mudarSituação = props.mudarSituação
+
     return (
-        <div className={styles.formularioLogin}>
-            <form id="login-form" >
-                <h1 className={styles.titleLogin}>Login</h1>
+        <div className={styles.formulario}>
+            <form>
+                <h1 className={styles.title}>Login</h1>
 
                 <div className={styles.inputContainer}>
                     <label for="email" className={styles.label}>Email</label>

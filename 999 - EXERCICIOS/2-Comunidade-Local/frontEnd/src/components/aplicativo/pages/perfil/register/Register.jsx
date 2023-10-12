@@ -22,10 +22,8 @@ export default function Register() {
             });
       
             if (response.status === 200) {
-              setLogado(true);
               alert("Certo === 200")
             } else {
-                // Tá chegando aqui !! qual o erro?
                 alert("Erro Status !== 200")
             }
         } 
@@ -38,9 +36,9 @@ export default function Register() {
 
 
     return (
-        <div className={styles.formularioLogin}>
-            <form id="login-form" onSubmit={handleSubmit}>
-                <h1 className={styles.titleLogin}>Register</h1>
+        <div className={styles.formulario}>
+            <form onSubmit={handleSubmit}>
+                <h1 className={styles.title}>Register</h1>
 
                 <div className={styles.inputContainer}>
                     <label for="username" className={styles.label}>Nome Do Usuário</label>
@@ -60,7 +58,7 @@ export default function Register() {
 
                 <button type="submit"  className={styles.buttonSubmit}>Entrar</button>
                 
-                <button className={styles.buttonSubmit}>Já possuo uma conta</button>
+                <a href='/perfil/login' className={styles.buttonSubmit}>Já tenho uma conta</a>
             </form>
         </div>
     )

@@ -1,17 +1,16 @@
 import { useState } from "react"
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Login from "./login/Login"
 import Register from "./register/Register"
 import styles from "./Perfil.module.scss"
 
 function Perfil() {
-    const [situacao, setsituacao] = useState('login')
+    const [situacao, setsituacao] = useState('Deslogado')
 
+    
 
     return (
-        (situacao === 'login' && [
-            < Login situacao={situacao}/>
-        ])
+        (situacao === 'Deslogado' && <Navigate to="login/" />)
     )
 }
 
