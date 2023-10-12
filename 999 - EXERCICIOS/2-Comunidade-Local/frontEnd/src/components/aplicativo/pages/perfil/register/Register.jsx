@@ -13,7 +13,7 @@ export default function Register() {
         const formData = { username, email, password }
     
         try {
-            const response = await fetch("http://localhost:4000/api/login", {
+            const response = await fetch("http://localhost:4000/api/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -23,7 +23,17 @@ export default function Register() {
       
             if (response.status === 200) {
               alert("Certo === 200")
-            } else {
+            } 
+            else if (response.status === 501) {
+                alert('Nome repetido')
+            }
+            else if (response.status === 502) {
+                alert('Email repetido')
+            }
+            else if (response.status === 503) {
+                alert('Senha repetido')
+            }
+            else {
                 alert("Erro Status !== 200")
             }
         } 
@@ -41,17 +51,17 @@ export default function Register() {
                 <h1 className={styles.title}>Register</h1>
 
                 <div className={styles.inputContainer}>
-                    <label for="username" className={styles.label}>Nome Do Usuário</label>
+                    <label htmlFor="username" className={styles.label}>Nome Do Usuário</label>
                     <input type="text" id="username" name="username" placeholder="Digite seu nome" required className={styles.input}/>
                 </div>
 
                 <div className={styles.inputContainer}>
-                    <label for="email" className={styles.label}>Email</label>
+                    <label htmlFor="email" className={styles.label}>Email</label>
                     <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required className={styles.input}/>
                 </div>
 
                 <div className={styles.inputContainer}>
-                    <label for="password" className={styles.label}>Senha</label>
+                    <label htmlFor="password" className={styles.label}>Senha</label>
                     <input type="password" id="password" name="password" placeholder="Digite sua senha" required className={styles.input}/>
                 </div>
 

@@ -10,12 +10,12 @@ export default function Login(props) {
                 <h1 className={styles.title}>Login</h1>
 
                 <div className={styles.inputContainer}>
-                    <label for="email" className={styles.label}>Email</label>
+                    <label htmlFor="email" className={styles.label}>Email</label>
                     <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required className={styles.input}/>
                 </div>
 
                 <div className={styles.inputContainer}>
-                    <label for="password" className={styles.label}>Senha</label>
+                    <label htmlFor="password" className={styles.label}>Senha</label>
                     <input type="password" id="password" name="password" placeholder="Digite sua senha" required className={styles.input}/>
                 </div>
 

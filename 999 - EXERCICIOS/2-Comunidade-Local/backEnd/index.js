@@ -3,7 +3,7 @@ const cors = require("cors");
 const mongoose = require('mongoose')
 
 // Rotas
-const login = require('./routers/login.js')
+const register = require('./routers/register.js')
 
 // Configurando o express
 const app = express()
@@ -19,7 +19,7 @@ mongoose.connect(port, {
     useUnifiedTopology: true,
 })
 .then(()=> {
-    app.use('/', login);
+    app.use('/', register);
 
     app.listen(4000, ()=> {
         console.log('Conectado ao banco de dados, e servidor esta rodando!')
