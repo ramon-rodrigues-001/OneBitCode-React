@@ -1,12 +1,23 @@
 import styles from '../Perfil.module.scss'
 
-export default function Login(props) {
+export default function Login() {
 
-    const mudarSituação = props.mudarSituação
+    const handleSubmit = async ( event ) => {
+        event.preventDefault()
+
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+
+        try {
+            const response = await fetch("http://localhost:4000/api/login", {
+                
+            })
+        }
+    }
 
     return (
         <div className={styles.formulario}>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <h1 className={styles.title}>Login</h1>
 
                 <div className={styles.inputContainer}>

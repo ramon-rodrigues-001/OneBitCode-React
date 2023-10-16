@@ -10,7 +10,12 @@ function Perfil() {
     
 
     return (
-        (situacao === 'Deslogado' && <Navigate to="login/" />)
+
+        situacao === 'Deslogado' ? (
+            <Navigate to="login/" />
+        ) : (
+            <h1>Seu conteúdo do H1 aqui</h1>
+        )
     )
 }
 
