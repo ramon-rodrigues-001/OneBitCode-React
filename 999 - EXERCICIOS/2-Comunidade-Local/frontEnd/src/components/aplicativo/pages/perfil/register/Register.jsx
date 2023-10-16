@@ -38,7 +38,7 @@ export default function Register() {
             }
         } 
         catch (error) {
-            console.error("Erro ao fazer login:", error);
+            console.error("Erro ao fazer registro:", error);
         }
     }
 

@@ -8,10 +8,25 @@ export default function Login() {
         const email = event.target.email.value;
         const password = event.target.password.value;
 
+        const formData = { email, password }
+
         try {
             const response = await fetch("http://localhost:4000/api/login", {
-                
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
             })
+
+            if (response.data.success) {
+                alert('success')
+            } else {
+                alert('no success')
+            }
+        }
+        catch (err) {
+            console.error("Erro ao fazer login:", err);
         }
     }
 
