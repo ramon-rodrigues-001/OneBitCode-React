@@ -1,7 +1,14 @@
 import { Link } from "react-router-dom"
 import styles from "./Header.module.scss"
+import { useState } from "react"
 
 function Header() {
+  const [menuActive, setMenuActive] = useState(false)
+
+  const setMenu = () => {
+    setMenuActive(!menuActive)
+  }
+
   return (
     <header>
         <h1>Comunity</h1>
@@ -30,6 +37,24 @@ function Header() {
               <a href="/perfil"><i class="bi bi-person-fill"></i></a>
             </li>
           </ul>
+        </div>
+
+
+        <div className={styles.containerMenu}>
+          <button className={styles.btnOpenMenu} onClick={setMenu}>
+            <i class="bi bi-three-dots"></i>
+          </button>
+
+          {menuActive && (
+            <div className={styles.menu}>
+              <div className={styles.headerMenu}>
+                <h3>Menu Lateral</h3>
+                <button className={styles.btnOpenMenu} onClick={setMenu}>
+                  <i class="bi bi-x"></i>
+                </button>
+              </div>
+            </div>
+          )}
         </div>
     </header>
   )

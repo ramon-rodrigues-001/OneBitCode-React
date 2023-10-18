@@ -14,6 +14,45 @@ header {
     align-items: center;
     z-index: 999;
 
+    .containerMenu {
+        display: none;
+
+        .btnOpenMenu {
+            padding: 0px 5px;
+            border: none;
+            background-color: transparent;
+            font-size: 2em;
+            transition: .3s;
+
+            &:hover {
+                scale: 1.3;
+            }
+        }
+
+        .menu {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            position: absolute;
+            top: 1px;
+            right: 0;
+            border-radius: 10px;
+            width: 90%;
+            height: 99.3vh;
+            padding: 10px 20px;
+
+            .headerMenu {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .btnOpenMenu {
+                    color: white;
+                    font-size: 3em;
+                }
+            }
+        }
+    }
+
     ul {
         display: flex;
         align-items: center;
@@ -106,6 +145,18 @@ header {
             &#perfil {
                 font-size: 1.4em;
             }
+        }
+    }
+}
+
+
+@media screen and (max-width: 580px) {
+    header {
+        .containerMenu {
+            display: block;
+        }
+        ul {
+            display: none;
         }
     }
 }
