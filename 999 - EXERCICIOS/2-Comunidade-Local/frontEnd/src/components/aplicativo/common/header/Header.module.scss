@@ -16,6 +16,7 @@ header {
 
     ul {
         display: flex;
+        align-items: center;
         gap: 40px;
         list-style: none;
     
@@ -92,4 +93,19 @@ header {
 }
   
   
-  
+
+@media screen and (max-width: 700px) {
+    header {
+        ul {
+            gap: 20px;
+
+            li {
+                font-size: 1.4em;
+            }
+
+            &#perfil {
+                font-size: 1.4em;
+            }
+        }
+    }
+}
