@@ -10,7 +10,6 @@ function Perfil() {
     
 
     return (
-
         situacao === 'Deslogado' ? (
             <Navigate to="login/" />
         ) : (

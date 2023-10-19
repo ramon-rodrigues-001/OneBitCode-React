@@ -31,3 +31,18 @@
     }
   }
 }
+
+@media scri {
+  
+}
+@media screen and (max-width: 750px) {
+  .container {
+  
+    .main {
+  
+      .containerAsideDaEsquerda {
+        display: none ;
+      }
+    }
+  }
+}

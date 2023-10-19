@@ -18,7 +18,7 @@ export default function App() {
 
             <main className={styles.main}>
                 <div className={styles.containerAsideDaEsquerda}>
-                    < Aside />
+                    < Aside /> 
                 </div>
                 <div className={styles.containerVitrineDaDireita}>
                     <BrowserRouter>
