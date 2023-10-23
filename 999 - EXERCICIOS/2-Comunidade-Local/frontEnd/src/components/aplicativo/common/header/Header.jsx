@@ -2,6 +2,9 @@ import { Link } from "react-router-dom"
 import styles from "./Header.module.scss"
 import { useState } from "react"
 
+// importando o menu hamburguer
+import Menu from "./menu/Menu"
+
 function Header() {
   const [menuActive, setMenuActive] = useState(false)
 
@@ -46,22 +49,7 @@ function Header() {
           </button>
 
           {menuActive && (
-            <div className={styles.menu}>
-              <div className={styles.headerMenu}>
-                <h3>Menu Lateral</h3>
-                <button className={styles.btnOpenMenu} onClick={setMenu}>
-                  <i class="bi bi-x"></i>
-                </button>
-              </div>
-              <div className={styles.bodyMenu}>
-                <div className={styles.navIconesMenu}>
-                  <a href="/"><i class="bi bi-cup-hot-fill"></i></a>
-                  <a href="/batePapo"><i class="bi bi-people-fill"></i></a>
-                  <a href="/noticias"><i class="bi bi-newspaper"></i></a>
-                  <a href="/perfil"><i class="bi bi-person-fill"></i></a>
-                </div>
-              </div>
-            </div>
+            < Menu setMenu={setMenu} />
           )}
         </div>
     </header>
